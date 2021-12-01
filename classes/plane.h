@@ -10,8 +10,8 @@ using namespace std;
 class plane{
     string enroll;
     unsigned capacity;
-
-
+    plane(string n, int number);
+    string getNumberPlane() const;
 
 };
 

@@ -9,8 +9,15 @@
 
 using namespace std;
 
-class passenger {
 
+class passenger {
+    passenger(unsigned id, unsigned nLuggage);
+    unsigned id;
+    int getLuggage() const;
+    void setLuggage();
+
+    vector<passenger> passengers;
+    unsigned numberLuggage;
 
 };
 

@@ -11,10 +11,14 @@
 using namespace std;
 
 
+
 class Service {
+    Service();
     bool type;
     time_t date;
     string employee;
+
+
 
 
 };
