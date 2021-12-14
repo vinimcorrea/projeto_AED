@@ -27,3 +27,7 @@ const string &Service::getEmployee() const {
 void Service::setEmployee(const string &employee) {
     Service::employee = employee;
 }
+
+bool Service::operator<(const Service& s1) const{
+    return date < s1.date;
+}

@@ -1,10 +1,15 @@
+#ifndef AED_PROJECT_PLANE_H
+#define AED_PROJECT_PLANE_H
+
+#include "Service.h"
+#include "Flight.h"
+#include "Service.h"
+
 #include <string>
 #include <vector>
 #include <queue>
 #include <list>
 
-#include "Flight.h"
-#include "Service.h"
 
 using namespace std;
 
@@ -14,6 +19,7 @@ class Plane{
     unsigned capacity;
     list<Flight> flightPlan;
     queue<Service> services;
+    vector<Service> realizedServices;
 
 public:
     Plane(string enroll, unsigned capacity, list<Flight> flightPlan, queue<Service> services);
@@ -23,11 +29,10 @@ public:
     const queue<Service> &getServices() const;
     unsigned getCapacity() const;
     int numPassengers(unsigned flightNumber) const;
-    bool cancelFlight();
+    void doneService();
+    //bool cancelFlight(Flight &f1);
+    //void sortServices();
 
 };
-
-#ifndef AED_PROJECT_PLANE_H
-#define AED_PROJECT_PLANE_H
 
 #endif //AED_PROJECT_PLANE_H

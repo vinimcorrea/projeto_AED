@@ -20,7 +20,7 @@ class Service {
 
 public:
     Service(string type, time_t date, Employee employee);
-    void addService(Service service);
+    void addService(Service& s1);
     Service getService() const;
     void setService(Service& service);
     const string &getType() const;
@@ -29,6 +29,8 @@ public:
     time_t getDate() const;
     void setDate(time_t date);
     void setType(const string &type);
+    bool operator<(const Service& s1) const;
+
 };
 
 

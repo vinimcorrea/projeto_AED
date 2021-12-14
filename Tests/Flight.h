@@ -1,13 +1,12 @@
-//
-// Created by Vinícius Correa on 14/12/2021.
-//
-
 #ifndef AED_PROJECT_FLIGHT_H
 #define AED_PROJECT_FLIGHT_H
 
+#include "Passenger.h"
+
+
 #include <string>
 #include <vector>
-#include "Passenger.h"
+
 
 using namespace std;
 
@@ -21,7 +20,6 @@ class Flight{
 public:
     Flight(unsigned flightNumber, time_t departureDate, time_t duration, string origin, string destiny);
     const vector<Passanger> &getPassengers() const;
-
     unsigned int getFlightNumber() const;
 };
 
