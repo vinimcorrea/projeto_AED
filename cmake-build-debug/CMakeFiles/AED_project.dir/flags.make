@@ -4,7 +4,7 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googlemock/include -isystem /Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest/include -isystem /Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest
 
 CXX_FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk -std=gnu++14
 

@@ -5,13 +5,71 @@
 		<Option title="AED_project"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\lib\;CMake Files\lib\googletest-master\;CMake Files\lib\googletest-master\googlemock\;CMake Files\lib\googletest-master\googlemock\cmake\;CMake Files\lib\googletest-master\googletest\;CMake Files\lib\googletest-master\googletest\cmake\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AED_project">
+				<Option output="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/AED_project" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googlemock/include"/>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest/include"/>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 AED_project"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AED_project/fast">
+				<Option output="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/AED_project" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googlemock/include"/>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest/include"/>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 AED_project/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -37,34 +95,47 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="AED_project">
-				<Option output="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/AED_project" prefix_auto="0" extension_auto="0"/>
+			<Target title="install/strip">
 				<Option working_dir="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
+				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 AED_project"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="AED_project/fast">
-				<Option output="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/AED_project" prefix_auto="0" extension_auto="0"/>
+			<Target title="install">
 				<Option working_dir="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock">
+				<Option output="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googlemock"/>
 				<Option object_output="./"/>
-				<Option type="1"/>
+				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googlemock/include"/>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googlemock"/>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest/include"/>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
@@ -73,18 +144,302 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 AED_project/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock/fast">
+				<Option output="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googlemock/include"/>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googlemock"/>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest/include"/>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock_main">
+				<Option output="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googlemock/include"/>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googlemock"/>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest/include"/>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock_main/fast">
+				<Option output="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googlemock/include"/>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googlemock"/>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest/include"/>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main">
+				<Option output="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest/include"/>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main/fast">
+				<Option output="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest/include"/>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest">
+				<Option output="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest/include"/>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest/fast">
+				<Option output="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest/include"/>
+					<Add directory="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/Airport.cpp">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/Airport.h">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/BST.h">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/Boarding.cpp">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/Boarding.h">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/Employee.cpp">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/Employee.h">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/Flight.cpp">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/Flight.h">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/GroundTransportation.cpp">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/GroundTransportation.h">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/LocalTransport.cpp">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/LocalTransport.h">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/Luggage.cpp">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/Luggage.h">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/Passenger.cpp">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/Passenger.h">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/Plane.cpp">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/Plane.h">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/Service.cpp">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/Service.h">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/Ticket.cpp">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/Ticket.h">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/Trolley.cpp">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/Trolley.h">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/Tests/tests.cpp">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googlemock/src/gmock-all.cc">
+			<Option target="gmock"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googlemock/src/gmock_main.cc">
+			<Option target="gmock_main"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest/src/gtest-all.cc">
+			<Option target="gtest"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest/src/gtest_main.cc">
+			<Option target="gtest_main"/>
+		</Unit>
 		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/main.cpp">
 			<Option target="AED_project"/>
 		</Unit>
 		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\googletest-master\"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googlemock/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\googletest-master\googlemock\"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googlemock/cmake/gmock.pc.in">
+			<Option virtualFolder="CMake Files\lib\googletest-master\googlemock\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googlemock/cmake/gmock_main.pc.in">
+			<Option virtualFolder="CMake Files\lib\googletest-master\googlemock\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest/cmake/Config.cmake.in">
+			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest/cmake/gtest.pc.in">
+			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest/cmake/gtest_main.pc.in">
+			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/viniciuscorrea/Desktop/university/AED/project/AED_project/lib/googletest-master/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\cmake\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

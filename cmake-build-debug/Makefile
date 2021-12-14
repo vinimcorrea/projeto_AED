@@ -65,6 +65,18 @@ CMAKE_BINARY_DIR = /Users/viniciuscorrea/Desktop/university/AED/project/AED_proj
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -84,6 +96,39 @@ edit_cache:
 # Special rule for the target edit_cache
 edit_cache/fast: edit_cache
 .PHONY : edit_cache/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -129,6 +174,370 @@ AED_project/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/build
 .PHONY : AED_project/fast
 
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f lib/googletest-master/googlemock/CMakeFiles/gmock.dir/build.make lib/googletest-master/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/build.make lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f lib/googletest-master/googletest/CMakeFiles/gtest_main.dir/build.make lib/googletest-master/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f lib/googletest-master/googletest/CMakeFiles/gtest.dir/build.make lib/googletest-master/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+Tests/Airport.o: Tests/Airport.cpp.o
+.PHONY : Tests/Airport.o
+
+# target to build an object file
+Tests/Airport.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Airport.cpp.o
+.PHONY : Tests/Airport.cpp.o
+
+Tests/Airport.i: Tests/Airport.cpp.i
+.PHONY : Tests/Airport.i
+
+# target to preprocess a source file
+Tests/Airport.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Airport.cpp.i
+.PHONY : Tests/Airport.cpp.i
+
+Tests/Airport.s: Tests/Airport.cpp.s
+.PHONY : Tests/Airport.s
+
+# target to generate assembly for a file
+Tests/Airport.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Airport.cpp.s
+.PHONY : Tests/Airport.cpp.s
+
+Tests/Boarding.o: Tests/Boarding.cpp.o
+.PHONY : Tests/Boarding.o
+
+# target to build an object file
+Tests/Boarding.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Boarding.cpp.o
+.PHONY : Tests/Boarding.cpp.o
+
+Tests/Boarding.i: Tests/Boarding.cpp.i
+.PHONY : Tests/Boarding.i
+
+# target to preprocess a source file
+Tests/Boarding.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Boarding.cpp.i
+.PHONY : Tests/Boarding.cpp.i
+
+Tests/Boarding.s: Tests/Boarding.cpp.s
+.PHONY : Tests/Boarding.s
+
+# target to generate assembly for a file
+Tests/Boarding.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Boarding.cpp.s
+.PHONY : Tests/Boarding.cpp.s
+
+Tests/Employee.o: Tests/Employee.cpp.o
+.PHONY : Tests/Employee.o
+
+# target to build an object file
+Tests/Employee.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Employee.cpp.o
+.PHONY : Tests/Employee.cpp.o
+
+Tests/Employee.i: Tests/Employee.cpp.i
+.PHONY : Tests/Employee.i
+
+# target to preprocess a source file
+Tests/Employee.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Employee.cpp.i
+.PHONY : Tests/Employee.cpp.i
+
+Tests/Employee.s: Tests/Employee.cpp.s
+.PHONY : Tests/Employee.s
+
+# target to generate assembly for a file
+Tests/Employee.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Employee.cpp.s
+.PHONY : Tests/Employee.cpp.s
+
+Tests/Flight.o: Tests/Flight.cpp.o
+.PHONY : Tests/Flight.o
+
+# target to build an object file
+Tests/Flight.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Flight.cpp.o
+.PHONY : Tests/Flight.cpp.o
+
+Tests/Flight.i: Tests/Flight.cpp.i
+.PHONY : Tests/Flight.i
+
+# target to preprocess a source file
+Tests/Flight.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Flight.cpp.i
+.PHONY : Tests/Flight.cpp.i
+
+Tests/Flight.s: Tests/Flight.cpp.s
+.PHONY : Tests/Flight.s
+
+# target to generate assembly for a file
+Tests/Flight.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Flight.cpp.s
+.PHONY : Tests/Flight.cpp.s
+
+Tests/GroundTransportation.o: Tests/GroundTransportation.cpp.o
+.PHONY : Tests/GroundTransportation.o
+
+# target to build an object file
+Tests/GroundTransportation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/GroundTransportation.cpp.o
+.PHONY : Tests/GroundTransportation.cpp.o
+
+Tests/GroundTransportation.i: Tests/GroundTransportation.cpp.i
+.PHONY : Tests/GroundTransportation.i
+
+# target to preprocess a source file
+Tests/GroundTransportation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/GroundTransportation.cpp.i
+.PHONY : Tests/GroundTransportation.cpp.i
+
+Tests/GroundTransportation.s: Tests/GroundTransportation.cpp.s
+.PHONY : Tests/GroundTransportation.s
+
+# target to generate assembly for a file
+Tests/GroundTransportation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/GroundTransportation.cpp.s
+.PHONY : Tests/GroundTransportation.cpp.s
+
+Tests/LocalTransport.o: Tests/LocalTransport.cpp.o
+.PHONY : Tests/LocalTransport.o
+
+# target to build an object file
+Tests/LocalTransport.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/LocalTransport.cpp.o
+.PHONY : Tests/LocalTransport.cpp.o
+
+Tests/LocalTransport.i: Tests/LocalTransport.cpp.i
+.PHONY : Tests/LocalTransport.i
+
+# target to preprocess a source file
+Tests/LocalTransport.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/LocalTransport.cpp.i
+.PHONY : Tests/LocalTransport.cpp.i
+
+Tests/LocalTransport.s: Tests/LocalTransport.cpp.s
+.PHONY : Tests/LocalTransport.s
+
+# target to generate assembly for a file
+Tests/LocalTransport.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/LocalTransport.cpp.s
+.PHONY : Tests/LocalTransport.cpp.s
+
+Tests/Luggage.o: Tests/Luggage.cpp.o
+.PHONY : Tests/Luggage.o
+
+# target to build an object file
+Tests/Luggage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Luggage.cpp.o
+.PHONY : Tests/Luggage.cpp.o
+
+Tests/Luggage.i: Tests/Luggage.cpp.i
+.PHONY : Tests/Luggage.i
+
+# target to preprocess a source file
+Tests/Luggage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Luggage.cpp.i
+.PHONY : Tests/Luggage.cpp.i
+
+Tests/Luggage.s: Tests/Luggage.cpp.s
+.PHONY : Tests/Luggage.s
+
+# target to generate assembly for a file
+Tests/Luggage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Luggage.cpp.s
+.PHONY : Tests/Luggage.cpp.s
+
+Tests/Passenger.o: Tests/Passenger.cpp.o
+.PHONY : Tests/Passenger.o
+
+# target to build an object file
+Tests/Passenger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Passenger.cpp.o
+.PHONY : Tests/Passenger.cpp.o
+
+Tests/Passenger.i: Tests/Passenger.cpp.i
+.PHONY : Tests/Passenger.i
+
+# target to preprocess a source file
+Tests/Passenger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Passenger.cpp.i
+.PHONY : Tests/Passenger.cpp.i
+
+Tests/Passenger.s: Tests/Passenger.cpp.s
+.PHONY : Tests/Passenger.s
+
+# target to generate assembly for a file
+Tests/Passenger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Passenger.cpp.s
+.PHONY : Tests/Passenger.cpp.s
+
+Tests/Plane.o: Tests/Plane.cpp.o
+.PHONY : Tests/Plane.o
+
+# target to build an object file
+Tests/Plane.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Plane.cpp.o
+.PHONY : Tests/Plane.cpp.o
+
+Tests/Plane.i: Tests/Plane.cpp.i
+.PHONY : Tests/Plane.i
+
+# target to preprocess a source file
+Tests/Plane.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Plane.cpp.i
+.PHONY : Tests/Plane.cpp.i
+
+Tests/Plane.s: Tests/Plane.cpp.s
+.PHONY : Tests/Plane.s
+
+# target to generate assembly for a file
+Tests/Plane.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Plane.cpp.s
+.PHONY : Tests/Plane.cpp.s
+
+Tests/Service.o: Tests/Service.cpp.o
+.PHONY : Tests/Service.o
+
+# target to build an object file
+Tests/Service.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Service.cpp.o
+.PHONY : Tests/Service.cpp.o
+
+Tests/Service.i: Tests/Service.cpp.i
+.PHONY : Tests/Service.i
+
+# target to preprocess a source file
+Tests/Service.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Service.cpp.i
+.PHONY : Tests/Service.cpp.i
+
+Tests/Service.s: Tests/Service.cpp.s
+.PHONY : Tests/Service.s
+
+# target to generate assembly for a file
+Tests/Service.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Service.cpp.s
+.PHONY : Tests/Service.cpp.s
+
+Tests/Ticket.o: Tests/Ticket.cpp.o
+.PHONY : Tests/Ticket.o
+
+# target to build an object file
+Tests/Ticket.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Ticket.cpp.o
+.PHONY : Tests/Ticket.cpp.o
+
+Tests/Ticket.i: Tests/Ticket.cpp.i
+.PHONY : Tests/Ticket.i
+
+# target to preprocess a source file
+Tests/Ticket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Ticket.cpp.i
+.PHONY : Tests/Ticket.cpp.i
+
+Tests/Ticket.s: Tests/Ticket.cpp.s
+.PHONY : Tests/Ticket.s
+
+# target to generate assembly for a file
+Tests/Ticket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Ticket.cpp.s
+.PHONY : Tests/Ticket.cpp.s
+
+Tests/Trolley.o: Tests/Trolley.cpp.o
+.PHONY : Tests/Trolley.o
+
+# target to build an object file
+Tests/Trolley.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Trolley.cpp.o
+.PHONY : Tests/Trolley.cpp.o
+
+Tests/Trolley.i: Tests/Trolley.cpp.i
+.PHONY : Tests/Trolley.i
+
+# target to preprocess a source file
+Tests/Trolley.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Trolley.cpp.i
+.PHONY : Tests/Trolley.cpp.i
+
+Tests/Trolley.s: Tests/Trolley.cpp.s
+.PHONY : Tests/Trolley.s
+
+# target to generate assembly for a file
+Tests/Trolley.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/Trolley.cpp.s
+.PHONY : Tests/Trolley.cpp.s
+
+Tests/tests.o: Tests/tests.cpp.o
+.PHONY : Tests/tests.o
+
+# target to build an object file
+Tests/tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/tests.cpp.o
+.PHONY : Tests/tests.cpp.o
+
+Tests/tests.i: Tests/tests.cpp.i
+.PHONY : Tests/tests.i
+
+# target to preprocess a source file
+Tests/tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/tests.cpp.i
+.PHONY : Tests/tests.cpp.i
+
+Tests/tests.s: Tests/tests.cpp.s
+.PHONY : Tests/tests.s
+
+# target to generate assembly for a file
+Tests/tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AED_project.dir/build.make CMakeFiles/AED_project.dir/Tests/tests.cpp.s
+.PHONY : Tests/tests.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -160,8 +569,55 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... AED_project"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest"
+	@echo "... gtest_main"
+	@echo "... Tests/Airport.o"
+	@echo "... Tests/Airport.i"
+	@echo "... Tests/Airport.s"
+	@echo "... Tests/Boarding.o"
+	@echo "... Tests/Boarding.i"
+	@echo "... Tests/Boarding.s"
+	@echo "... Tests/Employee.o"
+	@echo "... Tests/Employee.i"
+	@echo "... Tests/Employee.s"
+	@echo "... Tests/Flight.o"
+	@echo "... Tests/Flight.i"
+	@echo "... Tests/Flight.s"
+	@echo "... Tests/GroundTransportation.o"
+	@echo "... Tests/GroundTransportation.i"
+	@echo "... Tests/GroundTransportation.s"
+	@echo "... Tests/LocalTransport.o"
+	@echo "... Tests/LocalTransport.i"
+	@echo "... Tests/LocalTransport.s"
+	@echo "... Tests/Luggage.o"
+	@echo "... Tests/Luggage.i"
+	@echo "... Tests/Luggage.s"
+	@echo "... Tests/Passenger.o"
+	@echo "... Tests/Passenger.i"
+	@echo "... Tests/Passenger.s"
+	@echo "... Tests/Plane.o"
+	@echo "... Tests/Plane.i"
+	@echo "... Tests/Plane.s"
+	@echo "... Tests/Service.o"
+	@echo "... Tests/Service.i"
+	@echo "... Tests/Service.s"
+	@echo "... Tests/Ticket.o"
+	@echo "... Tests/Ticket.i"
+	@echo "... Tests/Ticket.s"
+	@echo "... Tests/Trolley.o"
+	@echo "... Tests/Trolley.i"
+	@echo "... Tests/Trolley.s"
+	@echo "... Tests/tests.o"
+	@echo "... Tests/tests.i"
+	@echo "... Tests/tests.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
