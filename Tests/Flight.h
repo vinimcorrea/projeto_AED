@@ -12,15 +12,22 @@ using namespace std;
 
 class Flight{
     unsigned flightNumber;
-    time_t departureDate;
-    time_t duration;
+    string departureDate;
+    unsigned duration;
     string originFlight;
     string destinyFlight;
     vector<Passenger> passengers;
+    int numberOfLuggage;
 public:
-    Flight(unsigned flightNumber, time_t departureDate, time_t duration, string origin, string destiny);
-    const vector<Passanger> &getPassengers() const;
+    int getNumberOfLuggage() const;
+
+public:
+    void setNumberOfLuggage(unsigned numberOfLuggage);
+
+    Flight(unsigned flightNumber, string departureDate, unsigned duration, string origin, string destiny);
+    const vector<Passenger> &getPassengers() const;
     unsigned int getFlightNumber() const;
+    void insertPassenger(Passenger& p1);
 };
 
 #endif //AED_PROJECT_FLIGHT_H

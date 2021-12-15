@@ -17,6 +17,7 @@ class Airport {
     string country;
 public:
     BST<GroundTransportation> localInformation;
+    
 };
 
 

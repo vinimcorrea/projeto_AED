@@ -4,6 +4,7 @@
 #include "Service.h"
 #include "Flight.h"
 #include "Service.h"
+#include "Passenger.h"
 
 #include <string>
 #include <vector>
@@ -22,16 +23,17 @@ class Plane{
     vector<Service> realizedServices;
 
 public:
-    Plane(string enroll, unsigned capacity, list<Flight> flightPlan, queue<Service> services);
+    Plane(string en, unsigned cap, list<Flight> fp, queue<Service> s){
+        enroll = en; capacity = cap; flightPlan = fp; s = services;}
     void addFlight(const Flight &f1);
     void addService(const Service &s1);
     const list<Flight> &getFlight() const;
     const queue<Service> &getServices() const;
-    unsigned getCapacity() const;
     int numPassengers(unsigned flightNumber) const;
     void doneService();
-    //bool cancelFlight(Flight &f1);
-    //void sortServices();
+    bool passengerGetTicket(Passenger &p1, unsigned flNumber);
+    void cancelFlight(unsigned flNumber);
+    void rescheduleFlight(unsigned flNumber);
 
 };
 
