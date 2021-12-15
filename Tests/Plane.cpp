@@ -65,6 +65,13 @@ void Plane::cancelFlight(unsigned fl) {
     }
 }
 
-void Plane::resch
+// due to delay or bad weather
+void Plane::rescheduleFlight(Flight &f1){
+    for(auto it = flightPlan.begin(); it != flightPlan.end(); it++){
+        if((*it).getFlightNumber() == f1.getFlightNumber()){
+            (*it).setDepartureDate(f1.getDepartureDate());
+        }
+    }
+}
 
 

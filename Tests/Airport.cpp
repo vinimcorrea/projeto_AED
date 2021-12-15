@@ -3,3 +3,7 @@
 //
 
 #include "Airport.h"
+
+const BST<GroundTransportation> &Airport::getLocalInformation() const {
+    return localInformation;
+}

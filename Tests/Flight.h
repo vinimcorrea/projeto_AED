@@ -28,6 +28,10 @@ public:
     const vector<Passenger> &getPassengers() const;
     unsigned int getFlightNumber() const;
     void insertPassenger(Passenger& p1);
+
+    const string &getDepartureDate() const;
+
+    void setDepartureDate(const string &departureDate);
 };
 
 #endif //AED_PROJECT_FLIGHT_H

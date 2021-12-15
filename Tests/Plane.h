@@ -33,7 +33,7 @@ public:
     void doneService();
     bool passengerGetTicket(Passenger &p1, unsigned flNumber);
     void cancelFlight(unsigned flNumber);
-    void rescheduleFlight(unsigned flNumber);
+    void rescheduleFlight(Flight &f1);
 
 };
 

@@ -12,3 +12,11 @@ unsigned int Flight::getFlightNumber() const {
 void Flight::setNumberOfLuggage(unsigned nl){
     numberOfLuggage = nl;
 }
+
+void Flight::setDepartureDate(const string &departureDate) {
+    Flight::departureDate = departureDate;
+}
+
+const string &Flight::getDepartureDate() const {
+    return departureDate;
+}
