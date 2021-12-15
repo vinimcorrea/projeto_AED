@@ -4,7 +4,7 @@
 - [ ] Display basic information list about the planes.
 - [ ] Display flight schedules for each plane.
 - [ ] Reschedule flights.
-- [ ] Cancel flights.
+- [X] Cancel flights.
 
 ## Services:
 - [ ] Display information on scheduled services.
