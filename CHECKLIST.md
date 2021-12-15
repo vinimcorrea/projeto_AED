@@ -12,9 +12,9 @@
 
 ## Passenger:
 - [ ] Display information about purchased tickets.
-- [ ] Purchase tickets.
-- [ ] Purchase bundles of tickets.
-- [ ] Specify baggage inclusion.
+- [X] Purchase tickets.
+- [X] Purchase bundles of tickets.
+- [X] Specify baggage inclusion.
 - [ ] Allocate tickets based on plane seats.
 - [ ] Refund tickets.
 
