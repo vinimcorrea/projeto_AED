@@ -8,7 +8,7 @@
 
 ## Services:
 - [ ] Display information on scheduled services.
-- [ ] Schedule new services.
+- [X] Schedule new services.
 
 ## Passenger:
 - [ ] Display information about purchased tickets.
