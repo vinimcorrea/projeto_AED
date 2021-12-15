@@ -12,12 +12,17 @@
 
 
 class Airport {
+
     string name;
     string city;
-    string country;
-public:
     BST<GroundTransportation> localInformation;
+
+public:
+    const BST<GroundTransportation> &getLocalInformation() const;
+    void addLocalInformation();
+
 };
 
 
 #endif //AED_PROJECT_AIRPORT_H
+

@@ -15,11 +15,10 @@ using namespace std;
 
 class Service {
     string type;
-    time_t date;
-    string employee;
+    string date;
 
 public:
-    Service(string type, time_t date, Employee employee);
+    Service(string type, string date, Employee employee);
     void addService(Service& s1);
     Service getService() const;
     void setService(Service& service);

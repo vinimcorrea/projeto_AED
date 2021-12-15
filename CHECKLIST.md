@@ -3,7 +3,7 @@
 ## Plane:
 - [ ] Display basic information list about the planes.
 - [ ] Display flight schedules for each plane.
-- [ ] Reschedule flights.
+- [X] Reschedule flights.
 - [X] Cancel flights.
 
 ## Services:
@@ -18,9 +18,9 @@
 - [ ] Allocate tickets based on plane seats.
 - [ ] Refund tickets.
 
-## Luggage Transportation:
+## Trolley:
 - [ ] Display information about transport car.
-- [ ] Allocate item on car.
+- [X] Allocate item on car.
 - [ ] Transport luggage to plane.
 
 ## Land Transportation:

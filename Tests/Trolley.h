@@ -11,7 +11,7 @@ using namespace std;
 
 class Trolley {
     int numberCarriage;
-    stack<Luggage> luggageStack;
+    stack<Luggage>luggageStack;
 public:
 };
 

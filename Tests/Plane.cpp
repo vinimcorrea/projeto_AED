@@ -20,9 +20,6 @@ void Plane::addService(const Service &s1){
     services.push(s1);
 }
 
-unsigned int Plane::getCapacity() const {
-    return capacity;
-}
 
 // get number of passengers according to flight number, if not existing flight or more passengers than capacity of plane, return -1
 int Plane::numPassengers(unsigned int flight) const {
@@ -41,21 +38,40 @@ void Plane::doneService(){
     services.pop();
 }
 
-/*
-void Plane::sortServices() {
-    vector<Service> aux;
-    for(unsigned i = 0; i < services.size(); i++){
-        aux.push_back(services.front());
-        services.pop();
+// Passenger gets or not ticket for specific flight, if flight doesn't exist, return false, otherwise return true if there are seats available.
+// If passenger wants luggage, add to numberOfLuggage.
+bool Plane::passengerGetTicket(Passenger & p1, unsigned flNumber){
+    for(auto it = flightPlan.begin(); it != flightPlan.end(); it++){
+        if((it)->getFlightNumber() == flNumber){
+            unsigned freeSeats = capacity - numPassengers((*it).getFlightNumber());
+            if(p1.getLuggage()){
+                (*it).setNumberOfLuggage((*it).getNumberOfLuggage() + p1.getPassengers());
+            }
+            if(p1.getPassengers() <= freeSeats) {
+                return true;
+            }
+            break;
+        }
     }
-    sort(aux.begin(), aux.end());
+    return false;
+}
 
-    for(unsigned i = 0; i < aux.size(); i++){
-        services.push(aux[i]);
+// due to bad conditions of plane or pandemics.
+void Plane::cancelFlight(unsigned fl) {
+    for(auto it = flightPlan.begin(); it != flightPlan.end(); it++){
+        if((*it).getFlightNumber() == fl)
+            flightPlan.erase(it);
+            break;
     }
 }
-bool Plane::cancelFlight(Flight &f1) {
-    return f1.getPassengers().size() > capacity;
+
+// due to delay or bad weather
+void Plane::rescheduleFlight(Flight &f1){
+    for(auto it = flightPlan.begin(); it != flightPlan.end(); it++){
+        if((*it).getFlightNumber() == f1.getFlightNumber()){
+            (*it).setDepartureDate(f1.getDepartureDate());
+        }
+    }
 }
-*/
+
 

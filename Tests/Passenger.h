@@ -2,22 +2,23 @@
 #define AED_PROJECT_PASSENGER_H
 
 #include <string>
-#include <ctime>
 #include "Plane.h"
 #include "Flight.h"
+#include "Service.h"
 
 using namespace std;
 
 
-class Passenger {
+class Passenger{
     unsigned passengers;
-    unsigned numberLuggage;
+    bool  luggage;
     unsigned id;
 public:
-    Passenger(unsigned id, unsigned nLuggage, unsigned nPassengers);
-    int getLuggage() const;
-    void setLuggage();
-    bool getTicket(bool luggage);
+    bool getLuggage() const;
+    Passenger(unsigned id, bool l, unsigned nPassengers);
+    bool dispatchLuggage() const;
+
+    unsigned int getPassengers() const;
 
 };
 
