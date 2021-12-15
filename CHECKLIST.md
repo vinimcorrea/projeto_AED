@@ -18,9 +18,9 @@
 - [ ] Allocate tickets based on plane seats.
 - [ ] Refund tickets.
 
-## Luggage Transportation:
+## Trolley:
 - [ ] Display information about transport car.
-- [ ] Allocate item on car.
+- [X] Allocate item on car.
 - [ ] Transport luggage to plane.
 
 ## Land Transportation:
