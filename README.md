@@ -1,7 +1,7 @@
 # Airport Scheme
 
 * Project name: Airport SML
-* Short description: Console-based program to manage an airport,
+* Short description: Console-based program to manage an airport
 * Environment: Unix/MacOS console
 * Tools: C++
 * Institution: FEUP
