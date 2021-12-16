@@ -27,7 +27,7 @@ public:
     Flight(unsigned flightNumber, string departureDate, unsigned duration, string origin, string destiny);
     const vector<Passenger> &getPassengers() const;
     unsigned int getFlightNumber() const;
-    void insertPassenger(Passenger& p1);
+    void addPassenger(Passenger& p1);
 
     const string &getDepartureDate() const;
 

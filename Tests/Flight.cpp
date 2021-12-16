@@ -20,3 +20,7 @@ void Flight::setDepartureDate(const string &departureDate) {
 const string &Flight::getDepartureDate() const {
     return departureDate;
 }
+
+void Flight::addPassenger(Passenger &p1) {
+    passengers.push_back(p1);
+}

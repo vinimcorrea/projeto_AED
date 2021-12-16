@@ -1,3 +1,7 @@
+//
+// Created by Vinícius Correa on 15/12/2021.
+//
+
 #ifndef AED_PROJECT_PLANE_H
 #define AED_PROJECT_PLANE_H
 
@@ -33,8 +37,8 @@ public:
     void doneService();
     bool passengerGetTicket(Passenger &p1, unsigned flNumber);
     void cancelFlight(unsigned flNumber);
-    void rescheduleFlight(Flight &f1);
-
+    void rescheduleFlight(Flight & f1);
+    bool searchFlight(unsigned id) const;
 };
 
 #endif //AED_PROJECT_PLANE_H

@@ -16,7 +16,7 @@ void Trolley::insertLuggageIntoTrolley() {
         stack<Luggage> empty;
         for(auto it = luggageStacksPerCarriage.begin(); it != luggageStacksPerCarriage.end(); it++){
             (*it).push_back(empty);
-        }
+        } // [ [[],[],[],[]], [[],[],[],[]], [[],[],[],[]]]
         b--;
     }
     for(auto it = luggageStacksPerCarriage.end(); it != luggageStacksPerCarriage.begin(); it++){

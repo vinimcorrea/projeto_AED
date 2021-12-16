@@ -7,17 +7,20 @@
 
 #include "BST.h"
 #include "GroundTransportation.h"
+#include "Plane.h"
 #include <string>
+#include <vector>
 
 
 
 class Airport {
-
     string name;
     string city;
     BST<GroundTransportation> localInformation;
+    vector<Plane *> planes;
 
 public:
+    Airport(string n, string c): localInformation(GroundTransportation("", 0.0, 0)){name = n; city = c;}
     const BST<GroundTransportation> &getLocalInformation() const;
     void addLocalInformation();
 

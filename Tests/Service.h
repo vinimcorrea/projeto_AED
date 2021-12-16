@@ -21,6 +21,7 @@ public:
     Service(string type, string date, Employee employee);
     void addService(Service& s1);
     Service getService() const;
+    enum ServiceType {CLEANING, MAINTENANCE};
     void setService(Service& service);
     const string &getType() const;
     const string &getEmployee() const;

@@ -1,7 +1,7 @@
 //
 // Created by Vinícius Correa on 14/12/2021.
 //
-
+/*
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
 #include "Plane.h"
@@ -51,3 +51,4 @@ TEST(test_1, numPassengers){
     EXPECT_EQ(0, pl1.numPassengers(f2.getFlightNumber()));
     EXPECT_EQ(6, pl1.numPassengers(f1.getFlightNumber()));
 }
+*/

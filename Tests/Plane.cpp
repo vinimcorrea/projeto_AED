@@ -1,6 +1,4 @@
 #include "Plane.h"
-#include <string>
-#include <vector>
 
 using namespace std;
 
@@ -21,13 +19,11 @@ void Plane::addService(const Service &s1){
 }
 
 
-// get number of passengers according to flight number, if not existing flight or more passengers than capacity of plane, return -1
+// get number of passengers according to flight number, if not existing flight, return -1
 int Plane::numPassengers(unsigned int flight) const {
-    for(auto it = flightPlan.begin(); it != flightPlan.end(); it++){
-        if((*it).getFlightNumber() == flight){
-            if((*it).getPassengers().size() <= capacity){
-                (*it).getPassengers().size();
-            }
+    for(const auto & it : flightPlan){
+        if(it.getFlightNumber() == flight){
+            return it.getPassengers().size();
         }
     }
     return -1;
@@ -41,16 +37,17 @@ void Plane::doneService(){
 // Passenger gets or not ticket for specific flight, if flight doesn't exist, return false, otherwise return true if there are seats available.
 // If passenger wants luggage, add to numberOfLuggage.
 bool Plane::passengerGetTicket(Passenger & p1, unsigned flNumber){
-    for(auto it = flightPlan.begin(); it != flightPlan.end(); it++){
-        if((it)->getFlightNumber() == flNumber){
-            unsigned freeSeats = capacity - numPassengers((*it).getFlightNumber());
+    for(auto & it : flightPlan){
+        if(it.getFlightNumber() == flNumber){
+            unsigned freeSeats = capacity - numPassengers(it.getFlightNumber());
             if(p1.getLuggage()){
-                (*it).setNumberOfLuggage((*it).getNumberOfLuggage() + p1.getPassengers());
+                it.setNumberOfLuggage(it.getNumberOfLuggage() + p1.getPassengers());
             }
             if(p1.getPassengers() <= freeSeats) {
+                it.addPassenger(p1);
                 return true;
             }
-            break;
+            return false;
         }
     }
     return false;
@@ -65,6 +62,7 @@ void Plane::cancelFlight(unsigned fl) {
     }
 }
 
+
 // due to delay or bad weather
 void Plane::rescheduleFlight(Flight &f1){
     for(auto it = flightPlan.begin(); it != flightPlan.end(); it++){
@@ -73,5 +71,7 @@ void Plane::rescheduleFlight(Flight &f1){
         }
     }
 }
+
+
 
 
