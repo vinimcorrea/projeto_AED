@@ -1,7 +1,7 @@
 //
 // Created by Vinícius Correa on 14/12/2021.
 //
-/*
+
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
 #include "Plane.h"
@@ -31,12 +31,12 @@ TEST(test_1, numPassengers){
     Flight f1(7813, "20-12-2021", 84, "Porto", "Milano");
     Flight f2(9648, "26-12-2021", 80, "Milano", "Brussels");
 
-    f1.insertPassenger(p1);
-    f1.insertPassenger(p2);
-    f1.insertPassenger(p3);
-    f1.insertPassenger(p4);
-    f1.insertPassenger(p5);
-    f1.insertPassenger(p6);
+    f1.addPassenger(p1);
+    f1.addPassenger(p2);
+    f1.addPassenger(p3);
+    f1.addPassenger(p4);
+    f1.addPassenger(p5);
+    f1.addPassenger(p6);
 
     list<Flight> flightPlan;
     flightPlan.push_back(f1);
@@ -51,4 +51,3 @@ TEST(test_1, numPassengers){
     EXPECT_EQ(0, pl1.numPassengers(f2.getFlightNumber()));
     EXPECT_EQ(6, pl1.numPassengers(f1.getFlightNumber()));
 }
-*/

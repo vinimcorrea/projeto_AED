@@ -11,7 +11,7 @@ class Employee {
     int id;
     string name;
 public:
-    Employee(int id, string name);
+    Employee(int i, string n){id =i; name =n;}
     int getId() const;
     void setId(int id);
 };

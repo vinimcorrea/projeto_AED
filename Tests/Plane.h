@@ -9,6 +9,7 @@
 #include "Flight.h"
 #include "Service.h"
 #include "Passenger.h"
+#include "Exceptions.h"
 
 #include <string>
 #include <vector>

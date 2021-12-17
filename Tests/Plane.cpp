@@ -19,14 +19,14 @@ void Plane::addService(const Service &s1){
 }
 
 
-// get number of passengers according to flight number, if not existing flight, return -1
+// get number of passengers according to flight number, if not existing flight, throw exception
 int Plane::numPassengers(unsigned int flight) const {
     for(const auto & it : flightPlan){
         if(it.getFlightNumber() == flight){
             return it.getPassengers().size();
         }
     }
-    return -1;
+    throw FlightDoesNotExist(flight);
 }
 
 void Plane::doneService(){
@@ -36,6 +36,7 @@ void Plane::doneService(){
 
 // Passenger gets or not ticket for specific flight, if flight doesn't exist, return false, otherwise return true if there are seats available.
 // If passenger wants luggage, add to numberOfLuggage.
+
 bool Plane::passengerGetTicket(Passenger & p1, unsigned flNumber){
     for(auto & it : flightPlan){
         if(it.getFlightNumber() == flNumber){
@@ -50,7 +51,7 @@ bool Plane::passengerGetTicket(Passenger & p1, unsigned flNumber){
             return false;
         }
     }
-    return false;
+    throw FlightDoesNotExist(flNumber);
 }
 
 // due to bad conditions of plane or pandemics.
