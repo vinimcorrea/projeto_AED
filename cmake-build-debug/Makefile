@@ -174,6 +174,19 @@ AED_project/fast:
 .PHONY : AED_project/fast
 
 #=============================================================================
+# Target rules for targets named Doxygen
+
+# Build rule for target.
+Doxygen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Doxygen
+.PHONY : Doxygen
+
+# fast build rule for target.
+Doxygen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Doxygen.dir\build.make CMakeFiles/Doxygen.dir/build
+.PHONY : Doxygen/fast
+
+#=============================================================================
 # Target rules for targets named gmock_main
 
 # Build rule for target.
@@ -393,6 +406,30 @@ Tests/Luggage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Luggage.cpp.s
 .PHONY : Tests/Luggage.cpp.s
 
+Tests/Menu.obj: Tests/Menu.cpp.obj
+.PHONY : Tests/Menu.obj
+
+# target to build an object file
+Tests/Menu.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Menu.cpp.obj
+.PHONY : Tests/Menu.cpp.obj
+
+Tests/Menu.i: Tests/Menu.cpp.i
+.PHONY : Tests/Menu.i
+
+# target to preprocess a source file
+Tests/Menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Menu.cpp.i
+.PHONY : Tests/Menu.cpp.i
+
+Tests/Menu.s: Tests/Menu.cpp.s
+.PHONY : Tests/Menu.s
+
+# target to generate assembly for a file
+Tests/Menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Menu.cpp.s
+.PHONY : Tests/Menu.cpp.s
+
 Tests/Passenger.obj: Tests/Passenger.cpp.obj
 .PHONY : Tests/Passenger.obj
 
@@ -573,6 +610,7 @@ help:
 	@echo ... install/strip
 	@echo ... list_install_components
 	@echo ... rebuild_cache
+	@echo ... Doxygen
 	@echo ... AED_project
 	@echo ... gmock
 	@echo ... gmock_main
@@ -599,6 +637,9 @@ help:
 	@echo ... Tests/Luggage.obj
 	@echo ... Tests/Luggage.i
 	@echo ... Tests/Luggage.s
+	@echo ... Tests/Menu.obj
+	@echo ... Tests/Menu.i
+	@echo ... Tests/Menu.s
 	@echo ... Tests/Passenger.obj
 	@echo ... Tests/Passenger.i
 	@echo ... Tests/Passenger.s

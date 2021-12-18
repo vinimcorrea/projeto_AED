@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/AED_project.dir/Tests/GroundTransportation.cpp.obj"
   "CMakeFiles/AED_project.dir/Tests/LocalTransport.cpp.obj"
   "CMakeFiles/AED_project.dir/Tests/Luggage.cpp.obj"
+  "CMakeFiles/AED_project.dir/Tests/Menu.cpp.obj"
   "CMakeFiles/AED_project.dir/Tests/Passenger.cpp.obj"
   "CMakeFiles/AED_project.dir/Tests/Plane.cpp.obj"
   "CMakeFiles/AED_project.dir/Tests/Service.cpp.obj"
