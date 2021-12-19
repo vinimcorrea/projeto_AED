@@ -1,7 +1,72 @@
-Aeroporto Sá Carneiro
+Aeroporto Francisco Sá Carneiro
 Porto
-scarneiro
+OPO
 
-Aeroporto de Lisboa
+Aeroporto Humberto Delgado
 Lisboa
-lisbon
+LIS
+
+
+Guangzhou Baiyun International Airport
+Baiyun-Huadu
+CAN
+
+Hartsfield–Jackson Atlanta International Airport
+Atlanta
+ATL
+
+Indira Gandhi International Airport
+Delhi
+DEL
+
+Istanbul Airport
+Arnavutköy
+IST
+
+Mexico City International Airport
+Venustiano Carranza
+MEX
+
+Charles de Gaulle Airport
+Roissy-en-France
+CDG
+
+São Paulo/Guarulhos International Airport
+Guarulhos
+GRU
+
+Orlando International Airport
+Orlando
+MCO
+
+Frankfurt Airport
+Frankfurt
+FRA
+
+Moscow Domodedovo Airport
+Domodedovo
+DME
+
+Gimpo International Airport
+Gangseo District
+GMP
+
+Tan Son Nhat International Airport
+Tân Bình District
+SGN
+
+Suvarnabhumi Airport
+Bang Phli
+BKK
+
+Beijing Daxing International Airport
+Daxing District
+PKX
+
+Madrid Barajas Airport
+Barajas
+MAD
+
+Dubai International Airport
+Dubai
+DXB

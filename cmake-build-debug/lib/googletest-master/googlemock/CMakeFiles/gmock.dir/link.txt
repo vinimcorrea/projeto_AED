@@ -1,2 +1,2 @@
-C:\msys64\mingw64\bin\ar.exe qc ..\..\libgmockd.a CMakeFiles/gmock.dir/src/gmock-all.cc.obj
-C:\msys64\mingw64\bin\ranlib.exe ..\..\libgmockd.a
+/Library/Developer/CommandLineTools/usr/bin/ar qc ../../libgmockd.a CMakeFiles/gmock.dir/src/gmock-all.cc.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib ../../libgmockd.a

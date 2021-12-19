@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Tomás Pires/Documents/School/AED/projeto_AED
+# Install script for directory: /Users/viniciuscorrea/Desktop/aedProject
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/AED_project")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,12 +34,12 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/msys64/mingw64/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "/Library/Developer/CommandLineTools/usr/bin/objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/cmake_install.cmake")
+  include("/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

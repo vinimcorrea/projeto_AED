@@ -31,7 +31,7 @@ void AirportMenu::displayMessage() {
     std::cout << "Welcome to the VRG Airline Management System." << std::endl;
     std::cout << "Please enter the codename of the desired airport, or \'q\' to quit to the command line." << std::endl;
     std::cout << std::endl;
-    std::cout << "Currently avaliable airports:" << std::endl;
+    std::cout << "Currently available airports:" << std::endl;
     for(auto airport : database->getAirports()){
         std::cout << airport.second->getName() << " ("
         << airport.second->getCity() << ") : "
