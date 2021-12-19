@@ -5,7 +5,7 @@
 #ifndef AED_PROJECT_DATABASE_H
 #define AED_PROJECT_DATABASE_H
 
-#include <vector>
+#include <unordered_map>
 
 #include "Airport.h"
 
@@ -16,7 +16,7 @@
  */
 class Database {
 private:
-    std::vector<Airport*> airports; ///database of airports
+    std::unordered_map<std::string, Airport*> airports; /*< database of airports */
 
     /**
      * @brief Loads the airport data from the corresponding text file.
@@ -33,6 +33,12 @@ private:
 public:
     Database();
     ~Database();
+
+    /**
+     * @brief Retrieves the airport listing.
+     * @return airport listing
+     */
+    std::unordered_map<std::string, Airport*> getAirports();
 };
 
 

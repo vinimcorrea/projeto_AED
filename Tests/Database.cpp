@@ -15,7 +15,7 @@ Database::Database() {
 
 Database::~Database() {
     for(auto it=airports.begin(); it!=airports.end(); ++it)
-        delete *it;
+        delete it->second;
 }
 
 void Database::loadAirports() {
@@ -27,8 +27,12 @@ void Database::loadAirports() {
             std::getline(airportFile, city);
             std::getline(airportFile, code);
 
-            airports.push_back(new Airport(name, city, code));
+            airports.insert(std::pair<std::string, Airport*>{code, new Airport(name, city, code)});
             std::getline(airportFile, name); //dummy read
         }
     }
+}
+
+unordered_map<std::string, Airport*> Database::getAirports() {
+    return airports;
 }

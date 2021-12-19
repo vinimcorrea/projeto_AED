@@ -32,6 +32,11 @@ public:
      */
     Airport(string n, string c, string code): localInformation(GroundTransportation("", 0.0, 0)),
     name(n), city(c), code(code) {};
+
+    const string getName();
+    const string getCity();
+    const string getCode();
+
     const BST<GroundTransportation> &getLocalInformation() const;
     void addLocalInformation();
 

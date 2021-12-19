@@ -30,6 +30,13 @@ Menu* Menu::processInput() {
 void AirportMenu::displayMessage() {
     std::cout << "Welcome to the VRG Airline Management System." << std::endl;
     std::cout << "Please enter the codename of the desired airport, or \'q\' to quit to the command line." << std::endl;
+    std::cout << std::endl;
+    std::cout << "Currently avaliable airports:" << std::endl;
+    for(auto airport : database->getAirports()){
+        std::cout << airport.second->getName() << " ("
+        << airport.second->getCity() << ") : "
+        << airport.second->getCode() << std::endl;
+    }
 }
 
 Menu* AirportMenu::processInput() {
@@ -40,12 +47,32 @@ Menu* AirportMenu::processInput() {
     if(inputSanityCheck()){
         if(userInput == "q")
             return nullptr;
-
-
-
+        auto targetAirport = database->getAirports().find(userInput);
+        if(targetAirport != database->getAirports().end()){
+            return new MainMenu(database, targetAirport->second);
+        }
     }
 
     std::cout << "Invalid user input." << std::endl;
+    return this;
+}
+
+void MainMenu::displayMessage() {
+    std::cout << "main menu goes here" << std::endl;
+}
+
+Menu* MainMenu::processInput() {
+    std::string userInput;
+
+    std::cin >> userInput;
+
+    if(inputSanityCheck()){
+        if(userInput == "q")
+            return nullptr;
+    }
+
+    std::cout << "Invalid user input." << std::endl;
+    return this;
 }
 
 /*

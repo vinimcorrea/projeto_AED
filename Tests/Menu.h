@@ -8,9 +8,17 @@
 #include <string>
 
 #include "Airport.h"
+#include "Database.h"
+
+/**
+ * @file Menu.h
+ * @brief User interface manager.
+ */
 
 class Menu {
 protected:
+    Database* database;
+
     /**
      * @brief General-purpose input sanity check function.
      *
@@ -19,6 +27,12 @@ protected:
     static bool inputSanityCheck();
 
 public:
+    /**
+     * @brief Constructor.
+     * @param database -> pointer to current database
+     */
+    Menu(Database* database) : database(database) {};
+
     /**
      * @brief Displays the menu's main screen.
      */
@@ -36,14 +50,17 @@ public:
 };
 
 class AirportMenu : public Menu{
-private:
-    /**
-     * @brief Loads an airport's data based on the
-     * @param codename
-     * @return
-     */
-    Airport* loadAirport(std::string codename);
 public:
+    AirportMenu(Database* database) : Menu(database) {};
+    void displayMessage() override;
+    Menu* processInput() override;
+};
+
+class MainMenu : public Menu{
+private:
+    Airport* currentAirport;
+public:
+    MainMenu(Database* database, Airport* airport) : Menu(database), currentAirport(airport) {};
     void displayMessage() override;
     Menu* processInput() override;
 };

@@ -7,3 +7,15 @@
 const BST<GroundTransportation> &Airport::getLocalInformation() const {
     return localInformation;
 }
+
+const string Airport::getName() {
+    return name;
+}
+
+const string Airport::getCity() {
+    return city;
+}
+
+const string Airport::getCode() {
+    return code;
+}
