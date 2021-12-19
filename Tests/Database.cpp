@@ -14,22 +14,21 @@ Database::Database() {
 }
 
 Database::~Database() {
-    for(auto it=airports.begin(); it!=airports.end(); ++it)
-        delete it->second;
+    for(auto & airport : airports)
+        delete airport.second;
 }
 
 void Database::loadAirports() {
-    std::ifstream airportFile(AIRPORT_FILE);
-    if(airportFile.is_open()) {
-        while (!airportFile.eof()) {
-            std::string name, city, code;
-            std::getline(airportFile, name);
-            std::getline(airportFile, city);
-            std::getline(airportFile, code);
+    std::fstream airportFile;
+    airportFile.open(AIRPORT_FILE, ios::in);
+    while (!airportFile.eof()) {
+        std::string name, city, code;
+        std::getline(airportFile, name);
+        std::getline(airportFile, city);
+        std::getline(airportFile, code);
 
-            airports.insert(std::pair<std::string, Airport*>{code, new Airport(name, city, code)});
-            std::getline(airportFile, name); //dummy read
-        }
+        airports.insert(std::pair<std::string, Airport*>{code, new Airport(name, city, code)});
+        std::getline(airportFile, name); //dummy read
     }
 }
 
