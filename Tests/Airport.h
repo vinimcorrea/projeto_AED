@@ -24,6 +24,12 @@ class Airport {
     vector<Plane *> planes;
 
 public:
+    /**
+     * @brief Constructor.
+     * @param n -> name of airport
+     * @param c -> location of airport
+     * @param code -> filename code
+     */
     Airport(string n, string c, string code): localInformation(GroundTransportation("", 0.0, 0)),
     name(n), city(c), code(code) {};
     const BST<GroundTransportation> &getLocalInformation() const;

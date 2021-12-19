@@ -16,7 +16,19 @@
  */
 class Database {
 private:
-    std::vector<Airport*> airports; ///Database of airports
+    std::vector<Airport*> airports; ///database of airports
+
+    /**
+     * @brief Loads the airport data from the corresponding text file.
+     *
+     * The text file is formatted in the following fashion:\n
+     *  -name\n
+     *  -city\n
+     *  -code\n
+     *  [blankspace]\n
+     * This applies for each airport entry.
+     */
+    void loadAirports();
 
 public:
     Database();
