@@ -9,9 +9,14 @@
 
 #include "Airport.h"
 
+/**
+ * @file Database.h
+ *
+ * @brief Container for the entire database.
+ */
 class Database {
 private:
-    std::vector<Airport*> airports;
+    std::vector<Airport*> airports; ///Database of airports
 
 public:
     Database();

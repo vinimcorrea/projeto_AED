@@ -13,11 +13,12 @@ Database::Database() {
     std::ifstream airportFile(AIRPORT_FILE);
     if(airportFile.is_open()) {
         while (!airportFile.eof()) {
-            std::string name, city;
+            std::string name, city, code;
             std::getline(airportFile, name);
             std::getline(airportFile, city);
+            std::getline(airportFile, code)
 
-            airports.push_back(new Airport(name, city));
+            airports.push_back(new Airport(name, city, code));
             std::getline(airportFile, name); //dummy read
         }
     }

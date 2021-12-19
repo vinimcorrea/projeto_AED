@@ -12,15 +12,20 @@
 #include <vector>
 
 
-
+/**
+ * @file Airport.h
+ * @brief Class containing information pertaining to one airport
+ */
 class Airport {
-    string name;
-    string city;
+    string name; ///name of the airport
+    string city; ///name of the airport's location
+    string code; ///codename used in files associated with this airport
     BST<GroundTransportation> localInformation;
     vector<Plane *> planes;
 
 public:
-    Airport(string n, string c): localInformation(GroundTransportation("", 0.0, 0)){name = n; city = c;}
+    Airport(string n, string c, string code): localInformation(GroundTransportation("", 0.0, 0)),
+    name(n), city(c), code(code) {};
     const BST<GroundTransportation> &getLocalInformation() const;
     void addLocalInformation();
 
