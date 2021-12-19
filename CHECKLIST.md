@@ -2,12 +2,14 @@
 
 ## Plane:
 - [ ] Display basic information list about the planes.
-- [ ] Display flight schedules for each plane.
+- [X] Display flight schedules for each plane.
 - [X] Reschedule flights.
 - [X] Cancel flights.
+- [ ] Sort by user attribute choice
+
 
 ## Services:
-- [ ] Display information on scheduled services.
+- [X] Display information on scheduled services.
 - [X] Schedule new services.
 
 ## Passenger:
@@ -15,8 +17,7 @@
 - [X] Purchase tickets.
 - [X] Purchase bundles of tickets.
 - [X] Specify baggage inclusion.
-- [ ] Allocate tickets based on plane seats.
-- [ ] Refund tickets.
+- [X] Refund tickets.
 
 ## Trolley:
 - [ ] Display information about transport car.
@@ -27,3 +28,4 @@
 - [ ] Display information on transports of a given airport.
 - [ ] Add new entries.
 - [ ] Update entries.
+- [ ] partial or total display based on user's choice
