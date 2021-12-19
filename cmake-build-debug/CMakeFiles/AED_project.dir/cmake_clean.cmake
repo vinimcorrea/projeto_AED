@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "AED_project.pdb"
   "CMakeFiles/AED_project.dir/Tests/Airport.cpp.obj"
   "CMakeFiles/AED_project.dir/Tests/Boarding.cpp.obj"
+  "CMakeFiles/AED_project.dir/Tests/Database.cpp.obj"
   "CMakeFiles/AED_project.dir/Tests/Employee.cpp.obj"
   "CMakeFiles/AED_project.dir/Tests/Flight.cpp.obj"
   "CMakeFiles/AED_project.dir/Tests/GroundTransportation.cpp.obj"

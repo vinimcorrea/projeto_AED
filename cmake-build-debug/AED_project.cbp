@@ -353,6 +353,12 @@
 		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Boarding.h">
 			<Option target="AED_project"/>
 		</Unit>
+		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Database.cpp">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Database.h">
+			<Option target="AED_project"/>
+		</Unit>
 		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Employee.cpp">
 			<Option target="AED_project"/>
 		</Unit>

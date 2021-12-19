@@ -286,6 +286,30 @@ Tests/Boarding.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Boarding.cpp.s
 .PHONY : Tests/Boarding.cpp.s
 
+Tests/Database.obj: Tests/Database.cpp.obj
+.PHONY : Tests/Database.obj
+
+# target to build an object file
+Tests/Database.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Database.cpp.obj
+.PHONY : Tests/Database.cpp.obj
+
+Tests/Database.i: Tests/Database.cpp.i
+.PHONY : Tests/Database.i
+
+# target to preprocess a source file
+Tests/Database.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Database.cpp.i
+.PHONY : Tests/Database.cpp.i
+
+Tests/Database.s: Tests/Database.cpp.s
+.PHONY : Tests/Database.s
+
+# target to generate assembly for a file
+Tests/Database.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Database.cpp.s
+.PHONY : Tests/Database.cpp.s
+
 Tests/Employee.obj: Tests/Employee.cpp.obj
 .PHONY : Tests/Employee.obj
 
@@ -622,6 +646,9 @@ help:
 	@echo ... Tests/Boarding.obj
 	@echo ... Tests/Boarding.i
 	@echo ... Tests/Boarding.s
+	@echo ... Tests/Database.obj
+	@echo ... Tests/Database.i
+	@echo ... Tests/Database.s
 	@echo ... Tests/Employee.obj
 	@echo ... Tests/Employee.i
 	@echo ... Tests/Employee.s

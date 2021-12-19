@@ -3,8 +3,52 @@
 //
 
 #include <iostream>
+#include <limits>
 #include "Menu.h"
 
+//--- Menu ------------------------------------------------
+
+bool Menu::inputSanityCheck() {
+    if(std::cin.fail()){
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        return false;
+    }
+    return true;
+}
+
+void Menu::displayMessage() {
+    std::cout << "This menu should not be displayed." << std::endl;
+}
+
+Menu* Menu::processInput() {
+    return nullptr;
+}
+
+//--- Airport Menu ----------------------------------------
+
+void AirportMenu::displayMessage() {
+    std::cout << "Welcome to the VRG Airline Management System." << std::endl;
+    std::cout << "Please enter the codename of the desired airport, or \'q\' to quit to the command line." << std::endl;
+}
+
+Menu* AirportMenu::processInput() {
+    std::string userInput;
+
+    std::cin >> userInput;
+
+    if(inputSanityCheck()){
+        if(userInput == "q")
+            return nullptr;
+
+
+
+    }
+
+    std::cout << "Invalid user input." << std::endl;
+}
+
+/*
 static void ApplicationMenu(){
     //For now this is just a reference. TODO the actual functionality.
 
@@ -38,3 +82,4 @@ static void ApplicationMenu(){
     std::cout << "║ [q] Quit to command line                                                     ║" << std::endl;
     std::cout << "╚══════════════════════════════════════════════════════════════════════════════╝" << std::endl;
 }
+ */

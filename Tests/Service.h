@@ -18,7 +18,7 @@ class Service {
     string date;
 
 public:
-    Service(string type, string date, Employee employee);
+    Service(string type, string date, Employee employee) : type(type), date(date) {};
     void addService(Service& s1);
     Service getService() const;
     enum ServiceType {CLEANING, MAINTENANCE};

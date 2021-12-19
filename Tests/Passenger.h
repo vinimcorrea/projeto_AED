@@ -2,9 +2,9 @@
 #define AED_PROJECT_PASSENGER_H
 
 #include <string>
-#include "Plane.h"
-#include "Flight.h"
-#include "Service.h"
+//#include "Plane.h"
+//#include "Flight.h"
+//#include "Service.h"
 
 using namespace std;
 

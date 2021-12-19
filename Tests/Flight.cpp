@@ -9,6 +9,10 @@ unsigned int Flight::getFlightNumber() const {
     return flightNumber;
 }
 
+int Flight::getNumberOfLuggage() const {
+    return numberOfLuggage;
+}
+
 void Flight::setNumberOfLuggage(unsigned nl){
     numberOfLuggage = nl;
 }

@@ -7,7 +7,6 @@
 
 #include "Service.h"
 #include "Flight.h"
-#include "Service.h"
 #include "Passenger.h"
 #include "Exceptions.h"
 

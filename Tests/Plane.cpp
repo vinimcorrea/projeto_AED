@@ -26,7 +26,8 @@ int Plane::numPassengers(unsigned int flight) const {
             return it.getPassengers().size();
         }
     }
-    throw FlightDoesNotExist(flight);
+    //throw FlightDoesNotExist(flight);
+    return -1;
 }
 
 void Plane::doneService(){
@@ -51,7 +52,8 @@ bool Plane::passengerGetTicket(Passenger & p1, unsigned flNumber){
             return false;
         }
     }
-    throw FlightDoesNotExist(flNumber);
+    //throw FlightDoesNotExist(flNumber);
+    return false;
 }
 
 // due to bad conditions of plane or pandemics.

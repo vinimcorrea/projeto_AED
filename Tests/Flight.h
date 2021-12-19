@@ -24,7 +24,9 @@ public:
 public:
     void setNumberOfLuggage(unsigned numberOfLuggage);
 
-    Flight(unsigned flightNumber, string departureDate, unsigned duration, string origin, string destiny);
+    Flight(unsigned flightNumber, string departureDate, unsigned duration, string origin, string destiny)
+        :flightNumber(flightNumber), departureDate(departureDate), duration(duration),
+        originFlight(origin), destinyFlight(destiny) {};
     const vector<Passenger> &getPassengers() const;
     unsigned int getFlightNumber() const;
     void addPassenger(Passenger& p1);
