@@ -49,12 +49,14 @@ public:
     //static void applicationMenu();
 };
 
+
 class AirportMenu : public Menu{
 public:
     AirportMenu(Database* database) : Menu(database) {};
     void displayMessage() override;
     Menu* processInput() override;
 };
+
 
 class MainMenu : public Menu{
 private:
@@ -65,5 +67,12 @@ public:
     Menu* processInput() override;
 };
 
+
+class LocalTransportMenu : public Menu{
+public:
+    LocalTransportMenu(Database* database) : Menu(database) {};
+    void displayMessage() override;
+    Menu* processInput() override;
+};
 
 #endif //AED_PROJECT_MENU_H

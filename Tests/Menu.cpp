@@ -58,7 +58,18 @@ Menu* AirportMenu::processInput() {
 }
 
 void MainMenu::displayMessage() {
-    std::cout << "main menu goes here" << std::endl;
+    std::cout << "Currently accessing: " << currentAirport->getName() << std::endl;
+    std::cout << "╔══════════════════════════════════════════════════════════════════════════════╗" << std::endl;
+    std::cout << "║                                                                              ║" << std::endl;
+    std::cout << "║ [1] AIRCRAFT MANAGEMENT SYSTEM                                               ║" << std::endl;
+    std::cout << "║ [2] FLIGHT SCHEDULING SYSTEM                                                 ║" << std::endl;
+    std::cout << "║ [3] SERVICE SCHEDULING SYSTEM                                                ║" << std::endl;
+    std::cout << "║ [4] CLIENT MANAGEMENT SYSTEM                                                 ║" << std::endl;
+    std::cout << "║ [5] BAGGAGE AUTOMATIC CHECK-IN SERVICE MANAGEMENT                            ║" << std::endl;
+    std::cout << "║ [6] LOCAL TRANSPORT SEARCH SYSTEM MANAGEMENT                                 ║" << std::endl;
+    std::cout << "║                                                                              ║" << std::endl;
+    std::cout << "║ [q] Go back                                                                  ║" << std::endl;
+    std::cout << "╚══════════════════════════════════════════════════════════════════════════════╝" << std::endl;
 }
 
 Menu* MainMenu::processInput() {
@@ -69,6 +80,46 @@ Menu* MainMenu::processInput() {
     if(inputSanityCheck()){
         if(userInput == "q")
             return nullptr;
+
+        switch(stoi(userInput)){
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                return new LocalTransportMenu(database);
+        };
+    }
+
+    std::cout << "Invalid user input." << std::endl;
+    return this;
+}
+
+
+void LocalTransportMenu::displayMessage() {
+    std::cout << "╔══════════════════════════════════════════════════════════════════════════════╗" << std::endl;
+    std::cout << "║ [1] Search an airport's local transport database                             ║" << std::endl;
+    std::cout << "╚══════════════════════════════════════════════════════════════════════════════╝" << std::endl;
+}
+
+Menu* LocalTransportMenu::processInput() {
+    std::string userInput;
+
+    std::cin >> userInput;
+
+    if(inputSanityCheck()){
+        if(userInput == "q")
+            return nullptr;
+        switch(stoi(userInput)){
+            case 1:
+                break;
+        };
     }
 
     std::cout << "Invalid user input." << std::endl;

@@ -18,28 +18,12 @@
   <component name="ChangeListManager">
     <list default="true" id="ce899e62-bdae-48cf-babd-c8a2d6c962db" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Airport.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Airport.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Airport.h" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Airport.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Database.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Database.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Database.h" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Database.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/Menu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Menu.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/Menu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Menu.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_project.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AED_project.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Doxyfile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Doxyfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/output/html/_database_8h_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/output/html/_database_8h_source.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/output/html/_menu_8h_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/output/html/_menu_8h_source.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/output/html/class_airport_menu-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/output/html/class_airport_menu-members.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/output/html/class_airport_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/output/html/class_airport_menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/output/html/class_database.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/output/html/class_database.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/output/html/dir_33c78a012c8d08979f57a54a07694c46.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/output/html/dir_33c78a012c8d08979f57a54a07694c46.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/output/html/files.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/output/html/files.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/output/html/functions.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/output/html/functions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/output/html/functions_func.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/output/html/functions_func.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/output/html/search/all_8.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/output/html/search/all_8.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/output/html/search/all_9.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/output/html/search/all_9.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/output/html/search/functions_3.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/output/html/search/functions_3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/output/html/search/searchdata.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/output/html/search/searchdata.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Doxyfile" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Doxyfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +36,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="22ICmYMuDFt4Komoz9JlYEmGIRS" />
   <component name="ProjectViewState">
@@ -132,7 +124,7 @@
       <workItem from="1639666050840" duration="1540000" />
       <workItem from="1639774450371" duration="5111000" />
       <workItem from="1639786414201" duration="303000" />
-      <workItem from="1639919329056" duration="8390000" />
+      <workItem from="1639919329056" duration="11814000" />
     </task>
     <servers />
   </component>
