@@ -4,13 +4,6 @@
 
 #include "Time.h"
 
-Time::Time(int h, int m, int s)
-{
-    hour = h;
-    minute = m;
-    second = s;
-}
-
 void Time::setTime(std::string s) {
     hour = stoi(s.substr(0,2));
     minute = stoi(s.substr(3,2));
@@ -41,7 +34,7 @@ bool Time::equals(Time otherTime)
         return false;
 }
 
-bool Time::operator<(const Time &t1) const{
+bool Time::operator<(Time const &t1) const{
     if(hour == t1.hour){
         if (minute == t1.minute) {
             return second < t1.second;

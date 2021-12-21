@@ -2,8 +2,8 @@
 
 using namespace std;
 
-void Plane::addFlight(const Flight &f1) {
-    flightPlan.push_back(f1);
+void Plane::addFlight(Flight flight) {
+    flightPlan.push_back(flight);
 }
 
 const string& Plane::getLicense() const {
@@ -22,6 +22,10 @@ const queue<Service> &Plane::getServices() const {
     return services;
 }
 
+const list<Service>& Plane::getPastServices() const {
+    return realizedServices;
+}
+
 const list<Flight> &Plane::getFlight() const{
     return flightPlan;
 }
@@ -32,6 +36,11 @@ const int Plane::getNumberOfFlights() const {
 
 void Plane::addService(const Service &s1){
     services.push(s1);
+}
+
+void Plane::executeService() {
+    realizedServices.push_back(services.front());
+    services.pop();
 }
 
 
@@ -93,7 +102,7 @@ void Plane::rescheduleFlight(const unsigned& n, const Date& date){
 
 struct sortByNumber{
 
-    inline bool operator()(const Flight & f1, const Flight& f2){
+    bool operator()(const Flight & f1, const Flight& f2){
         return f1.getFlightNumber() < f2.getFlightNumber();
     }
 };
@@ -101,14 +110,14 @@ struct sortByNumber{
 
 struct sortByDeparture{
 
-    inline bool operator()(const Flight & f1, const Flight& f2){
+    bool operator()(const Flight & f1, const Flight& f2){
         return f1.getDepartureDate() < f2.getDepartureDate();
     }
 };
 
 struct sortByDuration{
 
-    inline bool operator()(const Flight& f1, const Flight& f2){
+    bool operator()(const Flight& f1, const Flight& f2){
         return f1.getDuration() < f2.getDuration();
     }
 };
@@ -116,7 +125,7 @@ struct sortByDuration{
 
 struct sortByOrigin{
 
-    inline bool operator()(const Flight& f1, const Flight& f2){
+    bool operator()(const Flight& f1, const Flight& f2){
         return f1.getOriginFlight() < f2.getOriginFlight();
     }
 };
@@ -124,7 +133,7 @@ struct sortByOrigin{
 
 struct sortByDestiny{
 
-    inline bool operator()(const Flight& f1, const Flight& f2){
+    bool operator()(const Flight& f1, const Flight& f2){
         return f1.getDestinyFlight() < f2.getDestinyFlight();
     }
 };
@@ -147,7 +156,7 @@ list<Flight> Plane::sortByUserInput(const int &c1) {
             flightPlan.sort(sortByDestiny());
             return flightPlan;
     }
-
+    return list<Flight>();
 }
 
 list<Flight> Plane::filterByDestination(std::string city) {

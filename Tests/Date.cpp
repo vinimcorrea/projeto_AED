@@ -35,7 +35,7 @@ void Date::setDay(int day) {
 }
 
 std::string Date::formatted() const {
-    return to_string(day) + '-' + to_string(month) + '-' + to_string(year);
+    return (to_string(day) + "-" + to_string(month) + "-" + to_string(year));
 }
 
 Date Date::getDate(string str) {
@@ -95,18 +95,18 @@ bool Date::is_number(string str) {
 }
 
 // using for sort
-bool Date::operator<(const Date &d1) const {
-    if(year == d1.year){
-        if (month == d1.month) {
-            return day < d1.day;
+bool Date::operator<(const Date &d1) const{
+    if(this->year == d1.year){
+        if (this->month == d1.month) {
+            return this->day < d1.day;
         }
-        return month < d1.month;
+        return this->month < d1.month;
     }
-    return year < d1.year;
+    return this->year < d1.year;
 }
 
-bool Date::operator==(const Date& d1) const {
-    if (day == d1.day && month == d1.month && year == d1.year)
+bool Date::operator==(const Date& d1) const{
+    if (this->day == d1.day && this->month == d1.month && this->year == d1.year)
     {return true;}
     else return false;
 }

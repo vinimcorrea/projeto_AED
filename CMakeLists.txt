@@ -16,13 +16,8 @@ add_executable(AED_project
         Tests/Luggage.h
         Tests/Service.cpp
         Tests/Service.h
-        Tests/tests.cpp
-        Tests/Employee.cpp
-        Tests/Employee.h
         Tests/Ticket.cpp
         Tests/Ticket.h
-        Tests/Boarding.cpp
-        Tests/Boarding.h
         Tests/Trolley.cpp
         Tests/Trolley.h
         Tests/LocalTransport.cpp
@@ -37,7 +32,11 @@ add_executable(AED_project
         Tests/Menu.cpp
         Tests/Menu.h
         Tests/Database.cpp
-        Tests/Database.h)
+        Tests/Database.h
+        Tests/Date.cpp
+        Tests/Date.h
+        Tests/Time.cpp
+        Tests/Time.h)
 
 target_link_libraries(AED_project gtest gtest_main)
 

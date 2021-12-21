@@ -21,7 +21,7 @@ void Flight::setDepartureDate(const Date &departureDate) {
     Flight::departureDate = departureDate;
 }
 
-const Date &Flight::getDepartureDate() const {
+Date Flight::getDepartureDate() const {
     return departureDate;
 }
 

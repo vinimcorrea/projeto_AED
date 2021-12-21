@@ -27,7 +27,7 @@ const string Airport::getCode() {
     return code;
 }
 
-vector<Plane*>& Airport::getPlanes() {
+list<Plane*>& Airport::getPlanes() {
     return planes;
 }
 
@@ -44,8 +44,8 @@ Plane* Airport::findPlaneWithLicense(const std::string &filter) {
     return nullptr;
 }
 
-vector<Plane*> Airport::filterPlanesByType(const std::string &filter) {
-    vector<Plane*> ret;
+list<Plane*> Airport::filterPlanesByType(const std::string &filter) {
+    list<Plane*> ret;
 
     for(auto it=planes.begin(); it!=planes.end(); ++it){
         Plane* current = *it;
@@ -59,52 +59,52 @@ vector<Plane*> Airport::filterPlanesByType(const std::string &filter) {
 
 struct sortByCapacity{
 
-    inline bool operator()(const Plane& p1, const Plane& p2){
-        return p1.getCapacity() < p2.getCapacity();
+    inline bool operator()(const Plane* p1, const Plane* p2){
+        return p1->getCapacity() < p2->getCapacity();
     }
 };
 
 
 struct sortByNumberOfFlights{
 
-    inline bool operator()(const Plane& p1, const Plane& p2){
-        return p1.getNumberOfFlights() < p2.getNumberOfFlights();
+    inline bool operator()(const Plane* p1, const Plane* p2){
+        return p1->getNumberOfFlights() < p2->getNumberOfFlights();
     }
 };
 struct sortByType{
 
-    inline bool operator()(const Plane& p1, const Plane& p2){
-        return p1.getType() < p2.getType();
+    inline bool operator()(const Plane* p1, const Plane* p2){
+        return p1->getType() < p2->getType();
     }
 };
 
 struct sortByLicense{
 
-    inline bool operator()(const Plane& p1, const Plane& p2){
-        return p1.getLicense() < p2.getLicense();
+    inline bool operator()(const Plane* p1, const Plane* p2){
+        return p1->getLicense() < p2->getLicense();
     }
 };
 
 
 
-vector<Plane*> Airport::sortByUserInputPlanes(const int &s1) {
-    switch(s1){
+list<Plane*> Airport::sortByUserInputPlanes(const int &s1) {
+    switch (s1) {
         case 1:
-            sort(planes.begin(), planes.end(), sortByCapacity());
+            planes.sort(sortByCapacity());
             return planes;
         case 2:
-            sort(planes.begin(), planes.end(), sortByNumberOfFlights());
+            planes.sort(sortByNumberOfFlights());
             return planes;
         case 3:
-            sort(planes.begin(), planes.end(), sortByType());
+            planes.sort(sortByType());
             return planes;
         case 4:
-            sort(planes.begin(), planes.end(), sortByLicense());
+            planes.sort(sortByLicense());
             return planes;
-
     }
+    return list<Plane*>();
 }
-
+/*
 BST<GroundTransportation> Airport::filterTransportByType(const string &s0, GroundTransportation& previous, GroundTransportation& next) {
     BST<GroundTransportation> aux = localInformation;
     if(GroundTransportation("", 0.0, 0) == localInformation.find(GroundTransportation(s0, 0.0, 0))){
@@ -117,6 +117,7 @@ BST<GroundTransportation> Airport::filterTransportByType(const string &s0, Groun
         }
     }
 }
+ */
 
 void Airport::readFile(ifstream &f) {
     string type, distance, hour, minute, second;

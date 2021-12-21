@@ -9,6 +9,7 @@
 
 #include "Airport.h"
 #include "Database.h"
+#include "Service.h"
 
 /**
  * @file Menu.h
@@ -41,8 +42,9 @@ protected:
      *
      * @param t -> data pool to construct the data from
      */
-    void displayTable(const vector<Plane* >& planes) const;
+    void displayTable(const list<Plane* >& planes) const;
     void displayTable(const list<Flight>& planes) const;
+    void displayTable(const list<Service>& services) const;
     void displayTable(const BST<GroundTransportation>& localTransports) const;
 
     std::string formatEntry(const std::string& entry, int length) const;
@@ -120,13 +122,33 @@ public:
     Menu* processInput() override;
 };
 
+class ServiceMenu : public MainMenu{
+private:
+    /**
+     * @brief Schedules a new service according to user input.
+     */
+    void addService();
+    /**
+     * @brief Displays next and last services.
+     */
+    void serviceTable();
+public:
+    ServiceMenu(Database* database, Airport* airport) : MainMenu(database, airport) {};
+    void displayMessage() override;
+    Menu* processInput() override;
+};
 
-class LocalTransportMenu : public MainMenu{
+
+class LocalTransportMenu : public Menu{
 private:
     /**
      * @brief Displays table of local transports, formatted according to user input.
      */
     void transportTable();
+    /**
+     * @brief Adds a new service to the schedule according to user input
+     */
+    void addService();
 public:
     LocalTransportMenu(Database* database) : Menu(database) {};
     void displayMessage() override;

@@ -12,7 +12,7 @@
 #include <fstream>
 #include <string>
 #include <utility>
-#include <vector>
+#include <list>
 
 
 /**
@@ -20,18 +20,16 @@
  * @brief Class containing information pertaining to one airport
  */
 
-
+class Plane;
 
 class Airport {
+private:
     string name; ///name of the airport
     string city; ///name of the airport's location
     string code; ///codename used in files associated with this airport
     BST<GroundTransportation> localInformation;
-    vector<Plane *> planes;
-
+    list<Plane *> planes;
 public:
-
-
     Airport(): localInformation(GroundTransportation("", 0.0, 0)) {};
     /**
      * @brief Constructor.
@@ -40,7 +38,7 @@ public:
      * @param code -> filename code
      */
     Airport(string n, string c, string code): localInformation(GroundTransportation("", 0.0, 0)),
-    name(std::move(n)), city(std::move(c)), code(std::move(code)) {};
+        name(std::move(n)), city(std::move(c)), code(std::move(code)) {};
 
     /**
      * @brief Destructor.
@@ -54,7 +52,7 @@ public:
      * @brief Gets the list of planes currently on this airport.
      * @return list of planes
      */
-    vector<Plane*>& getPlanes();
+    list<Plane*>& getPlanes();
 
     /**
      * @brief Adds a new plane to the airport's database.
@@ -74,7 +72,7 @@ public:
      * @param filter -> plane type
      * @return list of planes of specified type
      */
-    vector<Plane*> filterPlanesByType(const std::string& filter);
+    list<Plane*> filterPlanesByType(const std::string& filter);
 
     const BST<GroundTransportation> &getLocalInformation() const;
     void addLocalInformation();
@@ -88,7 +86,7 @@ public:
     void removeGroundTransportation(const GroundTransportation& g1);
 
 
-    vector<Plane *> sortByUserInputPlanes(const int &s1);
+    list<Plane *> sortByUserInputPlanes(const int &s1);
     BST<GroundTransportation> sortByUserInputGroundTransportations(const int & s2);
 
     BST<GroundTransportation> filterTransportByType(const string & s0, GroundTransportation& previous, GroundTransportation& next);

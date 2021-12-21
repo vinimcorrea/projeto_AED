@@ -43,7 +43,7 @@ public:
     // readable format for humans
     Date getDate(string str);
     bool is_number(string str);
-    bool operator <(const Date & d1) const;
+    bool operator<(const Date& d1) const;
     bool operator==(const Date& d1) const;
 };
 

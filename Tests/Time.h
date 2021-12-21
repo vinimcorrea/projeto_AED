@@ -15,7 +15,7 @@ class Time {
     int second;
 public :
     //constructor with default value 0
-    Time(int h = 0, int m  = 0, int s = 0);
+    Time(int h = 0, int m  = 0, int s = 0):hour(h),minute(m),second(s){};
 
     int getHour() const;
 

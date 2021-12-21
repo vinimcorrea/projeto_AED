@@ -7,7 +7,8 @@
 
 #include <ctime>
 #include <string>
-#include "Employee.h"
+
+#include "Date.h"
 
 using namespace std;
 
@@ -15,10 +16,11 @@ using namespace std;
 
 class Service {
     string type;
-    string date;
+    Date date;
+    string employee;
 
 public:
-    Service(string type, string date, Employee employee) : type(type), date(date) {};
+    Service(string type, string date, string employee) : type(type), date(date), employee(employee) {};
     void addService(Service& s1);
     Service getService() const;
     enum ServiceType {CLEANING, MAINTENANCE};
@@ -26,7 +28,7 @@ public:
     const string &getType() const;
     const string &getEmployee() const;
     void setEmployee(const string &employee);
-    time_t getDate() const;
+    Date getDate() const;
     void setDate(time_t date);
     void setType(const string &type);
     bool operator<(const Service& s1) const;

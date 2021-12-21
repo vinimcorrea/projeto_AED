@@ -347,22 +347,16 @@
 		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/BST.h">
 			<Option target="AED_project"/>
 		</Unit>
-		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Boarding.cpp">
-			<Option target="AED_project"/>
-		</Unit>
-		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Boarding.h">
-			<Option target="AED_project"/>
-		</Unit>
 		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Database.cpp">
 			<Option target="AED_project"/>
 		</Unit>
 		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Database.h">
 			<Option target="AED_project"/>
 		</Unit>
-		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Employee.cpp">
+		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Date.cpp">
 			<Option target="AED_project"/>
 		</Unit>
-		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Employee.h">
+		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Date.h">
 			<Option target="AED_project"/>
 		</Unit>
 		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Flight.cpp">
@@ -419,13 +413,16 @@
 		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Ticket.h">
 			<Option target="AED_project"/>
 		</Unit>
+		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Time.cpp">
+			<Option target="AED_project"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Time.h">
+			<Option target="AED_project"/>
+		</Unit>
 		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Trolley.cpp">
 			<Option target="AED_project"/>
 		</Unit>
 		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Trolley.h">
-			<Option target="AED_project"/>
-		</Unit>
-		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/tests.cpp">
 			<Option target="AED_project"/>
 		</Unit>
 		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googlemock/src/gmock-all.cc">

@@ -18,6 +18,12 @@
 #define FLIGHTTABLE_DESTINY_WIDTH 15
 #define FLIGHTTABLE_NPASSENGER_WIDTH 14
 
+#define SERVICETABLE_TYPE_WIDTH 25
+#define SERVICETABLE_DATE_WIDTH 25
+#define SERVICETABLE_EMPLOYEE_WIDTH 26
+#define SERVICE_CLEAN "cleaning"
+#define SERVICE_MAINTENANCE "mainteneace"
+
 #define TRANSTABLE_TYPE_WIDTH 25
 #define TRANSTABLE_DIST_WIDTH 25
 #define TRANSTABLE_TIME_WIDTH 26
@@ -54,7 +60,7 @@ T Menu::inputHandler(std::string msg) {
     }
 }
 
-void Menu::displayTable(const vector<Plane *>& planes) const {
+void Menu::displayTable(const list<Plane *>& planes) const {
     std::cout << "╔════════════════════╤═══════════════════╤══════════════════╤══════════════════╗" << std::endl;
     std::cout << "║license number      │type               │seat capacity     │scheduled flights ║" << std::endl;
     std::cout << "║                    │                   │                  │                  ║" << std::endl;
@@ -84,7 +90,7 @@ void Menu::displayTable(const list<Flight>& flights) const {
         std::string number = formatEntry(to_string(p.getFlightNumber()), FLIGHTTABLE_NUMBER_WIDTH);
         std::string date = formatEntry(p.getDepartureDate().formatted(), FLIGHTTABLE_DATE_WIDTH);
         std::string origin = formatEntry(p.getOriginFlight()->getCity(), FLIGHTTABLE_ORIGIN_WIDTH);
-        std::string destination = formatEntry(to_string(p.getDestinyFlight()->getCity()), FLIGHTTABLE_DESTINY_WIDTH);
+        std::string destination = formatEntry(p.getDestinyFlight()->getCity(), FLIGHTTABLE_DESTINY_WIDTH);
         std::string nPassengers = formatEntry(to_string(p.getNumberOfPassengers()), FLIGHTTABLE_NPASSENGER_WIDTH);
         std::cout << "║" << setw(FLIGHTTABLE_NUMBER_WIDTH) << number;
         std::cout << "│" << setw(FLIGHTTABLE_DATE_WIDTH) << date;
@@ -94,6 +100,25 @@ void Menu::displayTable(const list<Flight>& flights) const {
         std::cout << "║               │               │               │               │              ║" << std::endl;
     }
     std::cout << "╚═══════════════╧═══════════════╧═══════════════╧═══════════════╧══════════════╝" << std::endl;
+    std::cout << setw(0);
+}
+
+void Menu::displayTable(const list<Service>& services) const {
+    std::cout << "╔═════════════════════════╤═════════════════════════╤══════════════════════════╗" << std::endl;
+    std::cout << "║service type             │date                     │employee name             ║" << std::endl;
+    std::cout << "║                         │                         │                          ║" << std::endl;
+    std::cout << setiosflags(std::ios::left);
+    for(Service s : services){
+        std::string type = formatEntry(s.getType(), SERVICETABLE_TYPE_WIDTH);
+        std::string date = formatEntry(s.getDate().formatted(), SERVICETABLE_DATE_WIDTH);
+        std::string employee = formatEntry(s.getEmployee(), SERVICETABLE_EMPLOYEE_WIDTH);
+        std::cout << "│" << setw(TRANSTABLE_TYPE_WIDTH) << type;
+        std::cout << "│" << setw(TRANSTABLE_DIST_WIDTH) << date;
+        std::cout << "│" << setw(TRANSTABLE_DIST_WIDTH) << employee << "║";
+        std::cout << "║                         │                         │                          ║" << std::endl;
+    }
+
+    std::cout << "╚═════════════════════════╧═════════════════════════╧══════════════════════════╝" << std::endl;
     std::cout << setw(0);
 }
 
@@ -108,9 +133,6 @@ void Menu::displayTable(const BST<GroundTransportation>& localTransports) const 
         std::string distance = formatEntry(to_string(g.getDistanceFromAirport()), TRANSTABLE_DIST_WIDTH);
         std::cout << "│" << setw(TRANSTABLE_TYPE_WIDTH) << type;
         std::cout << "│" << setw(TRANSTABLE_DIST_WIDTH) << distance;
-        for(time_t t : g.getTimetable()){
-            std::cout << "│" << setw(TRANSTABLE_TYPE_WIDTH) << distance;
-        }
         std::cout << "║                         │                         │                          ║" << std::endl;
     }
 
@@ -184,9 +206,9 @@ Menu* MainMenu::processInput() {
             case 1:
                 return new PlaneMenu(database, currentAirport);
             case 2:
-                break;
+                return new FlightMenu(database, currentAirport);
             case 3:
-                break;
+                return new ServiceMenu(database, currentAirport);
             case 4:
                 break;
             case 5:
@@ -238,31 +260,7 @@ Menu* PlaneMenu::processInput() {
 }
 
 
-void LocalTransportMenu::displayMessage() {
-    std::cout << "╔══════════════════════════════════════════════════════════════════════════════╗" << std::endl;
-    std::cout << "║ [1] Search an airport's local transport database                             ║" << std::endl;
-    std::cout << "║                                                                              ║" << std::endl;
-    std::cout << "║ [q] Go back                                                                  ║" << std::endl;
-    std::cout << "╚══════════════════════════════════════════════════════════════════════════════╝" << std::endl;
-}
 
-Menu* LocalTransportMenu::processInput() {
-    std::string userInput;
-
-    std::cin >> userInput;
-
-    if(inputSanityCheck()){
-        if(userInput == "q")
-            return nullptr;
-        switch(stoi(userInput)){
-            case 1:
-                break;
-        };
-    }
-
-    std::cout << "Invalid user input." << std::endl;
-    return this;
-}
 
 void PlaneMenu::createPlane() {
     std::string plate = inputHandler<std::string>("Please enter the plane's license number : ");
@@ -299,7 +297,7 @@ void PlaneMenu::planeTable() {
                         ("Please enter the license number of the plane : ");
                 desiredPlane = currentAirport->findPlaneWithLicense(filter);
                 if(desiredPlane)
-                    displayTable(vector<Plane*>({desiredPlane}));
+                    displayTable(list<Plane*>({desiredPlane}));
                 else
                     std::cout << "Plane not found.\n";
                 return;
@@ -321,7 +319,7 @@ void PlaneMenu::removePlane() {
     std::string rmCode = inputHandler<std::string>(
             "Please type the license number of the plane you wish to delete : ");
 
-    for(std::vector<Plane*>::iterator it=currentAirport->getPlanes().begin(); it!=currentAirport->getPlanes().end(); ++it){
+    for(std::list<Plane*>::iterator it=currentAirport->getPlanes().begin(); it!=currentAirport->getPlanes().end(); ++it){
         Plane* rmPlane = *it;
         if(rmPlane->getLicense() == rmCode){
             delete *it;
@@ -369,10 +367,22 @@ void FlightMenu::scheduleFlight() {
     std::string planeLicense = inputHandler<std::string>("Please type the license number of the plane.");
     Plane* currentPlane = currentAirport->findPlaneWithLicense(planeLicense);
     if(currentPlane){
-        std::cout << "The plane's current final stop will be at "
-            << currentPlane->getFlight().back().getOriginFlight()->getName()
-            << " (" << currentPlane->getFlight().back().getOriginFlight()->getCode() << ")"
-            << ", at date " << currentPlane->getFlight().back().getDepartureDate() << std::endl;
+        Airport* origin;
+        if(!currentPlane->getFlight().empty()) {
+            std::cout << "The plane's current final stop will be at "
+                      << currentPlane->getFlight().back().getOriginFlight()->getName()
+                      << " (" << currentPlane->getFlight().back().getOriginFlight()->getCode() << ")"
+                      << ", at date " << currentPlane->getFlight().back().getDepartureDate().formatted() << std::endl;
+            origin = currentPlane->getFlight().back().getOriginFlight();
+        } else {
+            std::string o = inputHandler<std::string>("Origin ? ");
+            origin = database->findAirport(o);
+
+            if(!origin){
+                std::cout << "No such airport.\n";
+                return;
+            }
+        }
 
         std::string destination = inputHandler<std::string>("Destination ? ");
         Airport* nAirport = database->findAirport(destination);
@@ -381,7 +391,7 @@ void FlightMenu::scheduleFlight() {
             std::cout << "No such airport was found.\n";
             return;
         }
-        if(nAirport->getCode() == currentPlane->getFlight().back().getOriginFlight()){
+        if(nAirport->getCode() == currentPlane->getFlight().back().getOriginFlight()->getCode()){
             std::cout << "Cannot travel to same location.\n";
             return;
         }
@@ -398,10 +408,10 @@ void FlightMenu::scheduleFlight() {
         Time nTime;
         nTime.setTime(duration);
 
-        currentPlane->addFlight(new Flight(
+        currentPlane->addFlight(Flight(
                 currentPlane->getFlight().back().getFlightNumber()+1,
                 nDate,
-                duration,
+                nTime,
                 currentPlane->getFlight().back().getDestinyFlight(),
                 nAirport
                 ));
@@ -466,6 +476,103 @@ void FlightMenu::flightTable() {
     }
 
     currentPlane->sortByUserInput(0);
+}
+
+//--- ServiceMenu ------------------------------------------
+
+void ServiceMenu::displayMessage(){
+    std::cout << "╔══════════════════════════════════════════════════════════════════════════════╗" << std::endl;
+    std::cout << "║ [1] Display services                                                         ║" << std::endl;
+    std::cout << "║ [2] Schedule new service                                                     ║" << std::endl;
+    std::cout << "║ [3] Carry out next service                                                   ║" << std::endl;
+    std::cout << "║                                                                              ║" << std::endl;
+    std::cout << "║ [q] Go back                                                                  ║" << std::endl;
+    std::cout << "╚══════════════════════════════════════════════════════════════════════════════╝" << std::endl;
+}
+
+Menu* ServiceMenu::processInput() {
+    std::string userInput;
+
+    std::cin >> userInput;
+
+    if(inputSanityCheck()){
+        if(userInput == "q")
+            return nullptr;
+        switch(stoi(userInput)){
+            case 1:
+                serviceTable();
+                return this;
+            case 2:
+                addService();
+                return this;
+        };
+    }
+
+    std::cout << "Invalid user input." << std::endl;
+    return this;
+}
+
+void ServiceMenu::serviceTable(){
+    std::string license = inputHandler<std::string>("Type the plane's license : ");
+    Plane* currentPlane = currentAirport->findPlaneWithLicense(license);
+    if(!currentPlane){
+        std::cout << "Plane not found.\n";
+        return;
+    }
+
+    while(true) {
+        std::cout << "Available commands:\n";
+        std::cout << "[1] Display next and last pending services\n";
+        std::cout << "[2] Display all done services\n";
+
+        std::cout << "[9] Go back\n";
+
+        int choice = inputHandler<int>("Input your option : ");
+
+        std::string filter;
+
+        switch(choice){
+            case 1:
+                displayTable(list<Service>({
+                    currentPlane->getServices().front(),
+                    currentPlane->getServices().back()
+                }));
+                break;
+            case 2:
+                displayTable(currentPlane->getPastServices());
+                break;
+
+            case 9:
+                return;
+
+            default:
+                std::cout << "Invalid option.\n";
+        }
+    }
+
+}
+
+void ServiceMenu::addService() {
+    std::string license = inputHandler<std::string>("Type the plane's license : ");
+    Plane* currentPlane = currentAirport->findPlaneWithLicense(license);
+    if(!currentPlane){
+        std::cout << "Plane not found.\n";
+        return;
+    }
+
+    std::string type = inputHandler<std::string>("Type of service (cleaning/maintenance) ? ");
+    if(type!=SERVICE_CLEAN && type!=SERVICE_MAINTENANCE){
+        std::cout << "invalid service type.\n";
+        return;
+    }
+
+    std::string date = inputHandler<std::string>("Maintenance date ? ");
+    Date nDate(date);
+
+    std::string employee = inputHandler<std::string>("Employee name ? ");
+
+    currentPlane->addService(Service(type, date, employee));
+    std::cout << "Service added.\n";
 }
 
 //--- LocalTransportMenu -----------------------------------

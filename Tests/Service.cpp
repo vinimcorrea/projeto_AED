@@ -12,7 +12,13 @@ void Service::setType(const string &type) {
     Service::type = type;
 }
 
+Date Service::getDate() const {
+    return date;
+}
 
+const string& Service::getEmployee() const {
+    return employee;
+}
 
 
 /*

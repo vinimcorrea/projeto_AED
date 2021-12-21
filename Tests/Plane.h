@@ -8,16 +8,20 @@
 #include "Service.h"
 #include "Flight.h"
 #include "Passenger.h"
-#include "Exceptions.h"
+//#include "Exceptions.h"
 
 #include <string>
 #include <vector>
 #include <queue>
 #include <list>
 
+/**
+ * @file Plane.h
+ * @brief Plane class.
+ */
 
 using namespace std;
-
+class Flight;
 
 class Plane{
 private:
@@ -41,9 +45,6 @@ public:
      */
     Plane(string lp, string type, unsigned cap, list<Flight> fp, queue<Service> s)
         : license(lp), type(type), capacity(cap), flightPlan(fp), services(s){};
-
-    void addFlight(const Flight &f1);
-    void addService(const Service &s1);
     /**
      * @brief Gets the plane's license number.
      * @return the license number
@@ -62,6 +63,10 @@ public:
      */
     const unsigned& getCapacity() const;
 
+    /**
+     * @brief Gets the flight schedule list
+     * @return flight schedule
+     */
     const list<Flight> &getFlight() const;
 
     /**
@@ -71,16 +76,33 @@ public:
     const int getNumberOfFlights() const;
 
     /**
-     *
-     * @return
+     * @brief Gets the pending service list.
+     * @return pending service list
      */
     const queue<Service> &getServices() const;
 
     /**
-     *
+     * @brief Gets the list of past services carried out.
+     * @return list of past services
+     */
+    const list<Service>& getPastServices() const;
+
+    /**
+     * @brief Adds a new service to the schedule
+     * @param service -> new service
+     */
+     void addService(const Service& s1);
+
+     /**
+      * @brief Executes the exit service, putting it in the past services list.
+      */
+     void executeService();
+
+    /**
      * @param flightNumber
      * @return
      */
+
     int numPassengers(unsigned flightNumber) const;
 
     /**
@@ -100,7 +122,7 @@ public:
      * @brief Schedules a new flight at the end of main schedule
      * @param flight -> new flight
      */
-    void addFlight(Flight* flight);
+    void addFlight(Flight flight);
 
     /**
      * @brief Cancels a flight and all subsequent ones.

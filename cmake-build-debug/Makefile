@@ -262,30 +262,6 @@ Tests/Airport.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Airport.cpp.s
 .PHONY : Tests/Airport.cpp.s
 
-Tests/Boarding.obj: Tests/Boarding.cpp.obj
-.PHONY : Tests/Boarding.obj
-
-# target to build an object file
-Tests/Boarding.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Boarding.cpp.obj
-.PHONY : Tests/Boarding.cpp.obj
-
-Tests/Boarding.i: Tests/Boarding.cpp.i
-.PHONY : Tests/Boarding.i
-
-# target to preprocess a source file
-Tests/Boarding.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Boarding.cpp.i
-.PHONY : Tests/Boarding.cpp.i
-
-Tests/Boarding.s: Tests/Boarding.cpp.s
-.PHONY : Tests/Boarding.s
-
-# target to generate assembly for a file
-Tests/Boarding.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Boarding.cpp.s
-.PHONY : Tests/Boarding.cpp.s
-
 Tests/Database.obj: Tests/Database.cpp.obj
 .PHONY : Tests/Database.obj
 
@@ -310,29 +286,29 @@ Tests/Database.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Database.cpp.s
 .PHONY : Tests/Database.cpp.s
 
-Tests/Employee.obj: Tests/Employee.cpp.obj
-.PHONY : Tests/Employee.obj
+Tests/Date.obj: Tests/Date.cpp.obj
+.PHONY : Tests/Date.obj
 
 # target to build an object file
-Tests/Employee.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Employee.cpp.obj
-.PHONY : Tests/Employee.cpp.obj
+Tests/Date.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Date.cpp.obj
+.PHONY : Tests/Date.cpp.obj
 
-Tests/Employee.i: Tests/Employee.cpp.i
-.PHONY : Tests/Employee.i
+Tests/Date.i: Tests/Date.cpp.i
+.PHONY : Tests/Date.i
 
 # target to preprocess a source file
-Tests/Employee.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Employee.cpp.i
-.PHONY : Tests/Employee.cpp.i
+Tests/Date.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Date.cpp.i
+.PHONY : Tests/Date.cpp.i
 
-Tests/Employee.s: Tests/Employee.cpp.s
-.PHONY : Tests/Employee.s
+Tests/Date.s: Tests/Date.cpp.s
+.PHONY : Tests/Date.s
 
 # target to generate assembly for a file
-Tests/Employee.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Employee.cpp.s
-.PHONY : Tests/Employee.cpp.s
+Tests/Date.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Date.cpp.s
+.PHONY : Tests/Date.cpp.s
 
 Tests/Flight.obj: Tests/Flight.cpp.obj
 .PHONY : Tests/Flight.obj
@@ -550,6 +526,30 @@ Tests/Ticket.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Ticket.cpp.s
 .PHONY : Tests/Ticket.cpp.s
 
+Tests/Time.obj: Tests/Time.cpp.obj
+.PHONY : Tests/Time.obj
+
+# target to build an object file
+Tests/Time.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Time.cpp.obj
+.PHONY : Tests/Time.cpp.obj
+
+Tests/Time.i: Tests/Time.cpp.i
+.PHONY : Tests/Time.i
+
+# target to preprocess a source file
+Tests/Time.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Time.cpp.i
+.PHONY : Tests/Time.cpp.i
+
+Tests/Time.s: Tests/Time.cpp.s
+.PHONY : Tests/Time.s
+
+# target to generate assembly for a file
+Tests/Time.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Time.cpp.s
+.PHONY : Tests/Time.cpp.s
+
 Tests/Trolley.obj: Tests/Trolley.cpp.obj
 .PHONY : Tests/Trolley.obj
 
@@ -573,30 +573,6 @@ Tests/Trolley.s: Tests/Trolley.cpp.s
 Tests/Trolley.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Trolley.cpp.s
 .PHONY : Tests/Trolley.cpp.s
-
-Tests/tests.obj: Tests/tests.cpp.obj
-.PHONY : Tests/tests.obj
-
-# target to build an object file
-Tests/tests.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/tests.cpp.obj
-.PHONY : Tests/tests.cpp.obj
-
-Tests/tests.i: Tests/tests.cpp.i
-.PHONY : Tests/tests.i
-
-# target to preprocess a source file
-Tests/tests.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/tests.cpp.i
-.PHONY : Tests/tests.cpp.i
-
-Tests/tests.s: Tests/tests.cpp.s
-.PHONY : Tests/tests.s
-
-# target to generate assembly for a file
-Tests/tests.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/tests.cpp.s
-.PHONY : Tests/tests.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -643,15 +619,12 @@ help:
 	@echo ... Tests/Airport.obj
 	@echo ... Tests/Airport.i
 	@echo ... Tests/Airport.s
-	@echo ... Tests/Boarding.obj
-	@echo ... Tests/Boarding.i
-	@echo ... Tests/Boarding.s
 	@echo ... Tests/Database.obj
 	@echo ... Tests/Database.i
 	@echo ... Tests/Database.s
-	@echo ... Tests/Employee.obj
-	@echo ... Tests/Employee.i
-	@echo ... Tests/Employee.s
+	@echo ... Tests/Date.obj
+	@echo ... Tests/Date.i
+	@echo ... Tests/Date.s
 	@echo ... Tests/Flight.obj
 	@echo ... Tests/Flight.i
 	@echo ... Tests/Flight.s
@@ -679,12 +652,12 @@ help:
 	@echo ... Tests/Ticket.obj
 	@echo ... Tests/Ticket.i
 	@echo ... Tests/Ticket.s
+	@echo ... Tests/Time.obj
+	@echo ... Tests/Time.i
+	@echo ... Tests/Time.s
 	@echo ... Tests/Trolley.obj
 	@echo ... Tests/Trolley.i
 	@echo ... Tests/Trolley.s
-	@echo ... Tests/tests.obj
-	@echo ... Tests/tests.i
-	@echo ... Tests/tests.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
