@@ -4,6 +4,8 @@
 
 #include "Airport.h"
 
+using namespace std;
+
 const BST<GroundTransportation> &Airport::getLocalInformation() const {
     return localInformation;
 }
@@ -24,14 +26,8 @@ vector<Plane*>& Airport::getPlanes() {
     return planes;
 }
 
-bool Airport::addPlane(Plane *plane) {
-    for(auto it=planes.begin(); it!=planes.end(); ++it){
-        Plane* p = *it;
-        if(p->getLicense() == plane->getLicense())
-            return false;
-    }
+void Airport::addPlane(Plane *plane) {
     planes.push_back(plane);
-    return true;
 }
 
 Plane* Airport::findPlaneWithLicense(const std::string &filter) {
@@ -104,3 +100,32 @@ vector<Plane*> Airport::sortByUserInputPlanes(const int &s1) {
     }
 }
 
+BST<GroundTransportation> Airport::filterTransportByType(const string &s0, GroundTransportation& previous, GroundTransportation& next) {
+    BST<GroundTransportation> aux = localInformation;
+    if(GroundTransportation("", 0.0, 0) == localInformation.find(GroundTransportation(s0, 0.0, 0))){
+        for(auto it = localInformation.begin(); it != localInformation.end(); it++){
+            if(s0 < (*it).getType()){
+                next = *it;
+                break;
+            }
+            previous = *it;
+        }
+    }
+}
+
+void Airport::readFile(ifstream &f) {
+    string type, distance, hour, minute, second;
+
+    while(!f.eof()){
+        getline(f, type);
+        getline(f, distance);
+        getline(f, hour, ':');
+        getline(f, minute, ':');
+        getline(f, second);
+
+        GroundTransportation g = GroundTransportation(type,stof(distance), (stoi(hour), stoi(minute), stoi(second)));
+
+        localInformation.insert(g);
+        getline(f, name); //dummy read
+    }
+}

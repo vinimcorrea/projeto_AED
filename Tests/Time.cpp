@@ -48,3 +48,15 @@ bool Time::operator<(const Time &t1) const{
 bool Time::operator==(const Time &t1) const {
     return hour == t1.hour && minute == t1.minute;
 }
+
+int Time::getSecond() const {
+    return second;
+}
+
+int Time::getMinute() const {
+    return minute;
+}
+
+int Time::getHour() const {
+    return hour;
+}

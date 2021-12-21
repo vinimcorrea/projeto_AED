@@ -8,6 +8,8 @@
 #include "BST.h"
 #include "GroundTransportation.h"
 #include "Plane.h"
+
+#include <fstream>
 #include <string>
 #include <utility>
 #include <vector>
@@ -17,6 +19,9 @@
  * @file Airport.h
  * @brief Class containing information pertaining to one airport
  */
+
+
+
 class Airport {
     string name; ///name of the airport
     string city; ///name of the airport's location
@@ -25,14 +30,17 @@ class Airport {
     vector<Plane *> planes;
 
 public:
+
+
+    Airport(): localInformation(GroundTransportation("", 0.0, 0)) {};
     /**
      * @brief Constructor.
      * @param n -> name of airport
      * @param c -> location of airport
      * @param code -> filename code
      */
-    Airport(string n, string c, string code): localInformation(GroundTransportation("", 0.0, list<time_t>())),
-    name(n), city(c), code(code) {};
+    Airport(string n, string c, string code): localInformation(GroundTransportation("", 0.0, 0)),
+    name(std::move(n)), city(std::move(c)), code(std::move(code)) {};
 
     const string getName();
     const string getCity();
@@ -45,11 +53,9 @@ public:
 
     /**
      * @brief Adds a new plane to the airport's database.
-     *        Only adds if no other plane with the same license plate exists.
      * @param plane -> pointer to plane to add
-     * @return true if successful, false otherwise
      */
-    bool addPlane(Plane* plane);
+    void addPlane(Plane* plane);
 
     /**
      * @brief Finds a plane with a specific license.
@@ -65,10 +71,6 @@ public:
      */
     vector<Plane*> filterPlanesByType(const std::string& filter);
 
-    /**
-     * @brief Gets information on local public transports.
-     * @return binary search tree with information
-     */
     const BST<GroundTransportation> &getLocalInformation() const;
     void addLocalInformation();
 
@@ -83,6 +85,10 @@ public:
 
     vector<Plane *> sortByUserInputPlanes(const int &s1);
     BST<GroundTransportation> sortByUserInputGroundTransportations(const int & s2);
+
+    BST<GroundTransportation> filterTransportByType(const string & s0, GroundTransportation& previous, GroundTransportation& next);
+
+    void readFile(ifstream &f);
 };
 
 
