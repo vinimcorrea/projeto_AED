@@ -18,6 +18,7 @@ public :
     Time(int h = 0, int m  = 0, int s = 0);
     //setter function
     void setTime(int h, int m, int s);
+    void setTime(std::string s);
     //print description of object in hh:mm:ss
     void print();
     //compare two time object

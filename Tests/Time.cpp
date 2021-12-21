@@ -11,6 +11,12 @@ Time::Time(int h, int m, int s)
     second = s;
 }
 
+void Time::setTime(std::string s) {
+    hour = stoi(s.substr(0,2));
+    minute = stoi(s.substr(3,2));
+    second = stoi(s.substr(6,2));
+}
+
 void Time::setTime(int h, int m, int s)
 {
     hour = h;

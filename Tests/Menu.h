@@ -43,6 +43,7 @@ protected:
      * @param t -> data pool to construct the data from
      */
     void displayTable(const vector<Plane* >& planes) const;
+    void displayTable(const list<Flight>& planes) const;
     void displayTable(const BST<GroundTransportation>& localTransports) const;
 
     std::string formatEntry(const std::string& entry, int length) const;
@@ -108,6 +109,21 @@ private:
 
 public:
     PlaneMenu(Database* database, Airport* airport) : MainMenu(database, airport) {};
+    void displayMessage() override;
+    Menu* processInput() override;
+};
+
+
+class FlightMenu : public MainMenu{
+private:
+    /**
+     * @brief Schedules a new flight according to user input.
+     */
+    void scheduleFlight();
+
+    void flightTable();
+public:
+    FlightMenu(Database* database, Airport* airport) : MainMenu(database, airport) {};
     void displayMessage() override;
     Menu* processInput() override;
 };

@@ -1,6 +1,7 @@
 #ifndef AED_PROJECT_FLIGHT_H
 #define AED_PROJECT_FLIGHT_H
 
+#include "Airport.h"
 #include "Passenger.h"
 #include "Date.h"
 #include "Time.h"
@@ -17,8 +18,8 @@ class Flight{
     unsigned flightNumber;
     Date departureDate;
     Time duration;
-    string originFlight;
-    string destinyFlight;
+    Airport* originFlight;
+    Airport* destinyFlight;
     vector<Passenger> passengers;
     int numberOfLuggage{};
 public:
@@ -27,7 +28,7 @@ public:
 public:
     void setNumberOfLuggage(unsigned numberOfLuggage);
 
-    Flight(unsigned flightNumber, Date departureDate, unsigned duration, string origin, string destiny)
+    Flight(unsigned flightNumber, Date departureDate, unsigned duration, Airport* origin, Airport* destiny)
         :flightNumber(flightNumber), departureDate(departureDate), duration(duration),
         originFlight(std::move(std::move(origin))), destinyFlight(std::move(destiny)) {};
     const vector<Passenger> &getPassengers() const;
@@ -42,9 +43,11 @@ public:
 
     Time getDuration() const;
 
-    const string &getOriginFlight() const;
+    Airport* getOriginFlight() const;
 
-    const string &getDestinyFlight() const;
+    Airport* getDestinyFlight() const;
+
+    int getNumberOfPassengers() const;
 };
 
 #endif //AED_PROJECT_FLIGHT_H

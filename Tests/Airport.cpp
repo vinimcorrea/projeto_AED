@@ -4,6 +4,11 @@
 
 #include "Airport.h"
 
+Airport::~Airport() {
+    for(auto it=planes.begin(); it!=planes.end(); ++it)
+        delete *it;
+}
+
 const BST<GroundTransportation> &Airport::getLocalInformation() const {
     return localInformation;
 }

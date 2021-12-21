@@ -4,6 +4,12 @@
 
 #include "Date.h"
 
+Date::Date(std::string s) {
+    day = stoi(s.substr(0, 2));
+    month = stoi(s.substr(3,2));
+    year = stoi(s.substr(6, 2));
+}
+
 int Date::getMonth() const {
     return month;
 }
@@ -26,6 +32,10 @@ int Date::getDay() const {
 
 void Date::setDay(int day) {
     Date::day = day;
+}
+
+std::string Date::formatted() const {
+    return to_string(day) + '-' + to_string(month) + '-' + to_string(year);
 }
 
 Date Date::getDate(string str) {

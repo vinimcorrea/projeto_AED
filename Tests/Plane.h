@@ -97,16 +97,23 @@ public:
     bool passengerGetTicket(Passenger &p1, unsigned flNumber);
 
     /**
-     *
-     * @param flNumber
+     * @brief Schedules a new flight at the end of main schedule
+     * @param flight -> new flight
+     */
+    void addFlight(Flight* flight);
+
+    /**
+     * @brief Cancels a flight and all subsequent ones.
+     * @param flNumber -> flight to cancel
      */
     void cancelFlight(unsigned flNumber);
 
     /**
-     *
-     * @param f1
+     * @brief Reschedules a flight.
+     * @param n -> number of flight to reschedule
+     * @param date -> new date
      */
-    void rescheduleFlight(Flight & f1);
+    void rescheduleFlight(const unsigned& n, const Date& date);
 
     /**
      *
@@ -116,13 +123,22 @@ public:
 
     bool searchFlight(unsigned id) const;
 
+    enum FlightSortOptions{
+        SORT_NUMBERS=0,
+        SORT_DEPARTURES=1,
+        SORT_DURATION=2,
+        SORT_ORIGIN=3,
+        SORT_DESTINATION=4
+    };
 
     /**
-     *
-     * @param c1
-     * @return
+     * @brief Sorts the flight list based on input value
+     * @param c1 -> input value
+     * @return sorted list
      */
     list<Flight> sortByUserInput(const int & c1);
+
+    list<Flight> filterByDestination(std::string city);
 };
 
 #endif //AED_PROJECT_PLANE_H

@@ -35,3 +35,12 @@ void Database::loadAirports() {
 unordered_map<std::string, Airport*> Database::getAirports() {
     return airports;
 }
+
+Airport* Database::findAirport(std::string key) {
+    auto ret = airports.find(key);
+    if(ret!=airports.end()){
+        return ret->second;
+    } else {
+        return nullptr;
+    }
+}

@@ -12,6 +12,12 @@
 #define PLANETABLE_CAPACITY_WIDTH 18
 #define PLANETABLE_NFLIGHTS_WIDTH 18
 
+#define FLIGHTTABLE_NUMBER_WIDTH 15
+#define FLIGHTTABLE_DATE_WIDTH 15
+#define FLIGHTTABLE_ORIGIN_WIDTH 15
+#define FLIGHTTABLE_DESTINY_WIDTH 15
+#define FLIGHTTABLE_NPASSENGER_WIDTH 14
+
 #define TRANSTABLE_TYPE_WIDTH 25
 #define TRANSTABLE_DIST_WIDTH 25
 #define TRANSTABLE_TIME_WIDTH 26
@@ -65,6 +71,28 @@ void Menu::displayTable(const vector<Plane *>& planes) const {
         std::cout << "║                    │                   │                  │                  ║" << std::endl;
     }
     std::cout << "╚════════════════════╧═══════════════════╧══════════════════╧══════════════════╝" << std::endl;
+    std::cout << setw(0);
+}
+
+void Menu::displayTable(const list<Flight>& flights) const {
+    std::cout << "╔═══════════════╤═══════════════╤═══════════════╤═══════════════╤══════════════╗" << std::endl;
+    std::cout << "║number         │departure date │origin         │destination    │nº passengers ║" << std::endl;
+    std::cout << "║               │               │               │               │              ║" << std::endl;
+    std::cout << setiosflags(std::ios::left);
+    for(Flight p : flights){
+        std::string number = formatEntry(to_string(p.getFlightNumber()), FLIGHTTABLE_NUMBER_WIDTH);
+        std::string date = formatEntry(p.getDepartureDate().formatted(), FLIGHTTABLE_DATE_WIDTH);
+        std::string origin = formatEntry(p.getOriginFlight()->getCity(), FLIGHTTABLE_ORIGIN_WIDTH);
+        std::string destination = formatEntry(to_string(p.getDestinyFlight()->getCity()), FLIGHTTABLE_DESTINY_WIDTH);
+        std::string nPassengers = formatEntry(to_string(p.getNumberOfPassengers()), FLIGHTTABLE_NPASSENGER_WIDTH);
+        std::cout << "║" << setw(FLIGHTTABLE_NUMBER_WIDTH) << number;
+        std::cout << "│" << setw(FLIGHTTABLE_DATE_WIDTH) << date;
+        std::cout << "│" << setw(FLIGHTTABLE_ORIGIN_WIDTH) << origin;
+        std::cout << "│" << setw(FLIGHTTABLE_DESTINY_WIDTH) << destination;
+        std::cout << "│" << setw(FLIGHTTABLE_NPASSENGER_WIDTH) << nPassengers << "║\n";
+        std::cout << "║               │               │               │               │              ║" << std::endl;
+    }
+    std::cout << "╚═══════════════╧═══════════════╧═══════════════╧═══════════════╧══════════════╝" << std::endl;
     std::cout << setw(0);
 }
 
@@ -280,6 +308,140 @@ void PlaneMenu::removePlane() {
     std::cout << "The license number specified does not exist in this airport's database.\n";
 }
 
+//--- FlightMenu -------------------------------------------
+
+void FlightMenu::displayMessage() {
+    std::cout << "╔══════════════════════════════════════════════════════════════════════════════╗" << std::endl;
+    std::cout << "║ [1] Schedule a new flight                                                    ║" << std::endl;
+    std::cout << "║ [2] List flight database for a specific plane                                ║" << std::endl;
+    std::cout << "║ [3] Reschedule a flight                                                      ║" << std::endl;
+    std::cout << "║                                                                              ║" << std::endl;
+    std::cout << "║ [q] Go back                                                                  ║" << std::endl;
+    std::cout << "╚══════════════════════════════════════════════════════════════════════════════╝" << std::endl;
+}
+
+Menu* FlightMenu::processInput() {
+    std::string userInput;
+
+    std::cin >> userInput;
+
+    if(inputSanityCheck()){
+        if(userInput == "q")
+            return nullptr;
+        switch(stoi(userInput)){
+            case 1:
+                scheduleFlight();
+                return this;
+        };
+    }
+
+    std::cout << "Invalid user input." << std::endl;
+    return this;
+}
+
+void FlightMenu::scheduleFlight() {
+    std::string planeLicense = inputHandler<std::string>("Please type the license number of the plane.");
+    Plane* currentPlane = currentAirport->findPlaneWithLicense(planeLicense);
+    if(currentPlane){
+        std::cout << "The plane's current final stop will be at "
+            << currentPlane->getFlight().back().getOriginFlight()->getName()
+            << " (" << currentPlane->getFlight().back().getOriginFlight()->getCode() << ")"
+            << ", at date " << currentPlane->getFlight().back().getDepartureDate() << std::endl;
+
+        std::string destination = inputHandler<std::string>("Destination ? ");
+        Airport* nAirport = database->findAirport(destination);
+
+        if(!nAirport){
+            std::cout << "No such airport was found.\n";
+            return;
+        }
+        if(nAirport->getCode() == currentPlane->getFlight().back().getOriginFlight()){
+            std::cout << "Cannot travel to same location.\n";
+            return;
+        }
+
+        std::string departDate = inputHandler<std::string>("Departure date (dd-mm-yy) ? ");
+        Date nDate(departDate);
+
+        if(nDate < currentPlane->getFlight().back().getDepartureDate()){
+            std::cout << "Date has to be after last flight.\n";
+            return;
+        }
+
+        std::string duration = inputHandler<std::string>("Duration (hh-mm-ss) ? ");
+        Time nTime;
+        nTime.setTime(duration);
+
+        currentPlane->addFlight(new Flight(
+                currentPlane->getFlight().back().getFlightNumber()+1,
+                nDate,
+                duration,
+                currentPlane->getFlight().back().getDestinyFlight(),
+                nAirport
+                ));
+        std::cout << "Flight added.\n";
+
+    }else{
+        std::cout << "No plane was found.\n";
+    }
+}
+
+void FlightMenu::flightTable() {
+    std::string license = inputHandler<std::string>("Type the plane's license : ");
+    Plane* currentPlane = currentAirport->findPlaneWithLicense(license);
+    if(!currentPlane){
+        std::cout << "Plane not found.\n";
+        return;
+    }
+
+    while(true) {
+        std::cout << "Available commands:\n";
+        std::cout << "[1] Display all entries\n";
+        std::cout << "[2] Display flights with specific destination\n";
+
+        std::cout << "[3] Sort table by departure dates\n";
+        std::cout << "[4] Sort table by duration\n";
+        std::cout << "[5] Sort table by origin\n";
+        std::cout << "[6] Sort table by destination\n";
+
+        std::cout << "[9] Go back\n";
+
+        int choice = inputHandler<int>("Input your option : ");
+
+        std::string filter;
+
+        switch(choice){
+            case 1:
+                displayTable(currentPlane->getFlight());
+                break;
+            case 2:
+                filter = inputHandler<std::string>("Enter destination city to filter by : ");
+                displayTable(currentPlane->filterByDestination(filter));
+                break;
+            case 3:
+                displayTable(currentPlane->sortByUserInput(1));
+                break;
+            case 4:
+                displayTable(currentPlane->sortByUserInput(2));
+                break;
+            case 5:
+                displayTable(currentPlane->sortByUserInput(3));
+                break;
+            case 6:
+                displayTable(currentPlane->sortByUserInput(4));
+                break;
+
+            case 9:
+                return;
+
+            default:
+                std::cout << "Invalid option.\n";
+        }
+    }
+
+    currentPlane->sortByUserInput(0);
+}
+
 //--- LocalTransportMenu -----------------------------------
 
 
@@ -328,9 +490,11 @@ void LocalTransportMenu::transportTable() {
                 return;
             case 3:
                 return;
+            default:
+                std::cout << "Invalid option.\n";
         }
 
-        std::cout << "Invalid option.\n";
+
     }
 }
 

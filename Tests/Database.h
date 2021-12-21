@@ -39,6 +39,13 @@ public:
      * @return airport listing
      */
     std::unordered_map<std::string, Airport*> getAirports();
+
+    /**
+     * @brief Finds an airport based on its codename.
+     * @param key -> codename of airport
+     * @return pointer to found airport, or NULL if not found.
+     */
+    Airport* findAirport(std::string key);
 };
 
 

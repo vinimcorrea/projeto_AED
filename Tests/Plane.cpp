@@ -83,13 +83,21 @@ void Plane::cancelFlight(unsigned fl) {
 
 
 // due to delay or bad weather
-void Plane::rescheduleFlight(Flight &f1){
+void Plane::rescheduleFlight(const unsigned& n, const Date& date){
     for(auto it = flightPlan.begin(); it != flightPlan.end(); it++){
-        if((*it).getFlightNumber() == f1.getFlightNumber()){
-            (*it).setDepartureDate(f1.getDepartureDate());
+        if((*it).getFlightNumber() == n){
+            (*it).setDepartureDate(date);
         }
     }
 }
+
+struct sortByNumber{
+
+    inline bool operator()(const Flight & f1, const Flight& f2){
+        return f1.getFlightNumber() < f2.getFlightNumber();
+    }
+};
+
 
 struct sortByDeparture{
 
@@ -124,19 +132,30 @@ struct sortByDestiny{
 
 list<Flight> Plane::sortByUserInput(const int &c1) {
     switch(c1){
-        case 1:
+        case SORT_NUMBERS:
+            flightPlan.sort(sortByNumber());
+        case SORT_DEPARTURES:
             flightPlan.sort(sortByDeparture());
             return flightPlan;
-        case 2:
+        case SORT_DURATION:
             flightPlan.sort(sortByDuration());
             return flightPlan;
-        case 3:
+        case SORT_ORIGIN:
             flightPlan.sort(sortByOrigin());
             return flightPlan;
-        case 4:
+        case SORT_DESTINATION:
             flightPlan.sort(sortByDestiny());
             return flightPlan;
     }
 
 }
 
+list<Flight> Plane::filterByDestination(std::string city) {
+    list<Flight> ret;
+    for(Flight f : flightPlan){
+        if(f.getDestinyFlight()->getCity() == city)
+            ret.push_back(f);
+    }
+
+    return ret;
+}

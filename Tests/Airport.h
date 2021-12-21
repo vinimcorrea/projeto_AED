@@ -34,6 +34,11 @@ public:
     Airport(string n, string c, string code): localInformation(GroundTransportation("", 0.0, list<time_t>())),
     name(n), city(c), code(code) {};
 
+    /**
+     * @brief Destructor.
+     */
+    ~Airport();
+
     const string getName();
     const string getCity();
     const string getCode();
