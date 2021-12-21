@@ -6,12 +6,28 @@ void Plane::addFlight(const Flight &f1) {
     flightPlan.push_back(f1);
 }
 
+const string& Plane::getLicense() const {
+    return license;
+}
+
+const string& Plane::getType() const {
+    return type;
+}
+
+const unsigned& Plane::getCapacity() const {
+    return capacity;
+}
+
 const queue<Service> &Plane::getServices() const {
     return services;
 }
 
 const list<Flight> &Plane::getFlight() const{
     return flightPlan;
+}
+
+const int Plane::getNumberOfFlights() const {
+    return flightPlan.size();
 }
 
 void Plane::addService(const Service &s1){

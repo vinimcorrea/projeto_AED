@@ -12,7 +12,7 @@
 
 /**
  * @file Menu.h
- * @brief User interface manager.
+ * @brief User interface managers.
  */
 
 class Menu {
@@ -24,7 +24,26 @@ protected:
      *
      * @return false if an error is detected, true otherwise
      */
+
     static bool inputSanityCheck();
+
+    /**
+     * @brief General-purpose input entry handler.
+     *
+     * @param msg -> message to output before input
+     * @return converted user input
+     */
+    template<class T>
+    T inputHandler(std::string msg);
+
+    /**
+     * @brief Displays a table containing information about a database.
+     *
+     * @param t -> data pool to construct the data from
+     */
+    void displayTable(const vector<Plane* > planes) const;
+
+    std::string formatEntry(const std::string& entry, int length) const;
 
 public:
     /**
@@ -59,10 +78,24 @@ public:
 
 
 class MainMenu : public Menu{
-private:
+protected:
     Airport* currentAirport;
 public:
     MainMenu(Database* database, Airport* airport) : Menu(database), currentAirport(airport) {};
+    void displayMessage() override;
+    Menu* processInput() override;
+};
+
+
+class PlaneMenu : public MainMenu{
+private:
+    /**
+     * @brief Adds a new plane to the current airport's database.
+     */
+    void createPlane();
+    void removePlane();
+public:
+    PlaneMenu(Database* database, Airport* airport) : MainMenu(database, airport) {};
     void displayMessage() override;
     Menu* processInput() override;
 };

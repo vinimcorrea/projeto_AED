@@ -46,7 +46,7 @@ TEST(test_1, numPassengers){
     services.push(s2);
     services.push(s1);
 
-    Plane pl1("B7031",123, flightPlan, services);
+    Plane pl1("B7031", "A310",123, flightPlan, services);
 
     EXPECT_EQ(0, pl1.numPassengers(f2.getFlightNumber()));
     EXPECT_EQ(6, pl1.numPassengers(f1.getFlightNumber()));

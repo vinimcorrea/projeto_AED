@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['makeempty_0',['makeEmpty',['../class_b_s_t.html#a5582f1066a084181d6a79ec0a6e9f9f2',1,'BST']]]
+  ['loadairports_0',['loadAirports',['../class_database.html#a3a0dda3758fb54b6a8d65cd397cece5f',1,'Database']]]
 ];

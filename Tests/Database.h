@@ -16,7 +16,7 @@
  */
 class Database {
 private:
-    std::unordered_map<std::string, Airport*> airports; /*< database of airports */
+    std::unordered_map<std::string, Airport*> airports;
 
     /**
      * @brief Loads the airport data from the corresponding text file.

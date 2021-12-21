@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['inputsanitycheck_0',['inputSanityCheck',['../class_menu.html#a551753e354e0b632b46e596d0f9ea3d1',1,'Menu']]]
+  ['getairports_0',['getAirports',['../class_database.html#a241866fcfe92f117eb3ac86fc442e1f6',1,'Database']]]
 ];

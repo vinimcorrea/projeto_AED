@@ -4,3 +4,6 @@
 
 #include "GroundTransportation.h"
 
+float GroundTransportation::getDistanceFromAirport() const {
+    return distanceFromAirport;
+}

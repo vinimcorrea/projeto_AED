@@ -19,3 +19,11 @@ const string Airport::getCity() {
 const string Airport::getCode() {
     return code;
 }
+
+vector<Plane*>& Airport::getPlanes() {
+    return planes;
+}
+
+void Airport::addPlane(Plane *plane) {
+    planes.push_back(plane);
+}

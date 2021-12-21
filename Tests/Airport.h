@@ -36,6 +36,17 @@ public:
     const string getName();
     const string getCity();
     const string getCode();
+    /**
+     * @brief Gets the list of planes currently on this airport.
+     * @return list of planes
+     */
+    vector<Plane*>& getPlanes();
+
+    /**
+     * @brief Adds a new plane to the airport's database.
+     * @param plane -> pointer to plane to add
+     */
+    void addPlane(Plane* plane);
 
     const BST<GroundTransportation> &getLocalInformation() const;
     void addLocalInformation();

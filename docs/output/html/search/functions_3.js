@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loadairports_0',['loadAirports',['../class_database.html#a3a0dda3758fb54b6a8d65cd397cece5f',1,'Database']]]
+  ['inputsanitycheck_0',['inputSanityCheck',['../class_menu.html#a551753e354e0b632b46e596d0f9ea3d1',1,'Menu']]]
 ];

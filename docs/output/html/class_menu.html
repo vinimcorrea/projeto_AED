@@ -66,6 +66,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_menu-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Menu Class Reference</div></div>
 </div><!--header-->
@@ -76,12 +77,17 @@ Inheritance diagram for Menu:</div>
  <div class="center">
   <img src="class_menu.png" usemap="#Menu_map" alt=""/>
   <map id="Menu_map" name="Menu_map">
-<area href="class_airport_menu.html" alt="AirportMenu" shape="rect" coords="0,56,83,80"/>
+<area href="class_airport_menu.html" alt="AirportMenu" shape="rect" coords="0,56,129,80"/>
+<area href="class_local_transport_menu.html" alt="LocalTransportMenu" shape="rect" coords="139,56,268,80"/>
+<area href="class_main_menu.html" alt="MainMenu" shape="rect" coords="278,56,407,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a38ae912e2c59ddfe596573533c030edb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a38ae912e2c59ddfe596573533c030edb">Menu</a> (<a class="el" href="class_database.html">Database</a> *database)</td></tr>
+<tr class="memdesc:a38ae912e2c59ddfe596573533c030edb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="class_menu.html#a38ae912e2c59ddfe596573533c030edb">More...</a><br /></td></tr>
+<tr class="separator:a38ae912e2c59ddfe596573533c030edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab060ba03876ae0a4f55d4d44cb19a5d6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#ab060ba03876ae0a4f55d4d44cb19a5d6">displayMessage</a> ()</td></tr>
 <tr class="memdesc:ab060ba03876ae0a4f55d4d44cb19a5d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the menu's main screen.  <a href="class_menu.html#ab060ba03876ae0a4f55d4d44cb19a5d6">More...</a><br /></td></tr>
 <tr class="separator:ab060ba03876ae0a4f55d4d44cb19a5d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -94,7 +100,48 @@ Static Protected Member Functions</h2></td></tr>
 <tr class="memitem:a551753e354e0b632b46e596d0f9ea3d1"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a551753e354e0b632b46e596d0f9ea3d1">inputSanityCheck</a> ()</td></tr>
 <tr class="memdesc:a551753e354e0b632b46e596d0f9ea3d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">General-purpose input sanity check function.  <a href="class_menu.html#a551753e354e0b632b46e596d0f9ea3d1">More...</a><br /></td></tr>
 <tr class="separator:a551753e354e0b632b46e596d0f9ea3d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a1c15a4a551b97caff2d786ac1440974c"><td class="memItemLeft" align="right" valign="top"><a id="a1c15a4a551b97caff2d786ac1440974c" name="a1c15a4a551b97caff2d786ac1440974c"></a>
+<a class="el" href="class_database.html">Database</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>database</b></td></tr>
+<tr class="separator:a1c15a4a551b97caff2d786ac1440974c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a38ae912e2c59ddfe596573533c030edb" name="a38ae912e2c59ddfe596573533c030edb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38ae912e2c59ddfe596573533c030edb">&#9670;&nbsp;</a></span>Menu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Menu::Menu </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_database.html">Database</a> *&#160;</td>
+          <td class="paramname"><em>database</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">database</td><td>-&gt; pointer to current database </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab060ba03876ae0a4f55d4d44cb19a5d6" name="ab060ba03876ae0a4f55d4d44cb19a5d6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab060ba03876ae0a4f55d4d44cb19a5d6">&#9670;&nbsp;</a></span>displayMessage()</h2>
@@ -121,7 +168,7 @@ Static Protected Member Functions</h2></td></tr>
 
 <p>Displays the menu's main screen. </p>
 
-<p>Reimplemented in <a class="el" href="class_airport_menu.html#a71a9eb552a5ddb78f9353e0e3670e730">AirportMenu</a>.</p>
+<p>Reimplemented in <a class="el" href="class_airport_menu.html#a71a9eb552a5ddb78f9353e0e3670e730">AirportMenu</a>, <a class="el" href="class_main_menu.html#ac691da91d9eac85c316e0b8b7e38ef67">MainMenu</a>, and <a class="el" href="class_local_transport_menu.html#ad6e619970fafb6b5d11895088611a3e3">LocalTransportMenu</a>.</p>
 
 </div>
 </div>
@@ -179,7 +226,7 @@ Static Protected Member Functions</h2></td></tr>
 <p>Processes user input, then specifies which menu to jump to. </p>
 <p >this -&gt; does not change menu nullptr -&gt; signal to go back a menu </p><dl class="section return"><dt>Returns</dt><dd>the menu to jump to </dd></dl>
 
-<p>Reimplemented in <a class="el" href="class_airport_menu.html#ab5d61498a6c46f7bc224182b5c2092a5">AirportMenu</a>.</p>
+<p>Reimplemented in <a class="el" href="class_airport_menu.html#ab5d61498a6c46f7bc224182b5c2092a5">AirportMenu</a>, <a class="el" href="class_main_menu.html#a1cbdb5f542953d853868c81434198983">MainMenu</a>, and <a class="el" href="class_local_transport_menu.html#a020ad2fb1e363f12fd9e087af41c2e98">LocalTransportMenu</a>.</p>
 
 </div>
 </div>

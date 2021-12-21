@@ -14,11 +14,14 @@ class GroundTransportation {
     float distanceFromAirport;
     time_t time;
 public:
-    GroundTransportation(string t, float d, time_t ti){type = t; distanceFromAirport = d; time = ti;}
-    float getDistanceFromAirport() const {
-        return distanceFromAirport;
-    }
+    GroundTransportation(string t, float d, time_t ti)
+        : type(t), distanceFromAirport(d), time(ti){};
 
+    /**
+     * @brief Returns the distance of the stop from the airport.
+     * @return distance from airport
+     */
+    float getDistanceFromAirport() const;
 };
 
 

@@ -20,18 +20,56 @@ using namespace std;
 
 
 class Plane{
-    string enroll;
+private:
+    string license;
+    string type;
     unsigned capacity;
     list<Flight> flightPlan;
     queue<Service> services;
-    vector<Service> realizedServices;
+    list<Service> realizedServices;
+
+    Plane(string lp, string type, unsigned cap) : license(lp), type(type), capacity(cap){};
 
 public:
-    Plane(string en, unsigned cap, list<Flight> fp, queue<Service> s){
-        enroll = en; capacity = cap; flightPlan = fp; s = services;}
+    /**
+     * @brief Constructor.
+     * @param lp -> license plate code
+     * @param type -> plane identifier
+     * @param cap -> seat capacity
+     * @param fp -> flight schedule
+     * @param s -> servicing schedule
+     */
+    Plane(string lp, string type, unsigned cap, list<Flight> fp, queue<Service> s)
+        : license(lp), type(type), capacity(cap), flightPlan(fp), services(s){};
+
     void addFlight(const Flight &f1);
     void addService(const Service &s1);
+    /**
+     * @brief Gets the plane's license number.
+     * @return the licnese number
+     */
+    const string &getLicense() const;
+
+    /**
+     * @brief Gets the plane's type code.
+     * @return the type code
+     */
+    const string &getType() const;
+
+    /**
+     * @brief Gets the plane's seat capacity.
+     * @return the seat capacity
+     */
+    const unsigned& getCapacity() const;
+
     const list<Flight> &getFlight() const;
+
+    /**
+     * @brief Gets the number of currently scheduled flights.
+     * @return the number of flights
+     */
+    const int getNumberOfFlights() const;
+
     const queue<Service> &getServices() const;
     int numPassengers(unsigned flightNumber) const;
     void doneService();

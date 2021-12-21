@@ -8,251 +8,259 @@
 		<Option virtualFolders="CMake Files\;CMake Files\docs\;CMake Files\lib\;CMake Files\lib\googletest-master\;CMake Files\lib\googletest-master\googlemock\;CMake Files\lib\googletest-master\googlemock\cmake\;CMake Files\lib\googletest-master\googletest\;CMake Files\lib\googletest-master\googletest\cmake\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock"/>
+				<Option working_dir="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="gmock">
-				<Option output="/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googlemock/include"/>
-					<Add directory="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googlemock"/>
-					<Add directory="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googletest/include"/>
-					<Add directory="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googletest"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="gmock/fast">
-				<Option output="/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googlemock/include"/>
-					<Add directory="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googlemock"/>
-					<Add directory="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googletest/include"/>
-					<Add directory="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googletest"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock_main">
-				<Option output="/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock"/>
+				<Option output="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googlemock/include"/>
-					<Add directory="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googlemock"/>
-					<Add directory="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googletest/include"/>
-					<Add directory="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googletest"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googlemock/include"/>
+					<Add directory="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googlemock"/>
+					<Add directory="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googletest/include"/>
+					<Add directory="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googletest"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/x86_64-w64-mingw32"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/backward"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/include-fixed"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock_main/fast">
-				<Option output="/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock"/>
+				<Option output="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googlemock/include"/>
-					<Add directory="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googlemock"/>
-					<Add directory="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googletest/include"/>
-					<Add directory="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googletest"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googlemock/include"/>
+					<Add directory="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googlemock"/>
+					<Add directory="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googletest/include"/>
+					<Add directory="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googletest"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/x86_64-w64-mingw32"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/backward"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/include-fixed"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="gtest_main">
-				<Option output="/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googletest"/>
+			<Target title="gmock">
+				<Option output="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googletest/include"/>
-					<Add directory="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googletest"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googlemock/include"/>
+					<Add directory="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googlemock"/>
+					<Add directory="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googletest/include"/>
+					<Add directory="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googletest"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/x86_64-w64-mingw32"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/backward"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/include-fixed"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="gtest_main/fast">
-				<Option output="/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googletest"/>
+			<Target title="gmock/fast">
+				<Option output="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googletest/include"/>
-					<Add directory="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googletest"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googlemock/include"/>
+					<Add directory="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googlemock"/>
+					<Add directory="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googletest/include"/>
+					<Add directory="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googletest"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/x86_64-w64-mingw32"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/backward"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/include-fixed"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest">
-				<Option output="/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googletest"/>
+				<Option output="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googletest/include"/>
-					<Add directory="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googletest"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googletest/include"/>
+					<Add directory="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googletest"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/x86_64-w64-mingw32"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/backward"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/include-fixed"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest/fast">
-				<Option output="/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googletest"/>
+				<Option output="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googletest/include"/>
-					<Add directory="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googletest"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googletest/include"/>
+					<Add directory="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googletest"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/x86_64-w64-mingw32"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/backward"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/include-fixed"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/viniciuscorrea/Desktop/aedProject/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main">
+				<Option output="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googletest/include"/>
+					<Add directory="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googletest"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/x86_64-w64-mingw32"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/backward"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/include-fixed"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main/fast">
+				<Option output="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googletest/include"/>
+					<Add directory="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googletest"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/x86_64-w64-mingw32"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/backward"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/include-fixed"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/cmake-build-debug/lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googlemock/src/gmock-all.cc">
+		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googlemock/src/gmock-all.cc">
 			<Option target="gmock"/>
 		</Unit>
-		<Unit filename="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googlemock/src/gmock_main.cc">
+		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googlemock/src/gmock_main.cc">
 			<Option target="gmock_main"/>
 		</Unit>
-		<Unit filename="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googletest/src/gtest-all.cc">
+		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googletest/src/gtest-all.cc">
 			<Option target="gtest"/>
 		</Unit>
-		<Unit filename="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googletest/src/gtest_main.cc">
+		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/Users/viniciuscorrea/Desktop/aedProject/CMakeLists.txt">
+		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/Users/viniciuscorrea/Desktop/aedProject/docs/Doxyfile">
+		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/docs/Doxyfile">
 			<Option virtualFolder="CMake Files\docs\"/>
 		</Unit>
-		<Unit filename="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/CMakeLists.txt">
+		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\lib\googletest-master\"/>
 		</Unit>
-		<Unit filename="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googlemock/CMakeLists.txt">
+		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googlemock/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googlemock\"/>
 		</Unit>
-		<Unit filename="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googlemock/cmake/gmock.pc.in">
+		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googlemock/cmake/gmock.pc.in">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googlemock/cmake/gmock_main.pc.in">
+		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googlemock/cmake/gmock_main.pc.in">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googletest/CMakeLists.txt">
+		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googletest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\"/>
 		</Unit>
-		<Unit filename="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googletest/cmake/Config.cmake.in">
+		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googletest/cmake/Config.cmake.in">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googletest/cmake/gtest.pc.in">
+		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googletest/cmake/gtest.pc.in">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googletest/cmake/gtest_main.pc.in">
+		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googletest/cmake/gtest_main.pc.in">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/Users/viniciuscorrea/Desktop/aedProject/lib/googletest-master/googletest/cmake/internal_utils.cmake">
+		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/lib/googletest-master/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\cmake\"/>
 		</Unit>
 	</Project>
