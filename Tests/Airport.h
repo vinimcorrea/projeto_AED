@@ -30,7 +30,7 @@ public:
      * @param c -> location of airport
      * @param code -> filename code
      */
-    Airport(string n, string c, string code): localInformation(GroundTransportation("", 0.0, 0)),
+    Airport(string n, string c, string code): localInformation(GroundTransportation("", 0.0, list<time_t>())),
     name(n), city(c), code(code) {};
 
     const string getName();

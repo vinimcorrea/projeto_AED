@@ -163,7 +163,7 @@ Menu* MainMenu::processInput() {
             case 5:
                 break;
             case 6:
-                return new LocalTransportMenu(database);
+                return new LocalTransportMenu(database, currentAirport);
         };
     }
 
