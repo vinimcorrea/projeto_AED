@@ -173,7 +173,7 @@ Menu* PlaneMenu::processInput() {
                 createPlane();
                 break;
             case 2:
-                displayTable(currentAirport->getPlanes());
+                planeTable();
                 break;
             case 3:
                 removePlane();
@@ -224,6 +224,41 @@ void PlaneMenu::createPlane() {
 
     currentAirport->addPlane(new Plane(plate, type, capacity, list<Flight>(), queue<Service>()));
     std::cout << "New aircraft successfully added to database.\n";
+}
+
+void PlaneMenu::planeTable() {
+    while(true) {
+        std::cout << "Available commands:\n";
+        std::cout << "[1] Display all entries\n";
+        std::cout << "[2] Search for plane with specific license\n";
+        std::cout << "[3] Display planes of a specific type\n";
+        int choice = inputHandler<int>("Input your option : ");
+
+        std::string filter;
+        Plane *desiredPlane;
+
+        switch(choice){
+            case 1:
+                displayTable(currentAirport->getPlanes());
+                return;
+            case 2:
+                filter = inputHandler<std::string>
+                        ("Please enter the license number of the plane : ");
+                desiredPlane = currentAirport->findPlaneWithLicense(filter);
+                if(desiredPlane)
+                    displayTable(vector<Plane*>({desiredPlane}));
+                else
+                    std::cout << "Plane not found.\n";
+                return;
+            case 3:
+                filter = inputHandler<std::string>
+                        ("Please enter the type of plane you want to filter by :");
+                displayTable(currentAirport->filterPlanesByType(filter));
+                return;
+        }
+
+        std::cout << "Invalid option.\n";
+    }
 }
 
 void PlaneMenu::removePlane() {

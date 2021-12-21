@@ -48,6 +48,20 @@ public:
      */
     void addPlane(Plane* plane);
 
+    /**
+     * @brief Finds a plane with a specific license.
+     * @param filter -> license number
+     * @return Pointer to plane, NULL if not found.
+     */
+    Plane* findPlaneWithLicense(const std::string& filter);
+
+    /**
+     * @brief Filters the plane list by plane type
+     * @param filter -> plane type
+     * @return list of planes of specified type
+     */
+    vector<Plane*> filterPlanesByType(const std::string& filter);
+
     const BST<GroundTransportation> &getLocalInformation() const;
     void addLocalInformation();
 

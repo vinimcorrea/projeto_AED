@@ -93,6 +93,7 @@ private:
      * @brief Adds a new plane to the current airport's database.
      */
     void createPlane();
+    void planeTable();
     void removePlane();
 public:
     PlaneMenu(Database* database, Airport* airport) : MainMenu(database, airport) {};
