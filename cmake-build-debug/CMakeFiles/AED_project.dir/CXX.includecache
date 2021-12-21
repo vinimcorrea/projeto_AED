@@ -1,0 +1,104 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Airport.h
+BST.h
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/BST.h
+GroundTransportation.h
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/GroundTransportation.h
+Plane.h
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Plane.h
+string
+-
+vector
+-
+
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/BST.h
+iostream
+-
+stack
+-
+queue
+-
+
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Database.h
+unordered_map
+-
+Airport.h
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Airport.h
+
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Employee.h
+string
+-
+
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Exceptions.h
+string
+-
+exception
+-
+
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Flight.h
+Passenger.h
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Passenger.h
+string
+-
+vector
+-
+
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/GroundTransportation.h
+string
+-
+
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Menu.cpp
+iomanip
+-
+iostream
+-
+limits
+-
+Menu.h
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Menu.h
+
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Menu.h
+string
+-
+Airport.h
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Airport.h
+Database.h
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Database.h
+
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Passenger.h
+string
+-
+
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Plane.h
+Service.h
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Service.h
+Flight.h
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Flight.h
+Passenger.h
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Passenger.h
+Exceptions.h
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Exceptions.h
+string
+-
+vector
+-
+queue
+-
+list
+-
+
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Service.h
+ctime
+-
+string
+-
+Employee.h
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Employee.h
+

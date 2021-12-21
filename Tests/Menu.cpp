@@ -12,6 +12,10 @@
 #define PLANETABLE_CAPACITY_WIDTH 18
 #define PLANETABLE_NFLIGHTS_WIDTH 18
 
+#define TRANSTABLE_TYPE_WIDTH 25
+#define TRANSTABLE_DIST_WIDTH 25
+#define TRANSTABLE_TIME_WIDTH 26
+
 //--- Menu ------------------------------------------------
 
 bool Menu::inputSanityCheck() {
@@ -44,7 +48,7 @@ T Menu::inputHandler(std::string msg) {
     }
 }
 
-void Menu::displayTable(const vector<Plane *> planes) const {
+void Menu::displayTable(const vector<Plane *>& planes) const {
     std::cout << "╔════════════════════╤═══════════════════╤══════════════════╤══════════════════╗" << std::endl;
     std::cout << "║license number      │type               │seat capacity     │scheduled flights ║" << std::endl;
     std::cout << "║                    │                   │                  │                  ║" << std::endl;
@@ -54,7 +58,6 @@ void Menu::displayTable(const vector<Plane *> planes) const {
         std::string type = formatEntry(p->getType(), PLANETABLE_TYPE_WIDTH);
         std::string capacity = formatEntry(to_string(p->getCapacity()), PLANETABLE_CAPACITY_WIDTH);
         std::string nFlights = formatEntry(to_string(p->getNumberOfFlights()), PLANETABLE_NFLIGHTS_WIDTH);
-
         std::cout << "║" << setw(PLANETABLE_LICENSE_WIDTH) << license;
         std::cout << "│" << setw(PLANETABLE_TYPE_WIDTH) << type;
         std::cout << "│" << setw(PLANETABLE_CAPACITY_WIDTH) << capacity;
@@ -62,6 +65,27 @@ void Menu::displayTable(const vector<Plane *> planes) const {
         std::cout << "║                    │                   │                  │                  ║" << std::endl;
     }
     std::cout << "╚════════════════════╧═══════════════════╧══════════════════╧══════════════════╝" << std::endl;
+    std::cout << setw(0);
+}
+
+void Menu::displayTable(const BST<GroundTransportation>& localTransports) const {
+    std::cout << "╔═════════════════════════╤═════════════════════════╤══════════════════════════╗" << std::endl;
+    std::cout << "║transport type           │distance from airport    │timetable                 ║" << std::endl;
+    std::cout << "║                         │                         │                          ║" << std::endl;
+    std::cout << setiosflags(std::ios::left);
+    for(BSTItrIn<GroundTransportation> it(localTransports); !it.isAtEnd(); it.advance()){
+        GroundTransportation g = it.retrieve();
+        std::string type = formatEntry(g.getType(), TRANSTABLE_TYPE_WIDTH);
+        std::string distance = formatEntry(to_string(g.getDistanceFromAirport()), TRANSTABLE_DIST_WIDTH);
+        std::cout << "│" << setw(TRANSTABLE_TYPE_WIDTH) << type;
+        std::cout << "│" << setw(TRANSTABLE_DIST_WIDTH) << distance;
+        for(time_t t : g.getTimetable()){
+            std::cout << "│" << setw(TRANSTABLE_TYPE_WIDTH) << distance;
+        }
+        std::cout << "║                         │                         │                          ║" << std::endl;
+    }
+
+    std::cout << "╚═════════════════════════╧═════════════════════════╧══════════════════════════╝" << std::endl;
     std::cout << setw(0);
 }
 
@@ -184,33 +208,6 @@ Menu* PlaneMenu::processInput() {
     return this;
 }
 
-
-void LocalTransportMenu::displayMessage() {
-    std::cout << "╔══════════════════════════════════════════════════════════════════════════════╗" << std::endl;
-    std::cout << "║ [1] Search an airport's local transport database                             ║" << std::endl;
-    std::cout << "║                                                                              ║" << std::endl;
-    std::cout << "║ [q] Go back                                                                  ║" << std::endl;
-    std::cout << "╚══════════════════════════════════════════════════════════════════════════════╝" << std::endl;
-}
-
-Menu* LocalTransportMenu::processInput() {
-    std::string userInput;
-
-    std::cin >> userInput;
-
-    if(inputSanityCheck()){
-        if(userInput == "q")
-            return nullptr;
-        switch(stoi(userInput)){
-            case 1:
-                break;
-        };
-    }
-
-    std::cout << "Invalid user input." << std::endl;
-    return this;
-}
-
 void PlaneMenu::createPlane() {
     std::string plate = inputHandler<std::string>("Please enter the plane's license number : ");
     std::string type = inputHandler<std::string>("Please enter the plane's type code : ");
@@ -222,8 +219,10 @@ void PlaneMenu::createPlane() {
     std::cout << newPlane->getType() << '\n';
     std::cout << newPlane->getLicense() << '\n';
 
-    currentAirport->addPlane(new Plane(plate, type, capacity, list<Flight>(), queue<Service>()));
-    std::cout << "New aircraft successfully added to database.\n";
+    if(currentAirport->addPlane(new Plane(plate, type, capacity, list<Flight>(), queue<Service>())))
+        std::cout << "New aircraft successfully added to database.\n";
+    else
+        std::cout << "A plane with the same license number already exists. Operation unsuccessful.\n";
 }
 
 void PlaneMenu::planeTable() {
@@ -279,6 +278,60 @@ void PlaneMenu::removePlane() {
     }
 
     std::cout << "The license number specified does not exist in this airport's database.\n";
+}
+
+//--- LocalTransportMenu -----------------------------------
+
+
+void LocalTransportMenu::displayMessage() {
+    std::cout << "╔══════════════════════════════════════════════════════════════════════════════╗" << std::endl;
+    std::cout << "║ [1] Search an airport's local transport database                             ║" << std::endl;
+    std::cout << "║                                                                              ║" << std::endl;
+    std::cout << "║ [q] Go back                                                                  ║" << std::endl;
+    std::cout << "╚══════════════════════════════════════════════════════════════════════════════╝" << std::endl;
+}
+
+Menu* LocalTransportMenu::processInput() {
+    std::string userInput;
+
+    std::cin >> userInput;
+
+    if(inputSanityCheck()){
+        if(userInput == "q")
+            return nullptr;
+        switch(stoi(userInput)){
+            case 1:
+                break;
+        };
+    }
+
+    std::cout << "Invalid user input." << std::endl;
+    return this;
+}
+
+void LocalTransportMenu::transportTable() {
+    while(true) {
+        std::cout << "Available commands:\n";
+        std::cout << "[1] Display all entries\n";
+        std::cout << "[2] Display all entries of a specific type\n";
+        std::cout << "[3] Search for closest local transport\n";
+        std::cout << "[4] Search for closest local transport of a specific type\n";
+        int choice = inputHandler<int>("Input your option : ");
+
+        std::string filter;
+
+        switch(choice){
+            case 1:
+
+                return;
+            case 2:
+                return;
+            case 3:
+                return;
+        }
+
+        std::cout << "Invalid option.\n";
+    }
 }
 
 /*

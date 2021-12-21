@@ -24,8 +24,14 @@ vector<Plane*>& Airport::getPlanes() {
     return planes;
 }
 
-void Airport::addPlane(Plane *plane) {
+bool Airport::addPlane(Plane *plane) {
+    for(auto it=planes.begin(); it!=planes.end(); ++it){
+        Plane* p = *it;
+        if(p->getLicense() == plane->getLicense())
+            return false;
+    }
     planes.push_back(plane);
+    return true;
 }
 
 Plane* Airport::findPlaneWithLicense(const std::string &filter) {

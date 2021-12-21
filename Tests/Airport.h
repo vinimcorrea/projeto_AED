@@ -44,9 +44,11 @@ public:
 
     /**
      * @brief Adds a new plane to the airport's database.
+     *        Only adds if no other plane with the same license plate exists.
      * @param plane -> pointer to plane to add
+     * @return true if successful, false otherwise
      */
-    void addPlane(Plane* plane);
+    bool addPlane(Plane* plane);
 
     /**
      * @brief Finds a plane with a specific license.
@@ -62,6 +64,10 @@ public:
      */
     vector<Plane*> filterPlanesByType(const std::string& filter);
 
+    /**
+     * @brief Gets information on local public transports.
+     * @return binary search tree with information
+     */
     const BST<GroundTransportation> &getLocalInformation() const;
     void addLocalInformation();
 

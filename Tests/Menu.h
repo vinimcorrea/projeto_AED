@@ -8,6 +8,7 @@
 #include <string>
 
 #include "Airport.h"
+#include "BST.h"
 #include "Database.h"
 
 /**
@@ -41,7 +42,8 @@ protected:
      *
      * @param t -> data pool to construct the data from
      */
-    void displayTable(const vector<Plane* > planes) const;
+    void displayTable(const vector<Plane* >& planes) const;
+    void displayTable(const BST<GroundTransportation>& localTransports) const;
 
     std::string formatEntry(const std::string& entry, int length) const;
 
@@ -93,8 +95,17 @@ private:
      * @brief Adds a new plane to the current airport's database.
      */
     void createPlane();
+
+    /**
+     * @brief Displays table of planes, formatted according to user input.
+     */
     void planeTable();
+
+    /**
+     * @brief Deletes a plane with a specific license number.
+     */
     void removePlane();
+
 public:
     PlaneMenu(Database* database, Airport* airport) : MainMenu(database, airport) {};
     void displayMessage() override;
@@ -102,9 +113,14 @@ public:
 };
 
 
-class LocalTransportMenu : public Menu{
+class LocalTransportMenu : public MainMenu{
+private:
+    /**
+     * @brief Displays table of local transports, formatted according to user input.
+     */
+    void transportTable();
 public:
-    LocalTransportMenu(Database* database) : Menu(database) {};
+    LocalTransportMenu(Database* database, Airport* airport) : MainMenu(database, airport) {};
     void displayMessage() override;
     Menu* processInput() override;
 };
