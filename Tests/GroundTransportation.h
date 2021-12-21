@@ -6,6 +6,7 @@
 #define AED_PROJECT_GROUNDTRANSPORTATION_H
 
 #include <list>
+//#include "Time.h"
 #include <string>
 
 using namespace std;
@@ -28,13 +29,25 @@ public:
      * @brief Returns the type of transport.
      * @return type
      */
-    string getType() const;
+    const string getType() const;
+
+    /**
+     * @brief Changes the type of transport.
+     * @param type -> new type
+     */
+    void setType(const string &type);
 
     /**
      * @brief Returns the distance of the stop from the airport.
      * @return distance from airport
      */
     float getDistanceFromAirport() const;
+
+    /**
+     * @brief Changes the transport stop's distance from the airport
+     * @param distanceFromAirport -> new distance
+     */
+    void setDistanceFromAirport(const float& distanceFromAirport);
 
     /**
      * @brief Get timetable of transport.

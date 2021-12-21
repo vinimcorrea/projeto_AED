@@ -15,3 +15,14 @@ float GroundTransportation::getDistanceFromAirport() const {
 list<time_t> GroundTransportation::getTimetable() {
     return timetable;
 }
+const string &GroundTransportation::getType() const {
+    return type;
+}
+
+void GroundTransportation::setType(const string &type) {
+    GroundTransportation::type = type;
+}
+
+void GroundTransportation::setDistanceFromAirport(const float& distanceFromAirport) {
+    GroundTransportation::distanceFromAirport = distanceFromAirport;
+}

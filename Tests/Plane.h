@@ -46,7 +46,7 @@ public:
     void addService(const Service &s1);
     /**
      * @brief Gets the plane's license number.
-     * @return the licnese number
+     * @return the license number
      */
     const string &getLicense() const;
 
@@ -66,17 +66,63 @@ public:
 
     /**
      * @brief Gets the number of currently scheduled flights.
-     * @return the number of flights
+     * @return Number of flights
      */
     const int getNumberOfFlights() const;
 
+    /**
+     *
+     * @return
+     */
     const queue<Service> &getServices() const;
+
+    /**
+     *
+     * @param flightNumber
+     * @return
+     */
     int numPassengers(unsigned flightNumber) const;
+
+    /**
+     *
+     */
     void doneService();
+
+    /**
+     *
+     * @param p1
+     * @param flNumber
+     * @return
+     */
     bool passengerGetTicket(Passenger &p1, unsigned flNumber);
+
+    /**
+     *
+     * @param flNumber
+     */
     void cancelFlight(unsigned flNumber);
+
+    /**
+     *
+     * @param f1
+     */
     void rescheduleFlight(Flight & f1);
+
+    /**
+     *
+     * @param id
+     * @return
+     */
+
     bool searchFlight(unsigned id) const;
+
+
+    /**
+     *
+     * @param c1
+     * @return
+     */
+    list<Flight> sortByUserInput(const int & c1);
 };
 
 #endif //AED_PROJECT_PLANE_H

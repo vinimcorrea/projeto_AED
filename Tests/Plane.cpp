@@ -91,6 +91,52 @@ void Plane::rescheduleFlight(Flight &f1){
     }
 }
 
+struct sortByDeparture{
+
+    inline bool operator()(const Flight & f1, const Flight& f2){
+        return f1.getDepartureDate() < f2.getDepartureDate();
+    }
+};
+
+struct sortByDuration{
+
+    inline bool operator()(const Flight& f1, const Flight& f2){
+        return f1.getDuration() < f2.getDuration();
+    }
+};
 
 
+struct sortByOrigin{
+
+    inline bool operator()(const Flight& f1, const Flight& f2){
+        return f1.getOriginFlight() < f2.getOriginFlight();
+    }
+};
+
+
+struct sortByDestiny{
+
+    inline bool operator()(const Flight& f1, const Flight& f2){
+        return f1.getDestinyFlight() < f2.getDestinyFlight();
+    }
+};
+
+
+list<Flight> Plane::sortByUserInput(const int &c1) {
+    switch(c1){
+        case 1:
+            flightPlan.sort(sortByDeparture());
+            return flightPlan;
+        case 2:
+            flightPlan.sort(sortByDuration());
+            return flightPlan;
+        case 3:
+            flightPlan.sort(sortByOrigin());
+            return flightPlan;
+        case 4:
+            flightPlan.sort(sortByDestiny());
+            return flightPlan;
+    }
+
+}
 

@@ -54,3 +54,53 @@ vector<Plane*> Airport::filterPlanesByType(const std::string &filter) {
 
     return ret;
 }
+
+
+struct sortByCapacity{
+
+    inline bool operator()(const Plane& p1, const Plane& p2){
+        return p1.getCapacity() < p2.getCapacity();
+    }
+};
+
+
+struct sortByNumberOfFlights{
+
+    inline bool operator()(const Plane& p1, const Plane& p2){
+        return p1.getNumberOfFlights() < p2.getNumberOfFlights();
+    }
+};
+struct sortByType{
+
+    inline bool operator()(const Plane& p1, const Plane& p2){
+        return p1.getType() < p2.getType();
+    }
+};
+
+struct sortByLicense{
+
+    inline bool operator()(const Plane& p1, const Plane& p2){
+        return p1.getLicense() < p2.getLicense();
+    }
+};
+
+
+
+vector<Plane*> Airport::sortByUserInputPlanes(const int &s1) {
+    switch(s1){
+        case 1:
+            sort(planes.begin(), planes.end(), sortByCapacity());
+            return planes;
+        case 2:
+            sort(planes.begin(), planes.end(), sortByNumberOfFlights());
+            return planes;
+        case 3:
+            sort(planes.begin(), planes.end(), sortByType());
+            return planes;
+        case 4:
+            sort(planes.begin(), planes.end(), sortByLicense());
+            return planes;
+
+    }
+}
+
