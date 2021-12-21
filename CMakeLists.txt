@@ -16,12 +16,8 @@ add_executable(AED_project
         Tests/Luggage.h
         Tests/Service.cpp
         Tests/Service.h
-        Tests/Ticket.cpp
-        Tests/Ticket.h
         Tests/Trolley.cpp
         Tests/Trolley.h
-        Tests/LocalTransport.cpp
-        Tests/LocalTransport.h
         Tests/Airport.cpp
         Tests/Airport.h
         Tests/BST.h

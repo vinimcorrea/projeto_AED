@@ -31,7 +31,13 @@ private:
     void loadAirports();
 
 public:
+    /*
+     * @brief Constructor.
+     */
     Database();
+    /**
+     * @brief Destructor.
+     */
     ~Database();
 
     /**

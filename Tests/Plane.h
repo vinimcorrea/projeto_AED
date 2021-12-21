@@ -8,7 +8,6 @@
 #include "Service.h"
 #include "Flight.h"
 #include "Passenger.h"
-//#include "Exceptions.h"
 
 #include <string>
 #include <vector>
@@ -67,7 +66,9 @@ public:
      * @brief Gets the flight schedule list
      * @return flight schedule
      */
-    const list<Flight> &getFlight() const;
+    list<Flight> &getFlight();
+
+
 
     /**
      * @brief Gets the number of currently scheduled flights.
@@ -98,17 +99,13 @@ public:
       */
      void executeService();
 
-    /**
-     * @param flightNumber
-     * @return
-     */
-
+/*
     int numPassengers(unsigned flightNumber) const;
+*/
 
-    /**
-     *
-     */
+/*
     void doneService();
+    */
 
     /**
      *

@@ -17,11 +17,15 @@ void Time::setTime(int h, int m, int s)
     second = s;
 }
 
-void Time::print()
+void Time::print() const
 {
     cout << setw(2) << setfill('0') << hour << ":"
          << setw(2) << setfill('0') << minute << ":"
          << setw(2) << setfill('0') << second << "\n";
+}
+
+std::string Time::formatted() const {
+    return to_string(hour)+":"+to_string(minute)+":"+to_string(second);
 }
 
 bool Time::equals(Time otherTime)

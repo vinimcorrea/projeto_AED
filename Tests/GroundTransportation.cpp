@@ -25,18 +25,20 @@ void GroundTransportation::setType(const string &type) {
     GroundTransportation::type = type;
 }
 
+/*
 void GroundTransportation::setDistanceFromAirport(float distanceFromAirport) {
     GroundTransportation::distanceFromAirport = distanceFromAirport;
 }
+ */
 
 void GroundTransportation::setTime(const Time &time) {
     GroundTransportation::time = time;
 }
 
 bool GroundTransportation::operator<(const GroundTransportation &g1) const {
-    return type < g1.type;
+    return distanceFromAirport < g1.distanceFromAirport;
 }
 
 bool GroundTransportation::operator==(const GroundTransportation &g2) const {
-    return this->type == type;
+    return this->distanceFromAirport == distanceFromAirport;
 }

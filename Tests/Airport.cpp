@@ -31,6 +31,10 @@ list<Plane*>& Airport::getPlanes() {
     return planes;
 }
 
+Trolley& Airport::getTrolley() {
+    return trolley;
+}
+
 void Airport::addPlane(Plane *plane) {
     planes.push_back(plane);
 }
@@ -86,7 +90,7 @@ struct sortByLicense{
 };
 
 
-
+/*
 list<Plane*> Airport::sortByUserInputPlanes(const int &s1) {
     switch (s1) {
         case 1:
@@ -104,6 +108,8 @@ list<Plane*> Airport::sortByUserInputPlanes(const int &s1) {
     }
     return list<Plane*>();
 }
+ */
+
 /*
 BST<GroundTransportation> Airport::filterTransportByType(const string &s0, GroundTransportation& previous, GroundTransportation& next) {
     BST<GroundTransportation> aux = localInformation;
@@ -119,6 +125,7 @@ BST<GroundTransportation> Airport::filterTransportByType(const string &s0, Groun
 }
  */
 
+/*
 void Airport::readFile(ifstream &f) {
     string type, distance, hour, minute, second;
 
@@ -135,3 +142,4 @@ void Airport::readFile(ifstream &f) {
         getline(f, name); //dummy read
     }
 }
+*/

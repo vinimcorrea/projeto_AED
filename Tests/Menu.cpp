@@ -6,6 +6,7 @@
 #include <iostream>
 #include <limits>
 #include "Menu.h"
+#include "Luggage.h"
 
 #define PLANETABLE_LICENSE_WIDTH 20
 #define PLANETABLE_TYPE_WIDTH 19
@@ -124,15 +125,17 @@ void Menu::displayTable(const list<Service>& services) const {
 
 void Menu::displayTable(const BST<GroundTransportation>& localTransports) const {
     std::cout << "╔═════════════════════════╤═════════════════════════╤══════════════════════════╗" << std::endl;
-    std::cout << "║transport type           │distance from airport    │timetable                 ║" << std::endl;
+    std::cout << "║transport type           │distance from airport    │arrives at                ║" << std::endl;
     std::cout << "║                         │                         │                          ║" << std::endl;
     std::cout << setiosflags(std::ios::left);
     for(BSTItrIn<GroundTransportation> it(localTransports); !it.isAtEnd(); it.advance()){
         GroundTransportation g = it.retrieve();
         std::string type = formatEntry(g.getType(), TRANSTABLE_TYPE_WIDTH);
         std::string distance = formatEntry(to_string(g.getDistanceFromAirport()), TRANSTABLE_DIST_WIDTH);
+        std::string time = formatEntry(g.getTime().formatted(), TRANSTABLE_TIME_WIDTH);
         std::cout << "│" << setw(TRANSTABLE_TYPE_WIDTH) << type;
         std::cout << "│" << setw(TRANSTABLE_DIST_WIDTH) << distance;
+        std::cout << "│" << setw(TRANSTABLE_TIME_WIDTH) << time;
         std::cout << "║                         │                         │                          ║" << std::endl;
     }
 
@@ -186,8 +189,7 @@ void MainMenu::displayMessage() {
     std::cout << "║ [2] FLIGHT SCHEDULING SYSTEM                                                 ║" << std::endl;
     std::cout << "║ [3] SERVICE SCHEDULING SYSTEM                                                ║" << std::endl;
     std::cout << "║ [4] CLIENT MANAGEMENT SYSTEM                                                 ║" << std::endl;
-    std::cout << "║ [5] BAGGAGE AUTOMATIC CHECK-IN SERVICE MANAGEMENT                            ║" << std::endl;
-    std::cout << "║ [6] LOCAL TRANSPORT SEARCH SYSTEM MANAGEMENT                                 ║" << std::endl;
+    std::cout << "║ [5] LOCAL TRANSPORT SEARCH SYSTEM MANAGEMENT                                 ║" << std::endl;
     std::cout << "║                                                                              ║" << std::endl;
     std::cout << "║ [q] Go back                                                                  ║" << std::endl;
     std::cout << "╚══════════════════════════════════════════════════════════════════════════════╝" << std::endl;
@@ -210,11 +212,9 @@ Menu* MainMenu::processInput() {
             case 3:
                 return new ServiceMenu(database, currentAirport);
             case 4:
-                break;
+                return new ClientMenu(database, currentAirport);
             case 5:
-                break;
-            case 6:
-                return new LocalTransportMenu(database);
+                return new LocalTransportMenu(database, currentAirport);
         };
     }
 
@@ -268,10 +268,6 @@ void PlaneMenu::createPlane() {
     unsigned capacity = inputHandler<unsigned>("Please enter the plane's seat capacity : ");
 
     Plane* newPlane = new Plane(plate, type, capacity, list<Flight>(), queue<Service>());
-    std::cout << newPlane->getNumberOfFlights() << '\n';
-    std::cout << newPlane->getCapacity() << '\n';
-    std::cout << newPlane->getType() << '\n';
-    std::cout << newPlane->getLicense() << '\n';
 
     currentAirport->addPlane(new Plane(plate, type, capacity, list<Flight>(), queue<Service>()));
     std::cout << "New aircraft successfully added to database.\n";
@@ -338,7 +334,6 @@ void FlightMenu::displayMessage() {
     std::cout << "╔══════════════════════════════════════════════════════════════════════════════╗" << std::endl;
     std::cout << "║ [1] Schedule a new flight                                                    ║" << std::endl;
     std::cout << "║ [2] List flight database for a specific plane                                ║" << std::endl;
-    std::cout << "║ [3] Reschedule a flight                                                      ║" << std::endl;
     std::cout << "║                                                                              ║" << std::endl;
     std::cout << "║ [q] Go back                                                                  ║" << std::endl;
     std::cout << "╚══════════════════════════════════════════════════════════════════════════════╝" << std::endl;
@@ -356,6 +351,8 @@ Menu* FlightMenu::processInput() {
             case 1:
                 scheduleFlight();
                 return this;
+            case 2:
+                flightTable();
         };
     }
 
@@ -505,6 +502,9 @@ Menu* ServiceMenu::processInput() {
             case 2:
                 addService();
                 return this;
+            case 3:
+                executeService();
+                return this;
         };
     }
 
@@ -575,6 +575,80 @@ void ServiceMenu::addService() {
     std::cout << "Service added.\n";
 }
 
+void ServiceMenu::executeService() {
+    std::string license = inputHandler<std::string>("Type the plane's license : ");
+    Plane* currentPlane = currentAirport->findPlaneWithLicense(license);
+    if(!currentPlane){
+        std::cout << "Plane not found.\n";
+        return;
+    }
+
+    currentPlane->executeService();
+}
+
+//--- ClientMenu -------------------------------------------
+
+void ClientMenu::displayMessage() {
+    std::cout << "╔══════════════════════════════════════════════════════════════════════════════╗" << std::endl;
+    std::cout << "║ [1] Register a ticket                                                        ║" << std::endl;
+    std::cout << "║                                                                              ║" << std::endl;
+    std::cout << "║ [q] Go back                                                                  ║" << std::endl;
+    std::cout << "╚══════════════════════════════════════════════════════════════════════════════╝" << std::endl;
+}
+
+Menu* ClientMenu::processInput() {
+    std::string userInput;
+
+    std::cin >> userInput;
+
+    if(inputSanityCheck()){
+        if(userInput == "q")
+            return nullptr;
+        switch(stoi(userInput)){
+            case 1:
+                addTicket();
+                return this;
+        };
+    }
+
+    std::cout << "Invalid user input." << std::endl;
+    return this;
+}
+
+void ClientMenu::addTicket() {
+    std::string license = inputHandler<std::string>("Type the plane's license : ");
+    Plane* currentPlane = currentAirport->findPlaneWithLicense(license);
+    if(!currentPlane){
+        std::cout << "Plane not found.\n";
+        return;
+    }
+
+    int fNum = inputHandler<int>("Type the flight's number : ");
+    for(auto it=currentPlane->getFlight().begin(); it!= currentPlane->getFlight().end(); ++it){
+        if(it->getFlightNumber() == fNum){
+            int nTickets = inputHandler<int>("How many tickets ? ");
+            if((currentPlane->getCapacity() - it->getNumberOfPassengers()) >= fNum){
+                char aCheckin = inputHandler<char>( "Auto check-in (y/n) ? ");
+                if(aCheckin != 'y' && aCheckin != 'n'){
+                    std::cout << "Invalid answer\n";
+                    return;
+                }
+                bool a = aCheckin == 'y';
+                for(;nTickets!=0;nTickets--){
+                    Passenger p(a);
+                    Luggage l(p);
+                    it->addPassenger(p);
+                    currentAirport->getTrolley().luggageThroughTreadmill(l);
+                }
+                currentAirport->getTrolley().insertLuggageIntoTrolley();
+                currentAirport->getTrolley().removeLuggage();
+            }
+        }
+    }
+
+
+}
+
 //--- LocalTransportMenu -----------------------------------
 
 
@@ -596,7 +670,8 @@ Menu* LocalTransportMenu::processInput() {
             return nullptr;
         switch(stoi(userInput)){
             case 1:
-                break;
+                transportTable();
+                return this;
         };
     }
 
@@ -608,20 +683,17 @@ void LocalTransportMenu::transportTable() {
     while(true) {
         std::cout << "Available commands:\n";
         std::cout << "[1] Display all entries\n";
-        std::cout << "[2] Display all entries of a specific type\n";
-        std::cout << "[3] Search for closest local transport\n";
-        std::cout << "[4] Search for closest local transport of a specific type\n";
+        std::cout << "[2] Search for closest local transport\n";
         int choice = inputHandler<int>("Input your option : ");
 
         std::string filter;
 
         switch(choice){
             case 1:
-
+                displayTable(currentAirport->getLocalInformation());
                 return;
             case 2:
-                return;
-            case 3:
+                displayTable(BST<GroundTransportation>(currentAirport->getLocalInformation().findMin()));
                 return;
             default:
                 std::cout << "Invalid option.\n";
@@ -630,39 +702,3 @@ void LocalTransportMenu::transportTable() {
 
     }
 }
-
-/*
-static void ApplicationMenu(){
-    //For now this is just a reference. TODO the actual functionality.
-
-    std::cout << "Welcome to the VRG Airline Management System." << std::endl;
-    std::cout << "Please choose one of the following options:" << std::endl;
-    std::cout << std::endl;
-    std::cout << "╔══════════════════════════════════════╤═══════════════════════════════════════╗" << std::endl;
-    std::cout << "║                                      │                                       ║" << std::endl;
-    std::cout << "║ AIRCRAFT MANAGEMENT:                 │ FLIGHT MANAGEMENT:                    ║" << std::endl;
-    std::cout << "║ [1] Add aircraft to database         │ [1] Schedule flight                   ║" << std::endl;
-    std::cout << "║ [2] Remove aircraft from database    │ [2] Cancel flight                     ║" << std::endl;
-    std::cout << "║ [3] Print aircraft database          │ [3] Reschedule flight                 ║" << std::endl;
-    std::cout << "║ [4] Edit aircraft data               │ [4] Print flight database             ║" << std::endl;
-    std::cout << "╠══════════════════════════════════════╪═══════════════════════════════════════╣" << std::endl;
-    std::cout << "║ SERVICE MANAGEMENT:                  │ CLIENT MANAGEMENT:                    ║" << std::endl;
-    std::cout << "║ [1] Schedule new service             │ [1] Register order                    ║" << std::endl;
-    std::cout << "║ [2] Mark service as finished         │ [2] Print ticket database             ║" << std::endl;
-    std::cout << "║ [3] See upcoming service             │ [3] Unregister order                  ║" << std::endl;
-    std::cout << "║ [4] Print past service database      │                                       ║" << std::endl;
-    std::cout << "║ [5] Cancel next service              │                                       ║" << std::endl;
-    std::cout << "╠══════════════════════════════════════╪═══════════════════════════════════════╣" << std::endl;
-    std::cout << "║ AUTO CHECK-IN SERVICE MANAGEMENT:    │ LOCAL TRANSPORT DATABASE MANAGEMENT:  ║" << std::endl;
-    std::cout << "║ [1] Print baggage transport status   │ [1] Display airport's database        ║" << std::endl;
-    std::cout << "║ [2] Move baggage to aircraft         │ [2] Add new airport database          ║" << std::endl;
-    std::cout << "║                                      │ [3] Remove airport database           ║" << std::endl;
-    std::cout << "║                                      │ [4] Add entry to database             ║" << std::endl;
-    std::cout << "║                                      │ [5] Remove entry from database        ║" << std::endl;
-    std::cout << "╠══════════════════════════════════════╧═══════════════════════════════════════╣" << std::endl;
-    std::cout << "║ [s] Save changes                                                             ║" << std::endl;
-    std::cout << "║ [l] Load files                                                               ║" << std::endl;
-    std::cout << "║ [q] Quit to command line                                                     ║" << std::endl;
-    std::cout << "╚══════════════════════════════════════════════════════════════════════════════╝" << std::endl;
-}
- */

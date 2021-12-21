@@ -371,12 +371,6 @@
 		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/GroundTransportation.h">
 			<Option target="AED_project"/>
 		</Unit>
-		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/LocalTransport.cpp">
-			<Option target="AED_project"/>
-		</Unit>
-		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/LocalTransport.h">
-			<Option target="AED_project"/>
-		</Unit>
 		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Luggage.cpp">
 			<Option target="AED_project"/>
 		</Unit>
@@ -405,12 +399,6 @@
 			<Option target="AED_project"/>
 		</Unit>
 		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Service.h">
-			<Option target="AED_project"/>
-		</Unit>
-		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Ticket.cpp">
-			<Option target="AED_project"/>
-		</Unit>
-		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Ticket.h">
 			<Option target="AED_project"/>
 		</Unit>
 		<Unit filename="C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Time.cpp">

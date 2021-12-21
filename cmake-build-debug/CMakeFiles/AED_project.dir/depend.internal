@@ -8,10 +8,12 @@ CMakeFiles/AED_project.dir/Tests/Airport.cpp.obj
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Date.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Flight.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/GroundTransportation.h
+ C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Luggage.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Passenger.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Plane.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Service.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Time.h
+ C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Trolley.h
 CMakeFiles/AED_project.dir/Tests/Database.cpp.obj
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Airport.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/BST.h
@@ -20,10 +22,12 @@ CMakeFiles/AED_project.dir/Tests/Database.cpp.obj
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Date.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Flight.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/GroundTransportation.h
+ C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Luggage.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Passenger.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Plane.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Service.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Time.h
+ C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Trolley.h
 CMakeFiles/AED_project.dir/Tests/Date.cpp.obj
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Date.cpp
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Date.h
@@ -34,18 +38,17 @@ CMakeFiles/AED_project.dir/Tests/Flight.cpp.obj
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Flight.cpp
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Flight.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/GroundTransportation.h
+ C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Luggage.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Passenger.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Plane.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Service.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Time.h
+ C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Trolley.h
 CMakeFiles/AED_project.dir/Tests/GroundTransportation.cpp.obj
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/BST.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/GroundTransportation.cpp
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/GroundTransportation.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Time.h
-CMakeFiles/AED_project.dir/Tests/LocalTransport.cpp.obj
- C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/LocalTransport.cpp
- C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/LocalTransport.h
 CMakeFiles/AED_project.dir/Tests/Luggage.cpp.obj
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Luggage.cpp
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Luggage.h
@@ -57,12 +60,14 @@ CMakeFiles/AED_project.dir/Tests/Menu.cpp.obj
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Date.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Flight.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/GroundTransportation.h
+ C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Luggage.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Menu.cpp
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Menu.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Passenger.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Plane.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Service.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Time.h
+ C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Trolley.h
 CMakeFiles/AED_project.dir/Tests/Passenger.cpp.obj
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Passenger.cpp
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Passenger.h
@@ -72,18 +77,17 @@ CMakeFiles/AED_project.dir/Tests/Plane.cpp.obj
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Date.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Flight.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/GroundTransportation.h
+ C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Luggage.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Passenger.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Plane.cpp
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Plane.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Service.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Time.h
+ C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Trolley.h
 CMakeFiles/AED_project.dir/Tests/Service.cpp.obj
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Date.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Service.cpp
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Service.h
-CMakeFiles/AED_project.dir/Tests/Ticket.cpp.obj
- C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Ticket.cpp
- C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Ticket.h
 CMakeFiles/AED_project.dir/Tests/Time.cpp.obj
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Time.cpp
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Time.h
@@ -134,9 +138,11 @@ CMakeFiles/AED_project.dir/main.cpp.obj
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Date.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Flight.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/GroundTransportation.h
+ C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Luggage.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Menu.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Passenger.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Plane.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Service.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Time.h
+ C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Trolley.h
  C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/main.cpp

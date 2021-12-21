@@ -27,7 +27,8 @@ public :
     void setTime(int h, int m, int s);
     void setTime(std::string s);
     //print description of object in hh:mm:ss
-    void print();
+    void print() const;
+    std::string formatted() const;
     //compare two time object
     bool equals(Time);
     bool operator<(const Time &t1) const;

@@ -8,12 +8,16 @@
 #include "BST.h"
 #include "GroundTransportation.h"
 #include "Plane.h"
+#include "Trolley.h"
 
 #include <fstream>
 #include <string>
 #include <utility>
 #include <list>
 
+#define TROLLEY_NCARRIAGE 4
+#define TROLLEY_NSTACK 3
+#define TROLLEY_NLUGGAGE 5
 
 /**
  * @file Airport.h
@@ -29,8 +33,10 @@ private:
     string code; ///codename used in files associated with this airport
     BST<GroundTransportation> localInformation;
     list<Plane *> planes;
+    Trolley trolley;
 public:
-    Airport(): localInformation(GroundTransportation("", 0.0, 0)) {};
+    Airport(): localInformation(GroundTransportation("", 0.0, 0)),
+    trolley(Trolley(TROLLEY_NCARRIAGE, TROLLEY_NSTACK, TROLLEY_NLUGGAGE)) {};
     /**
      * @brief Constructor.
      * @param n -> name of airport
@@ -38,6 +44,7 @@ public:
      * @param code -> filename code
      */
     Airport(string n, string c, string code): localInformation(GroundTransportation("", 0.0, 0)),
+        trolley(Trolley(TROLLEY_NCARRIAGE, TROLLEY_NSTACK, TROLLEY_NLUGGAGE)),
         name(std::move(n)), city(std::move(c)), code(std::move(code)) {};
 
     /**
@@ -45,8 +52,20 @@ public:
      */
     ~Airport();
 
+    /**
+     * @brief Gets the airport's name.
+     * @return name
+     */
     const string getName();
+    /**
+     * @brief Gets the airport's city.
+     * @return city
+     */
     const string getCity();
+    /**
+     * @brief Gets the airport's code.
+     * @return code
+     */
     const string getCode();
     /**
      * @brief Gets the list of planes currently on this airport.
@@ -59,6 +78,12 @@ public:
      * @param plane -> pointer to plane to add
      */
     void addPlane(Plane* plane);
+
+    /**
+     * @brief Gets the trolley.
+     * @return trolley
+     */
+    Trolley& getTrolley();
 
     /**
      * @brief Finds a plane with a specific license.
@@ -74,24 +99,23 @@ public:
      */
     list<Plane*> filterPlanesByType(const std::string& filter);
 
-    const BST<GroundTransportation> &getLocalInformation() const;
-    void addLocalInformation();
-
     /**
-     * @brief Remove ground transportation
-     * @param g1
+     * @brief Gets the airport's database on local transportation.
      * @return
      */
+    const BST<GroundTransportation> &getLocalInformation() const;
 
-    void removeGroundTransportation(const GroundTransportation& g1);
+    //void addLocalInformation();
+
+    //void removeGroundTransportation(const GroundTransportation& g1);
 
 
-    list<Plane *> sortByUserInputPlanes(const int &s1);
-    BST<GroundTransportation> sortByUserInputGroundTransportations(const int & s2);
+    //list<Plane *> sortByUserInputPlanes(const int &s1);
+    //BST<GroundTransportation> sortByUserInputGroundTransportations(const int & s2);
 
-    BST<GroundTransportation> filterTransportByType(const string & s0, GroundTransportation& previous, GroundTransportation& next);
+    //BST<GroundTransportation> filterTransportByType(const string & s0, GroundTransportation& previous, GroundTransportation& next);
 
-    void readFile(ifstream &f);
+    //void readFile(ifstream &f);
 };
 
 

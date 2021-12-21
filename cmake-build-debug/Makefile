@@ -358,30 +358,6 @@ Tests/GroundTransportation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/GroundTransportation.cpp.s
 .PHONY : Tests/GroundTransportation.cpp.s
 
-Tests/LocalTransport.obj: Tests/LocalTransport.cpp.obj
-.PHONY : Tests/LocalTransport.obj
-
-# target to build an object file
-Tests/LocalTransport.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/LocalTransport.cpp.obj
-.PHONY : Tests/LocalTransport.cpp.obj
-
-Tests/LocalTransport.i: Tests/LocalTransport.cpp.i
-.PHONY : Tests/LocalTransport.i
-
-# target to preprocess a source file
-Tests/LocalTransport.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/LocalTransport.cpp.i
-.PHONY : Tests/LocalTransport.cpp.i
-
-Tests/LocalTransport.s: Tests/LocalTransport.cpp.s
-.PHONY : Tests/LocalTransport.s
-
-# target to generate assembly for a file
-Tests/LocalTransport.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/LocalTransport.cpp.s
-.PHONY : Tests/LocalTransport.cpp.s
-
 Tests/Luggage.obj: Tests/Luggage.cpp.obj
 .PHONY : Tests/Luggage.obj
 
@@ -502,30 +478,6 @@ Tests/Service.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Service.cpp.s
 .PHONY : Tests/Service.cpp.s
 
-Tests/Ticket.obj: Tests/Ticket.cpp.obj
-.PHONY : Tests/Ticket.obj
-
-# target to build an object file
-Tests/Ticket.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Ticket.cpp.obj
-.PHONY : Tests/Ticket.cpp.obj
-
-Tests/Ticket.i: Tests/Ticket.cpp.i
-.PHONY : Tests/Ticket.i
-
-# target to preprocess a source file
-Tests/Ticket.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Ticket.cpp.i
-.PHONY : Tests/Ticket.cpp.i
-
-Tests/Ticket.s: Tests/Ticket.cpp.s
-.PHONY : Tests/Ticket.s
-
-# target to generate assembly for a file
-Tests/Ticket.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED_project.dir\build.make CMakeFiles/AED_project.dir/Tests/Ticket.cpp.s
-.PHONY : Tests/Ticket.cpp.s
-
 Tests/Time.obj: Tests/Time.cpp.obj
 .PHONY : Tests/Time.obj
 
@@ -631,9 +583,6 @@ help:
 	@echo ... Tests/GroundTransportation.obj
 	@echo ... Tests/GroundTransportation.i
 	@echo ... Tests/GroundTransportation.s
-	@echo ... Tests/LocalTransport.obj
-	@echo ... Tests/LocalTransport.i
-	@echo ... Tests/LocalTransport.s
 	@echo ... Tests/Luggage.obj
 	@echo ... Tests/Luggage.i
 	@echo ... Tests/Luggage.s
@@ -649,9 +598,6 @@ help:
 	@echo ... Tests/Service.obj
 	@echo ... Tests/Service.i
 	@echo ... Tests/Service.s
-	@echo ... Tests/Ticket.obj
-	@echo ... Tests/Ticket.i
-	@echo ... Tests/Ticket.s
 	@echo ... Tests/Time.obj
 	@echo ... Tests/Time.i
 	@echo ... Tests/Time.s

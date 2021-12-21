@@ -6,35 +6,9 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Airport.h
-BST.h
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/BST.h
-GroundTransportation.h
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/GroundTransportation.h
-Plane.h
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Plane.h
-fstream
--
-string
--
-utility
--
-list
--
-
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/BST.h
-iostream
--
-stack
--
-queue
--
-
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Database.h
-unordered_map
--
-Airport.h
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Airport.h
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Date.cpp
+Date.h
+C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Date.h
 
 C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Date.h
 iostream
@@ -46,83 +20,5 @@ sstream
 cstdlib
 -
 stdexcept
--
-
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Flight.h
-Passenger.h
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Passenger.h
-Airport.h
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Airport.h
-Date.h
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Date.h
-Time.h
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Time.h
-string
--
-utility
--
-vector
--
-
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/GroundTransportation.h
-Time.h
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Time.h
-BST.h
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/BST.h
-string
--
-
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Menu.cpp
-iomanip
--
-iostream
--
-limits
--
-Menu.h
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Menu.h
-
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Menu.h
-string
--
-Airport.h
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Airport.h
-Database.h
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Database.h
-Service.h
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Service.h
-
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Passenger.h
-string
--
-
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Plane.h
-Service.h
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Service.h
-Flight.h
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Flight.h
-Passenger.h
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Passenger.h
-string
--
-vector
--
-queue
--
-list
--
-
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Service.h
-ctime
--
-string
--
-Date.h
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Date.h
-
-C:/Users/Tomás Pires/Documents/School/AED/projeto_AED/Tests/Time.h
-iostream
--
-iomanip
 -
 

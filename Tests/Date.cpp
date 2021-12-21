@@ -37,7 +37,7 @@ void Date::setDay(int day) {
 std::string Date::formatted() const {
     return (to_string(day) + "-" + to_string(month) + "-" + to_string(year));
 }
-
+/*
 Date Date::getDate(string str) {
     istringstream iss(str);
 
@@ -82,6 +82,7 @@ Date Date::getDate(string str) {
 
     return Date{day, month, year};
 }
+ */
 
 bool Date::is_number(string str) {
     for (size_t i = 0; i < str.length(); i++)

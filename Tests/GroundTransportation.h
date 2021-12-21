@@ -42,13 +42,31 @@ public:
      */
     const Time &getTime() const;
 
+    /**
+     * @brief Change the transport's type.
+     * @param type -> new type
+     */
     void setType(const string &type);
 
-    void setDistanceFromAirport(float distanceFromAirport);
+    //void setDistanceFromAirport(float distanceFromAirport);
 
+    /**
+     * @brief Change the time of next stop
+     * @param time -> time
+     */
     void setTime(const Time &time);
 
+    /**
+     * @brief Less than operator.
+     * @param g1 -> right element
+     * @return true if left<right, false otherwise
+     */
     bool operator<(const GroundTransportation& g1) const;
+    /**
+     * @brief Equality operator
+     * @param g2 -> right element
+     * @return true if left equal to right, false otherwise
+     */
     bool operator==(const GroundTransportation& g2) const;
 };
 

@@ -19,8 +19,8 @@ void Trolley::insertLuggageIntoTrolley() {
         } // [ [[],[],[],[]], [[],[],[],[]], [[],[],[],[]]]
         b--;
     }
-    for(auto it = luggageStacksPerCarriage.end(); it != luggageStacksPerCarriage.begin(); it++){
-        for(auto at = (*it).end(); at != (*it).begin();){
+    for(auto it = luggageStacksPerCarriage.rbegin(); it != luggageStacksPerCarriage.rend(); it++){
+        for(auto at = (*it).rbegin(); at != (*it).rend();){
             if(treadmill.empty()) break;
             if((*at).size() == numberLuggagePerStack) {
                 at--;
@@ -35,6 +35,10 @@ void Trolley::insertLuggageIntoTrolley() {
 
 bool Trolley::trolleyIsFull() const {
     return numberStacks*numberCarriage*numberLuggagePerStack == numberOfLuggageInserted;
+}
+
+void Trolley::removeLuggage() {
+    luggageStacksPerCarriage = list<list<stack<Luggage>>>();
 }
 
 

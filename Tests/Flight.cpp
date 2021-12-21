@@ -41,9 +41,11 @@ Airport* Flight::getDestinyFlight() const {
     return destinyFlight;
 }
 
+/*
 void Flight::setDuration(const Time &duration) {
     Flight::duration = duration;
 }
+ */
 
 int Flight::getNumberOfPassengers() const {
     return passengers.size();

@@ -26,7 +26,7 @@ const list<Service>& Plane::getPastServices() const {
     return realizedServices;
 }
 
-const list<Flight> &Plane::getFlight() const{
+list<Flight> &Plane::getFlight(){
     return flightPlan;
 }
 
@@ -39,11 +39,13 @@ void Plane::addService(const Service &s1){
 }
 
 void Plane::executeService() {
-    realizedServices.push_back(services.front());
-    services.pop();
+    if(!services.empty()) {
+        realizedServices.push_back(services.front());
+        services.pop();
+    }
 }
 
-
+/*
 // get number of passengers according to flight number, if not existing flight, throw exception
 int Plane::numPassengers(unsigned int flight) const {
     for(const auto & it : flightPlan){
@@ -54,15 +56,17 @@ int Plane::numPassengers(unsigned int flight) const {
     //throw FlightDoesNotExist(flight);
     return -1;
 }
-
+ */
+/*
 void Plane::doneService(){
     realizedServices.push_back(services.front());
     services.pop();
 }
-
+*/
 // Passenger gets or not ticket for specific flight, if flight doesn't exist, return false, otherwise return true if there are seats available.
 // If passenger wants luggage, add to numberOfLuggage.
 
+/*
 bool Plane::passengerGetTicket(Passenger & p1, unsigned flNumber){
     for(auto & it : flightPlan){
         if(it.getFlightNumber() == flNumber){
@@ -80,6 +84,7 @@ bool Plane::passengerGetTicket(Passenger & p1, unsigned flNumber){
     //throw FlightDoesNotExist(flNumber);
     return false;
 }
+ */
 
 // due to bad conditions of plane or pandemics.
 void Plane::cancelFlight(unsigned fl) {

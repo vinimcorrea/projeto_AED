@@ -15,7 +15,7 @@ using namespace std;
 class Luggage {
     Passenger p1;
 public:
-    Luggage();
+    Luggage(Passenger p):p1(p){};
 };
 
 

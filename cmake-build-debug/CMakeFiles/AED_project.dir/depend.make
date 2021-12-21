@@ -8,10 +8,12 @@ CMakeFiles/AED_project.dir/Tests/Airport.cpp.obj: \
  ../Tests/Date.h \
  ../Tests/Flight.h \
  ../Tests/GroundTransportation.h \
+ ../Tests/Luggage.h \
  ../Tests/Passenger.h \
  ../Tests/Plane.h \
  ../Tests/Service.h \
- ../Tests/Time.h
+ ../Tests/Time.h \
+ ../Tests/Trolley.h
 CMakeFiles/AED_project.dir/Tests/Database.cpp.obj: \
  ../Tests/Airport.h \
  ../Tests/BST.h \
@@ -20,10 +22,12 @@ CMakeFiles/AED_project.dir/Tests/Database.cpp.obj: \
  ../Tests/Date.h \
  ../Tests/Flight.h \
  ../Tests/GroundTransportation.h \
+ ../Tests/Luggage.h \
  ../Tests/Passenger.h \
  ../Tests/Plane.h \
  ../Tests/Service.h \
- ../Tests/Time.h
+ ../Tests/Time.h \
+ ../Tests/Trolley.h
 CMakeFiles/AED_project.dir/Tests/Date.cpp.obj: \
  ../Tests/Date.cpp \
  ../Tests/Date.h
@@ -34,18 +38,17 @@ CMakeFiles/AED_project.dir/Tests/Flight.cpp.obj: \
  ../Tests/Flight.cpp \
  ../Tests/Flight.h \
  ../Tests/GroundTransportation.h \
+ ../Tests/Luggage.h \
  ../Tests/Passenger.h \
  ../Tests/Plane.h \
  ../Tests/Service.h \
- ../Tests/Time.h
+ ../Tests/Time.h \
+ ../Tests/Trolley.h
 CMakeFiles/AED_project.dir/Tests/GroundTransportation.cpp.obj: \
  ../Tests/BST.h \
  ../Tests/GroundTransportation.cpp \
  ../Tests/GroundTransportation.h \
  ../Tests/Time.h
-CMakeFiles/AED_project.dir/Tests/LocalTransport.cpp.obj: \
- ../Tests/LocalTransport.cpp \
- ../Tests/LocalTransport.h
 CMakeFiles/AED_project.dir/Tests/Luggage.cpp.obj: \
  ../Tests/Luggage.cpp \
  ../Tests/Luggage.h \
@@ -57,12 +60,14 @@ CMakeFiles/AED_project.dir/Tests/Menu.cpp.obj: \
  ../Tests/Date.h \
  ../Tests/Flight.h \
  ../Tests/GroundTransportation.h \
+ ../Tests/Luggage.h \
  ../Tests/Menu.cpp \
  ../Tests/Menu.h \
  ../Tests/Passenger.h \
  ../Tests/Plane.h \
  ../Tests/Service.h \
- ../Tests/Time.h
+ ../Tests/Time.h \
+ ../Tests/Trolley.h
 CMakeFiles/AED_project.dir/Tests/Passenger.cpp.obj: \
  ../Tests/Passenger.cpp \
  ../Tests/Passenger.h
@@ -72,18 +77,17 @@ CMakeFiles/AED_project.dir/Tests/Plane.cpp.obj: \
  ../Tests/Date.h \
  ../Tests/Flight.h \
  ../Tests/GroundTransportation.h \
+ ../Tests/Luggage.h \
  ../Tests/Passenger.h \
  ../Tests/Plane.cpp \
  ../Tests/Plane.h \
  ../Tests/Service.h \
- ../Tests/Time.h
+ ../Tests/Time.h \
+ ../Tests/Trolley.h
 CMakeFiles/AED_project.dir/Tests/Service.cpp.obj: \
  ../Tests/Date.h \
  ../Tests/Service.cpp \
  ../Tests/Service.h
-CMakeFiles/AED_project.dir/Tests/Ticket.cpp.obj: \
- ../Tests/Ticket.cpp \
- ../Tests/Ticket.h
 CMakeFiles/AED_project.dir/Tests/Time.cpp.obj: \
  ../Tests/Time.cpp \
  ../Tests/Time.h
@@ -134,9 +138,11 @@ CMakeFiles/AED_project.dir/main.cpp.obj: \
  ../Tests/Date.h \
  ../Tests/Flight.h \
  ../Tests/GroundTransportation.h \
+ ../Tests/Luggage.h \
  ../Tests/Menu.h \
  ../Tests/Passenger.h \
  ../Tests/Plane.h \
  ../Tests/Service.h \
  ../Tests/Time.h \
+ ../Tests/Trolley.h \
  ../main.cpp

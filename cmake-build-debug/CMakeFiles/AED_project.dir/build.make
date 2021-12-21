@@ -135,24 +135,10 @@ CMakeFiles/AED_project.dir/Tests/Service.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AED_project.dir/Tests/Service.cpp.s"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\Tests\Service.cpp" -o CMakeFiles\AED_project.dir\Tests\Service.cpp.s
 
-CMakeFiles/AED_project.dir/Tests/Ticket.cpp.obj: CMakeFiles/AED_project.dir/flags.make
-CMakeFiles/AED_project.dir/Tests/Ticket.cpp.obj: CMakeFiles/AED_project.dir/includes_CXX.rsp
-CMakeFiles/AED_project.dir/Tests/Ticket.cpp.obj: ../Tests/Ticket.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/AED_project.dir/Tests/Ticket.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\AED_project.dir\Tests\Ticket.cpp.obj -c "C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\Tests\Ticket.cpp"
-
-CMakeFiles/AED_project.dir/Tests/Ticket.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AED_project.dir/Tests/Ticket.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\Tests\Ticket.cpp" > CMakeFiles\AED_project.dir\Tests\Ticket.cpp.i
-
-CMakeFiles/AED_project.dir/Tests/Ticket.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AED_project.dir/Tests/Ticket.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\Tests\Ticket.cpp" -o CMakeFiles\AED_project.dir\Tests\Ticket.cpp.s
-
 CMakeFiles/AED_project.dir/Tests/Trolley.cpp.obj: CMakeFiles/AED_project.dir/flags.make
 CMakeFiles/AED_project.dir/Tests/Trolley.cpp.obj: CMakeFiles/AED_project.dir/includes_CXX.rsp
 CMakeFiles/AED_project.dir/Tests/Trolley.cpp.obj: ../Tests/Trolley.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/AED_project.dir/Tests/Trolley.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/AED_project.dir/Tests/Trolley.cpp.obj"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\AED_project.dir\Tests\Trolley.cpp.obj -c "C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\Tests\Trolley.cpp"
 
 CMakeFiles/AED_project.dir/Tests/Trolley.cpp.i: cmake_force
@@ -163,24 +149,10 @@ CMakeFiles/AED_project.dir/Tests/Trolley.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AED_project.dir/Tests/Trolley.cpp.s"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\Tests\Trolley.cpp" -o CMakeFiles\AED_project.dir\Tests\Trolley.cpp.s
 
-CMakeFiles/AED_project.dir/Tests/LocalTransport.cpp.obj: CMakeFiles/AED_project.dir/flags.make
-CMakeFiles/AED_project.dir/Tests/LocalTransport.cpp.obj: CMakeFiles/AED_project.dir/includes_CXX.rsp
-CMakeFiles/AED_project.dir/Tests/LocalTransport.cpp.obj: ../Tests/LocalTransport.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/AED_project.dir/Tests/LocalTransport.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\AED_project.dir\Tests\LocalTransport.cpp.obj -c "C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\Tests\LocalTransport.cpp"
-
-CMakeFiles/AED_project.dir/Tests/LocalTransport.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AED_project.dir/Tests/LocalTransport.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\Tests\LocalTransport.cpp" > CMakeFiles\AED_project.dir\Tests\LocalTransport.cpp.i
-
-CMakeFiles/AED_project.dir/Tests/LocalTransport.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AED_project.dir/Tests/LocalTransport.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\Tests\LocalTransport.cpp" -o CMakeFiles\AED_project.dir\Tests\LocalTransport.cpp.s
-
 CMakeFiles/AED_project.dir/Tests/Airport.cpp.obj: CMakeFiles/AED_project.dir/flags.make
 CMakeFiles/AED_project.dir/Tests/Airport.cpp.obj: CMakeFiles/AED_project.dir/includes_CXX.rsp
 CMakeFiles/AED_project.dir/Tests/Airport.cpp.obj: ../Tests/Airport.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/AED_project.dir/Tests/Airport.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/AED_project.dir/Tests/Airport.cpp.obj"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\AED_project.dir\Tests\Airport.cpp.obj -c "C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\Tests\Airport.cpp"
 
 CMakeFiles/AED_project.dir/Tests/Airport.cpp.i: cmake_force
@@ -194,7 +166,7 @@ CMakeFiles/AED_project.dir/Tests/Airport.cpp.s: cmake_force
 CMakeFiles/AED_project.dir/Tests/GroundTransportation.cpp.obj: CMakeFiles/AED_project.dir/flags.make
 CMakeFiles/AED_project.dir/Tests/GroundTransportation.cpp.obj: CMakeFiles/AED_project.dir/includes_CXX.rsp
 CMakeFiles/AED_project.dir/Tests/GroundTransportation.cpp.obj: ../Tests/GroundTransportation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/AED_project.dir/Tests/GroundTransportation.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/AED_project.dir/Tests/GroundTransportation.cpp.obj"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\AED_project.dir\Tests\GroundTransportation.cpp.obj -c "C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\Tests\GroundTransportation.cpp"
 
 CMakeFiles/AED_project.dir/Tests/GroundTransportation.cpp.i: cmake_force
@@ -208,7 +180,7 @@ CMakeFiles/AED_project.dir/Tests/GroundTransportation.cpp.s: cmake_force
 CMakeFiles/AED_project.dir/Tests/Flight.cpp.obj: CMakeFiles/AED_project.dir/flags.make
 CMakeFiles/AED_project.dir/Tests/Flight.cpp.obj: CMakeFiles/AED_project.dir/includes_CXX.rsp
 CMakeFiles/AED_project.dir/Tests/Flight.cpp.obj: ../Tests/Flight.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/AED_project.dir/Tests/Flight.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/AED_project.dir/Tests/Flight.cpp.obj"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\AED_project.dir\Tests\Flight.cpp.obj -c "C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\Tests\Flight.cpp"
 
 CMakeFiles/AED_project.dir/Tests/Flight.cpp.i: cmake_force
@@ -222,7 +194,7 @@ CMakeFiles/AED_project.dir/Tests/Flight.cpp.s: cmake_force
 CMakeFiles/AED_project.dir/Tests/Menu.cpp.obj: CMakeFiles/AED_project.dir/flags.make
 CMakeFiles/AED_project.dir/Tests/Menu.cpp.obj: CMakeFiles/AED_project.dir/includes_CXX.rsp
 CMakeFiles/AED_project.dir/Tests/Menu.cpp.obj: ../Tests/Menu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/AED_project.dir/Tests/Menu.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/AED_project.dir/Tests/Menu.cpp.obj"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\AED_project.dir\Tests\Menu.cpp.obj -c "C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\Tests\Menu.cpp"
 
 CMakeFiles/AED_project.dir/Tests/Menu.cpp.i: cmake_force
@@ -236,7 +208,7 @@ CMakeFiles/AED_project.dir/Tests/Menu.cpp.s: cmake_force
 CMakeFiles/AED_project.dir/Tests/Database.cpp.obj: CMakeFiles/AED_project.dir/flags.make
 CMakeFiles/AED_project.dir/Tests/Database.cpp.obj: CMakeFiles/AED_project.dir/includes_CXX.rsp
 CMakeFiles/AED_project.dir/Tests/Database.cpp.obj: ../Tests/Database.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/AED_project.dir/Tests/Database.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/AED_project.dir/Tests/Database.cpp.obj"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\AED_project.dir\Tests\Database.cpp.obj -c "C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\Tests\Database.cpp"
 
 CMakeFiles/AED_project.dir/Tests/Database.cpp.i: cmake_force
@@ -250,7 +222,7 @@ CMakeFiles/AED_project.dir/Tests/Database.cpp.s: cmake_force
 CMakeFiles/AED_project.dir/Tests/Date.cpp.obj: CMakeFiles/AED_project.dir/flags.make
 CMakeFiles/AED_project.dir/Tests/Date.cpp.obj: CMakeFiles/AED_project.dir/includes_CXX.rsp
 CMakeFiles/AED_project.dir/Tests/Date.cpp.obj: ../Tests/Date.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/AED_project.dir/Tests/Date.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/AED_project.dir/Tests/Date.cpp.obj"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\AED_project.dir\Tests\Date.cpp.obj -c "C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\Tests\Date.cpp"
 
 CMakeFiles/AED_project.dir/Tests/Date.cpp.i: cmake_force
@@ -264,7 +236,7 @@ CMakeFiles/AED_project.dir/Tests/Date.cpp.s: cmake_force
 CMakeFiles/AED_project.dir/Tests/Time.cpp.obj: CMakeFiles/AED_project.dir/flags.make
 CMakeFiles/AED_project.dir/Tests/Time.cpp.obj: CMakeFiles/AED_project.dir/includes_CXX.rsp
 CMakeFiles/AED_project.dir/Tests/Time.cpp.obj: ../Tests/Time.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/AED_project.dir/Tests/Time.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/AED_project.dir/Tests/Time.cpp.obj"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\AED_project.dir\Tests\Time.cpp.obj -c "C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\Tests\Time.cpp"
 
 CMakeFiles/AED_project.dir/Tests/Time.cpp.i: cmake_force
@@ -282,9 +254,7 @@ AED_project_OBJECTS = \
 "CMakeFiles/AED_project.dir/Tests/Passenger.cpp.obj" \
 "CMakeFiles/AED_project.dir/Tests/Luggage.cpp.obj" \
 "CMakeFiles/AED_project.dir/Tests/Service.cpp.obj" \
-"CMakeFiles/AED_project.dir/Tests/Ticket.cpp.obj" \
 "CMakeFiles/AED_project.dir/Tests/Trolley.cpp.obj" \
-"CMakeFiles/AED_project.dir/Tests/LocalTransport.cpp.obj" \
 "CMakeFiles/AED_project.dir/Tests/Airport.cpp.obj" \
 "CMakeFiles/AED_project.dir/Tests/GroundTransportation.cpp.obj" \
 "CMakeFiles/AED_project.dir/Tests/Flight.cpp.obj" \
@@ -301,9 +271,7 @@ AED_project.exe: CMakeFiles/AED_project.dir/Tests/Plane.cpp.obj
 AED_project.exe: CMakeFiles/AED_project.dir/Tests/Passenger.cpp.obj
 AED_project.exe: CMakeFiles/AED_project.dir/Tests/Luggage.cpp.obj
 AED_project.exe: CMakeFiles/AED_project.dir/Tests/Service.cpp.obj
-AED_project.exe: CMakeFiles/AED_project.dir/Tests/Ticket.cpp.obj
 AED_project.exe: CMakeFiles/AED_project.dir/Tests/Trolley.cpp.obj
-AED_project.exe: CMakeFiles/AED_project.dir/Tests/LocalTransport.cpp.obj
 AED_project.exe: CMakeFiles/AED_project.dir/Tests/Airport.cpp.obj
 AED_project.exe: CMakeFiles/AED_project.dir/Tests/GroundTransportation.cpp.obj
 AED_project.exe: CMakeFiles/AED_project.dir/Tests/Flight.cpp.obj
@@ -318,7 +286,7 @@ AED_project.exe: lib/libgtestd.a
 AED_project.exe: CMakeFiles/AED_project.dir/linklibs.rsp
 AED_project.exe: CMakeFiles/AED_project.dir/objects1.rsp
 AED_project.exe: CMakeFiles/AED_project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable AED_project.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Tomás Pires\Documents\School\AED\projeto_AED\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable AED_project.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\AED_project.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
