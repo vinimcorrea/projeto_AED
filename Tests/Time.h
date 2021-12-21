@@ -16,6 +16,13 @@ class Time {
 public :
     //constructor with default value 0
     Time(int h = 0, int m  = 0, int s = 0);
+
+    int getHour() const;
+
+    int getMinute() const;
+
+    int getSecond() const;
+
     //setter function
     void setTime(int h, int m, int s);
     void setTime(std::string s);

@@ -64,6 +64,7 @@ void Menu::displayTable(const vector<Plane *>& planes) const {
         std::string type = formatEntry(p->getType(), PLANETABLE_TYPE_WIDTH);
         std::string capacity = formatEntry(to_string(p->getCapacity()), PLANETABLE_CAPACITY_WIDTH);
         std::string nFlights = formatEntry(to_string(p->getNumberOfFlights()), PLANETABLE_NFLIGHTS_WIDTH);
+
         std::cout << "║" << setw(PLANETABLE_LICENSE_WIDTH) << license;
         std::cout << "│" << setw(PLANETABLE_TYPE_WIDTH) << type;
         std::cout << "│" << setw(PLANETABLE_CAPACITY_WIDTH) << capacity;
@@ -191,7 +192,7 @@ Menu* MainMenu::processInput() {
             case 5:
                 break;
             case 6:
-                return new LocalTransportMenu(database, currentAirport);
+                return new LocalTransportMenu(database);
         };
     }
 
@@ -236,6 +237,33 @@ Menu* PlaneMenu::processInput() {
     return this;
 }
 
+
+void LocalTransportMenu::displayMessage() {
+    std::cout << "╔══════════════════════════════════════════════════════════════════════════════╗" << std::endl;
+    std::cout << "║ [1] Search an airport's local transport database                             ║" << std::endl;
+    std::cout << "║                                                                              ║" << std::endl;
+    std::cout << "║ [q] Go back                                                                  ║" << std::endl;
+    std::cout << "╚══════════════════════════════════════════════════════════════════════════════╝" << std::endl;
+}
+
+Menu* LocalTransportMenu::processInput() {
+    std::string userInput;
+
+    std::cin >> userInput;
+
+    if(inputSanityCheck()){
+        if(userInput == "q")
+            return nullptr;
+        switch(stoi(userInput)){
+            case 1:
+                break;
+        };
+    }
+
+    std::cout << "Invalid user input." << std::endl;
+    return this;
+}
+
 void PlaneMenu::createPlane() {
     std::string plate = inputHandler<std::string>("Please enter the plane's license number : ");
     std::string type = inputHandler<std::string>("Please enter the plane's type code : ");
@@ -247,10 +275,8 @@ void PlaneMenu::createPlane() {
     std::cout << newPlane->getType() << '\n';
     std::cout << newPlane->getLicense() << '\n';
 
-    if(currentAirport->addPlane(new Plane(plate, type, capacity, list<Flight>(), queue<Service>())))
-        std::cout << "New aircraft successfully added to database.\n";
-    else
-        std::cout << "A plane with the same license number already exists. Operation unsuccessful.\n";
+    currentAirport->addPlane(new Plane(plate, type, capacity, list<Flight>(), queue<Service>()));
+    std::cout << "New aircraft successfully added to database.\n";
 }
 
 void PlaneMenu::planeTable() {

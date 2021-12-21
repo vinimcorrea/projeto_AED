@@ -5,8 +5,8 @@
 #ifndef AED_PROJECT_GROUNDTRANSPORTATION_H
 #define AED_PROJECT_GROUNDTRANSPORTATION_H
 
-#include <list>
-//#include "Time.h"
+#include "Time.h"
+#include "BST.h"
 #include <string>
 
 using namespace std;
@@ -14,28 +14,16 @@ using namespace std;
 class GroundTransportation {
     string type;
     float distanceFromAirport;
-    list<time_t> timetable;
+    Time time;
 public:
     /**
-     * @brief Constructor.
-     * @param t -> type of transport
-     * @param d -> distance from airport
-     * @param ti -> timetable
+     * @brief Constructor : t = Type, d = distance, ti = time
+     * @param t
+     * @param d
+     * @param ti
      */
-    GroundTransportation(string t, float d, list<time_t> ti)
-        : type(t), distanceFromAirport(d), timetable(ti){};
 
-    /**
-     * @brief Returns the type of transport.
-     * @return type
-     */
-    const string getType() const;
-
-    /**
-     * @brief Changes the type of transport.
-     * @param type -> new type
-     */
-    void setType(const string &type);
+    GroundTransportation(string t, float d, Time ti);
 
     /**
      * @brief Returns the distance of the stop from the airport.
@@ -44,16 +32,24 @@ public:
     float getDistanceFromAirport() const;
 
     /**
-     * @brief Changes the transport stop's distance from the airport
-     * @param distanceFromAirport -> new distance
+     * @brief Getter for type of transport
+     * @return type of the transport
      */
-    void setDistanceFromAirport(const float& distanceFromAirport);
-
+    const string &getType() const;
     /**
-     * @brief Get timetable of transport.
-     * @return timetable
+     * @brief Getter for time
+     * @return time remaining until transport arrive
      */
-     list<time_t> getTimetable();
+    const Time &getTime() const;
+
+    void setType(const string &type);
+
+    void setDistanceFromAirport(float distanceFromAirport);
+
+    void setTime(const Time &time);
+
+    bool operator<(const GroundTransportation& g1) const;
+    bool operator==(const GroundTransportation& g2) const;
 };
 
 

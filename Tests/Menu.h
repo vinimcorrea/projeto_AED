@@ -8,7 +8,6 @@
 #include <string>
 
 #include "Airport.h"
-#include "BST.h"
 #include "Database.h"
 
 /**
@@ -96,17 +95,8 @@ private:
      * @brief Adds a new plane to the current airport's database.
      */
     void createPlane();
-
-    /**
-     * @brief Displays table of planes, formatted according to user input.
-     */
     void planeTable();
-
-    /**
-     * @brief Deletes a plane with a specific license number.
-     */
     void removePlane();
-
 public:
     PlaneMenu(Database* database, Airport* airport) : MainMenu(database, airport) {};
     void displayMessage() override;
@@ -120,7 +110,9 @@ private:
      * @brief Schedules a new flight according to user input.
      */
     void scheduleFlight();
-
+    /**
+     * @brief Displays table of flights according to user input
+     */
     void flightTable();
 public:
     FlightMenu(Database* database, Airport* airport) : MainMenu(database, airport) {};
@@ -136,7 +128,7 @@ private:
      */
     void transportTable();
 public:
-    LocalTransportMenu(Database* database, Airport* airport) : MainMenu(database, airport) {};
+    LocalTransportMenu(Database* database) : Menu(database) {};
     void displayMessage() override;
     Menu* processInput() override;
 };
