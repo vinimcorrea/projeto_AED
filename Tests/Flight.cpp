@@ -17,14 +17,30 @@ void Flight::setNumberOfLuggage(unsigned nl){
     numberOfLuggage = nl;
 }
 
-void Flight::setDepartureDate(const string &departureDate) {
+void Flight::setDepartureDate(const Date &departureDate) {
     Flight::departureDate = departureDate;
 }
 
-const string &Flight::getDepartureDate() const {
+const Date &Flight::getDepartureDate() const {
     return departureDate;
 }
 
 void Flight::addPassenger(Passenger &p1) {
     passengers.push_back(p1);
+}
+
+Time Flight::getDuration() const {
+    return duration;
+}
+
+const string &Flight::getOriginFlight() const {
+    return originFlight;
+}
+
+const string &Flight::getDestinyFlight() const {
+    return destinyFlight;
+}
+
+void Flight::setDuration(const Time &duration) {
+    Flight::duration = duration;
 }

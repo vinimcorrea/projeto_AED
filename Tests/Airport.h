@@ -9,6 +9,7 @@
 #include "GroundTransportation.h"
 #include "Plane.h"
 #include <string>
+#include <utility>
 #include <vector>
 
 
@@ -31,7 +32,7 @@ public:
      * @param code -> filename code
      */
     Airport(string n, string c, string code): localInformation(GroundTransportation("", 0.0, 0)),
-    name(n), city(c), code(code) {};
+    name(std::move(n)), city(std::move(c)), code(std::move(code)) {};
 
     const string getName();
     const string getCity();
@@ -65,6 +66,17 @@ public:
     const BST<GroundTransportation> &getLocalInformation() const;
     void addLocalInformation();
 
+    /**
+     * @brief Remove ground transportation
+     * @param g1
+     * @return
+     */
+
+    void removeGroundTransportation(const GroundTransportation& g1);
+
+
+    vector<Plane *> sortByUserInputPlanes(const int &s1);
+    BST<GroundTransportation> sortByUserInputGroundTransportations(const int & s2);
 };
 
 
